@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Moon, Sun, FileCheck, Globe } from 'lucide-react';
+import { Menu, X, Moon, Sun, FileCheck } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { SUPPORTED_LANGUAGES } from '../i18n/languages';
 
@@ -19,6 +19,8 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
     setIsLangOpen(false);
     setIsMenuOpen(false);
   };
+
+  const currentFlag = SUPPORTED_LANGUAGES.find(l => l.code === language)?.flag || '🌐';
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-sm">
@@ -47,22 +49,25 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center gap-1 p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
               >
-                <span className="text-lg">{SUPPORTED_LANGUAGES.find(l => l.code === language)?.flag}</span>
+                <span className="text-lg">{currentFlag}</span>
               </button>
               
               {isLangOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 border border-gray-200 dark:border-gray-700 max-h-80 overflow-y-auto">
-                  {SUPPORTED_LANGUAGES.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLangSelect(lang.code)}
-                      className={`flex items-center gap-3 px-4 py-2 text-sm w-full text-left ${language === lang.code ? 'bg-brand-50 dark:bg-brand-900/30 text-brand-600' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'}`}
-                    >
-                      <span className="text-lg">{lang.flag}</span>
-                      <span>{lang.name}</span>
-                    </button>
-                  ))}
-                </div>
+                <>
+                  <div className="fixed inset-0 z-10" onClick={() => setIsLangOpen(false)}></div>
+                  <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-20 border border-gray-200 dark:border-gray-700 max-h-80 overflow-y-auto">
+                    {SUPPORTED_LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => handleLangSelect(lang.code)}
+                        className={`flex items-center gap-3 px-4 py-2 text-sm w-full text-left ${language === lang.code ? 'bg-brand-50 dark:bg-brand-900/30 text-brand-600' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'}`}
+                      >
+                        <span className="text-lg">{lang.flag}</span>
+                        <span>{lang.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                </>
               )}
             </div>
 
@@ -75,15 +80,38 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             </button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button & Controls */}
           <div className="md:hidden flex items-center gap-3">
-             {/* Mobile Lang Selector */}
-             <button 
-                onClick={() => setIsLangOpen(!isLangOpen)}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700"
-              >
-                <span className="text-lg">{SUPPORTED_LANGUAGES.find(l => l.code === language)?.flag}</span>
-              </button>
+             {/* Mobile Lang Selector with Independent Dropdown */}
+             <div className="relative z-50">
+               <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsLangOpen(!isLangOpen);
+                  }}
+                  className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center justify-center w-10 h-10"
+                >
+                  <span className="text-xl leading-none">{currentFlag}</span>
+                </button>
+                
+                {isLangOpen && (
+                  <>
+                    <div className="fixed inset-0 z-40 bg-black/5" onClick={() => setIsLangOpen(false)}></div>
+                    <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-2 border border-gray-200 dark:border-gray-700 max-h-[60vh] overflow-y-auto z-50">
+                      {SUPPORTED_LANGUAGES.map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => handleLangSelect(lang.code)}
+                          className={`flex items-center gap-3 px-4 py-3 text-sm w-full text-left ${language === lang.code ? 'bg-brand-50 dark:bg-brand-900/30 text-brand-600' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'}`}
+                        >
+                          <span className="text-xl">{lang.flag}</span>
+                          <span className="font-medium">{lang.name}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+             </div>
 
              <button 
               onClick={toggleDarkMode} 
@@ -134,23 +162,6 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               Blog
             </Link>
           </div>
-          
-          {/* Mobile Lang Menu Expanded */}
-          {isLangOpen && (
-             <div className="px-2 pt-2 pb-3 border-t border-gray-100 dark:border-gray-700 max-h-60 overflow-y-auto">
-                <p className="px-3 text-xs font-bold text-gray-400 uppercase mb-2">Select Language</p>
-                {SUPPORTED_LANGUAGES.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => handleLangSelect(lang.code)}
-                    className="flex items-center gap-3 px-3 py-2 w-full text-left text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md"
-                  >
-                    <span className="text-lg">{lang.flag}</span>
-                    <span>{lang.name}</span>
-                  </button>
-                ))}
-             </div>
-          )}
         </div>
       )}
     </header>

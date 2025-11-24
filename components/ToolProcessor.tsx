@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Upload, FileText, ArrowRight, CheckCircle, XCircle, Loader2, RefreshCw, Download, Share2, Star, ShieldCheck, Globe, DollarSign, Sparkles, ChevronRight, Home } from 'lucide-react';
+import { Upload, ArrowRight, CheckCircle, XCircle, Loader2, RefreshCw, Download, Share2, Star, DollarSign, ChevronRight, Home, Trash2, ArrowUp, ArrowDown, Plus, GripVertical } from 'lucide-react';
 import { ToolType, ProcessedFile, ToolInfo } from '../types';
 import { TOOLS } from '../constants';
 import * as PDFService from '../services/pdfService';
@@ -31,18 +31,31 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ProcessedFile | null>(null);
   const [toolInfo, setToolInfo] = useState<ToolInfo | undefined>(undefined);
+  const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
   
   // Config State
   const [splitRange, setSplitRange] = useState<string>("1");
   const [rotation, setRotation] = useState<90 | 180 | 270>(90);
-  const [password, setPassword] = useState<string>("");
   const [watermarkText, setWatermarkText] = useState<string>("CONFIDENTIAL");
+  const [compressionQuality, setCompressionQuality] = useState<number>(0.6); // Default to recommended
 
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const addMoreInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const t = TOOLS.find(t => t.id === toolType);
     setToolInfo(t);
+    
+    // Reset all state when switching tools to prevent UI glitches
+    setFiles([]);
+    setStep(1);
+    setResult(null);
+    setError(null);
+    setSplitRange("1");
+    setRotation(90);
+    setWatermarkText("CONFIDENTIAL");
+    setCompressionQuality(0.6);
+    setDraggedIndex(null);
   }, [toolType]);
 
   const handleDrag = useCallback((e: React.DragEvent) => {
@@ -70,18 +83,75 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
     }
   };
 
-  const handleFiles = (fileList: FileList) => {
+  const handleAddMoreInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      handleFiles(e.target.files, true);
+    }
+  };
+
+  const handleFiles = (fileList: FileList, append: boolean = false) => {
     setError(null);
     const validFiles = Array.from(fileList);
     
-    if (!multiple && validFiles.length > 1) {
+    if (!multiple && (validFiles.length > 1 || (append && files.length >= 1))) {
       setError("This tool only supports one file at a time.");
       return;
     }
     
-    setFiles(validFiles);
+    setFiles(prev => append ? [...prev, ...validFiles] : validFiles);
     setStep(2);
-    trackEvent('upload_files', 'Tool', toolType, validFiles.length);
+    trackEvent(append ? 'add_more_files' : 'upload_files', 'Tool', toolType, validFiles.length);
+  };
+
+  const formatFileSize = (bytes: number): string => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
+  const removeFile = (index: number) => {
+    const newFiles = [...files];
+    newFiles.splice(index, 1);
+    setFiles(newFiles);
+    if (newFiles.length === 0) {
+      setStep(1);
+    }
+  };
+
+  const moveFile = (index: number, direction: -1 | 1) => {
+    const newFiles = [...files];
+    const targetIndex = index + direction;
+    if (targetIndex >= 0 && targetIndex < newFiles.length) {
+      [newFiles[index], newFiles[targetIndex]] = [newFiles[targetIndex], newFiles[index]];
+      setFiles(newFiles);
+    }
+  };
+
+  // Drag and Drop Reordering Handlers
+  const handleDragStart = (e: React.DragEvent<HTMLDivElement>, index: number) => {
+    if (!multiple) return;
+    setDraggedIndex(index);
+    e.dataTransfer.effectAllowed = "move";
+  };
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>, index: number) => {
+    e.preventDefault(); // Necessary for onDrop to work
+    if (draggedIndex === null || draggedIndex === index) return;
+  };
+
+  const handleDropReorder = (e: React.DragEvent<HTMLDivElement>, index: number) => {
+    e.preventDefault();
+    if (draggedIndex === null || draggedIndex === index) return;
+
+    const newFiles = [...files];
+    const draggedItem = newFiles[draggedIndex];
+    newFiles.splice(draggedIndex, 1);
+    newFiles.splice(index, 0, draggedItem);
+    
+    setFiles(newFiles);
+    setDraggedIndex(null);
   };
 
   const triggerConfetti = () => {
@@ -101,6 +171,7 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
 
     try {
       let processed: ProcessedFile | null = null;
+      // Slight artificial delay for UX
       await new Promise(r => setTimeout(r, 1000));
 
       switch (toolType) {
@@ -122,19 +193,11 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
         case ToolType.WATERMARK:
            processed = await PDFService.watermarkPDF(files[0], watermarkText);
            break;
-        case ToolType.PROTECT:
-           if (!password) throw new Error("Password is required");
-           processed = await PDFService.protectPDF(files[0], password);
-           break;
-        case ToolType.UNLOCK:
-           processed = await PDFService.unlockPDF(files[0], password);
-           break;
         case ToolType.NUMBERING:
            processed = await PDFService.addPageNumbers(files[0]);
            break;
         case ToolType.COMPRESS:
-           processed = await PDFService.mergePDFs(files);
-           processed.name = `compressed-${files[0].name}`;
+           processed = await PDFService.compressPDF(files, compressionQuality);
            break;
         default:
           throw new Error("Tool not implemented yet");
@@ -192,7 +255,102 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
     setResult(null);
     setError(null);
     setSplitRange("1");
-    setPassword("");
+  };
+
+  const renderFileList = () => {
+    if (files.length === 0) return null;
+
+    const isMergeOrImg = [ToolType.MERGE, ToolType.IMG_TO_PDF].includes(toolType);
+
+    return (
+      <div className="w-full max-w-2xl mb-8">
+        <h4 className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
+          Selected Files ({files.length})
+        </h4>
+        <div className="space-y-3">
+          {files.map((file, idx) => (
+            <div 
+              key={`${file.name}-${idx}`} 
+              className={`bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-between gap-4 transition-all ${draggedIndex === idx ? 'opacity-50 border-dashed border-brand-400' : ''} ${isMergeOrImg ? 'cursor-move' : ''}`}
+              draggable={isMergeOrImg}
+              onDragStart={(e) => handleDragStart(e, idx)}
+              onDragOver={(e) => handleDragOver(e, idx)}
+              onDrop={(e) => handleDropReorder(e, idx)}
+              onDragEnd={() => setDraggedIndex(null)}
+            >
+              <div className="flex items-center gap-4 overflow-hidden">
+                {isMergeOrImg && (
+                  <div className="text-gray-300 cursor-grab active:cursor-grabbing">
+                    <GripVertical size={20} />
+                  </div>
+                )}
+                <div className="bg-brand-50 dark:bg-brand-900/20 p-2 rounded-lg text-brand-600 dark:text-brand-400">
+                  {file.type.includes('image') ? <Icons.Image size={20} /> : <Icons.FileText size={20} />}
+                </div>
+                <div className="min-w-0">
+                  <p className="font-medium text-gray-900 dark:text-white truncate" title={file.name}>{file.name}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">{formatFileSize(file.size)}</p>
+                </div>
+              </div>
+              
+              {isMergeOrImg ? (
+                <div className="flex items-center gap-1">
+                   <button 
+                    onClick={() => moveFile(idx, -1)} 
+                    disabled={idx === 0}
+                    className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-gray-500 disabled:opacity-30"
+                    title="Move Up"
+                   >
+                     <ArrowUp size={18} />
+                   </button>
+                   <button 
+                    onClick={() => moveFile(idx, 1)} 
+                    disabled={idx === files.length - 1}
+                    className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-gray-500 disabled:opacity-30"
+                    title="Move Down"
+                   >
+                     <ArrowDown size={18} />
+                   </button>
+                   <button 
+                    onClick={() => removeFile(idx)}
+                    className="p-1 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500 rounded ml-2"
+                    title="Remove File"
+                   >
+                     <Trash2 size={18} />
+                   </button>
+                </div>
+              ) : (
+                <button 
+                  onClick={() => removeFile(idx)}
+                  className="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500 rounded-lg transition-colors"
+                >
+                  <XCircle size={20} />
+                </button>
+              )}
+            </div>
+          ))}
+        </div>
+        
+        {isMergeOrImg && (
+          <div className="mt-4 flex justify-center">
+             <button 
+              onClick={() => addMoreInputRef.current?.click()}
+              className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/20 hover:bg-brand-100 dark:hover:bg-brand-900/40 rounded-lg transition-colors border border-brand-200 dark:border-brand-800"
+             >
+               <Plus size={16} /> Add More Files
+             </button>
+             <input 
+               ref={addMoreInputRef} 
+               type="file" 
+               className="hidden" 
+               accept={accept} 
+               multiple 
+               onChange={handleAddMoreInput} 
+             />
+          </div>
+        )}
+      </div>
+    );
   };
 
   const renderConfig = () => {
@@ -224,19 +382,6 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
              ))}
            </div>
         );
-      case ToolType.PROTECT:
-      case ToolType.UNLOCK:
-        return (
-          <div className="w-full max-w-md">
-            <label className="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">Password</label>
-            <input 
-              type="password" 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none"
-            />
-          </div>
-        );
       case ToolType.WATERMARK:
         return (
           <div className="w-full max-w-md">
@@ -249,8 +394,38 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
             />
           </div>
         );
+      case ToolType.COMPRESS:
+        return (
+          <div className="w-full max-w-md">
+             <label className="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-3">Compression Level</label>
+             <div className="grid grid-cols-1 gap-3">
+               {[
+                 { label: "Recommended (Good Quality)", val: 0.6, desc: "~40% Size Reduction" },
+                 { label: "Extreme (Low Quality)", val: 0.3, desc: "~70% Size Reduction" }
+               ].map((opt) => (
+                 <button
+                   key={opt.val}
+                   onClick={() => setCompressionQuality(opt.val)}
+                   className={`p-4 rounded-xl border text-left transition-all ${
+                     compressionQuality === opt.val 
+                     ? 'border-brand-500 bg-brand-50 dark:bg-brand-900/30 ring-1 ring-brand-500' 
+                     : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-brand-300'
+                   }`}
+                 >
+                   <div className="flex items-center justify-between">
+                     <span className={`font-bold ${compressionQuality === opt.val ? 'text-brand-700 dark:text-brand-300' : 'text-gray-700 dark:text-gray-200'}`}>
+                       {opt.label}
+                     </span>
+                     {compressionQuality === opt.val && <CheckCircle size={18} className="text-brand-600" />}
+                   </div>
+                   <p className="text-xs text-gray-500 mt-1">{opt.desc}</p>
+                 </button>
+               ))}
+             </div>
+          </div>
+        );
       default:
-         return <p className="text-gray-600 dark:text-gray-300 font-medium">{t('ready')} {files.length} file(s).</p>;
+         return <p className="text-gray-600 dark:text-gray-300 font-medium">Ready to process {files.length} file(s).</p>;
     }
   };
 
@@ -281,6 +456,15 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
       }
     ];
   };
+  
+  // Calculate size reduction percentage if available
+  const resultSize = result 
+    ? (result.data instanceof Blob ? result.data.size : result.data.byteLength) 
+    : 0;
+
+  const reduction = result && files.length > 0 && toolType === ToolType.COMPRESS
+  ? Math.round((1 - (resultSize / files.reduce((acc, f) => acc + f.size, 0))) * 100)
+  : 0;
 
   return (
     <div className="flex flex-col items-center justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
@@ -301,6 +485,13 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
         <ChevronRight size={14} className="mx-2" />
         <span className="font-semibold text-gray-900 dark:text-white truncate">{title}</span>
       </nav>
+
+      {error && (
+        <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-300 rounded-xl flex items-center gap-3 max-w-2xl w-full animate-bounce">
+          <XCircle size={24} />
+          <span className="font-medium">{error}</span>
+        </div>
+      )}
 
       <div className="text-center mb-10 animate-fade-in-up">
         <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl mb-4">{title}</h1>
@@ -351,6 +542,9 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
             </div>
 
             <div className="flex-1 flex flex-col items-center gap-8">
+              {/* File List Rendered Here */}
+              {renderFileList()}
+
               <div className="w-full flex flex-col items-center p-8 bg-gray-50 dark:bg-gray-900/30 rounded-2xl border border-gray-100 dark:border-gray-700">
                 {renderConfig()}
               </div>
@@ -379,7 +573,21 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
               <CheckCircle className="h-16 w-16 text-green-600 dark:text-green-300" />
             </div>
             <h3 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-2">{t('ready')}</h3>
-            
+
+            {toolType === ToolType.COMPRESS && (
+               <>
+                {reduction > 0 ? (
+                    <div className="mb-4 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-4 py-2 rounded-full font-bold text-sm">
+                        Reduced by {reduction}%
+                    </div>
+                ) : (
+                    <div className="mb-4 bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 px-4 py-2 rounded-full font-bold text-sm">
+                        File already optimized
+                    </div>
+                )}
+               </>
+            )}
+
             <div className="mb-8 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 px-6 py-3 rounded-full flex items-center gap-2 animate-pulse-slow">
                <DollarSign size={18} className="text-yellow-600 dark:text-yellow-400" />
                <span className="text-yellow-800 dark:text-yellow-200 font-bold text-sm">

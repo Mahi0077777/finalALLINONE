@@ -148,77 +148,68 @@ const Home: React.FC = () => {
             <table className="w-full text-sm sm:text-base">
               <thead>
                 <tr className="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                  <th className="p-6 text-left text-gray-500 dark:text-gray-400 font-medium w-1/3">Feature</th>
-                  <th className="p-6 text-center text-brand-600 dark:text-brand-400 font-bold text-lg bg-brand-50 dark:bg-brand-900/20 w-1/3">FreePDFPro</th>
-                  <th className="p-6 text-center text-gray-900 dark:text-white font-bold w-1/3">Adobe Acrobat Pro</th>
+                  <th className="p-3 sm:p-6 text-left text-gray-500 dark:text-gray-400 font-medium w-1/2">Feature</th>
+                  <th className="p-3 sm:p-6 text-center text-brand-600 dark:text-brand-400 font-bold text-lg bg-brand-50 dark:bg-brand-900/20 w-1/2">FreePDFPro</th>
                 </tr>
               </thead>
               <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
                 {/* Price */}
                 <tr>
-                  <td className="p-6 font-medium text-gray-900 dark:text-white flex items-center gap-2">
-                    <span className="bg-green-100 dark:bg-green-900 p-1 rounded text-green-600"><DollarSign size={16}/></span> Price
+                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center gap-2">
+                        <span className="bg-green-100 dark:bg-green-900 p-1 rounded text-green-600 shrink-0"><DollarSign size={16}/></span> 
+                        <span>Price</span>
+                    </div>
                   </td>
-                  <td className="p-6 text-center font-bold text-green-600 bg-brand-50/30 dark:bg-brand-900/10">$0 (Free Forever)</td>
-                  <td className="p-6 text-center text-red-500 font-medium">$19.99 / month</td>
+                  <td className="p-3 sm:p-6 text-center font-bold text-green-600 bg-brand-50/30 dark:bg-brand-900/10">$0 (Free Forever)</td>
                 </tr>
                 {/* Privacy */}
                 <tr>
-                  <td className="p-6 font-medium text-gray-900 dark:text-white flex items-center gap-2">
-                    <span className="bg-blue-100 dark:bg-blue-900 p-1 rounded text-blue-600"><Shield size={16}/></span> Privacy (No Uploads)
-                  </td>
-                  <td className="p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
-                    <div className="flex items-center justify-center gap-2 text-green-600 font-bold">
-                        <Check size={20} strokeWidth={3} /> <span>100% Private</span>
+                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center gap-2">
+                        <span className="bg-blue-100 dark:bg-blue-900 p-1 rounded text-blue-600 shrink-0"><Shield size={16}/></span> 
+                        <span>Privacy (No Uploads)</span>
                     </div>
                   </td>
-                  <td className="p-6 text-center text-gray-400">
-                    <div className="flex items-center justify-center gap-2">
-                        <X size={20} /> <span>Cloud Uploads</span>
+                  <td className="p-3 sm:p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-green-600 font-bold">
+                        <Check size={20} strokeWidth={3} className="shrink-0" /> 
+                        <span className="text-center">100% Private</span>
                     </div>
                   </td>
                 </tr>
                  {/* Registration */}
                  <tr>
-                  <td className="p-6 font-medium text-gray-900 dark:text-white flex items-center gap-2">
-                    <span className="bg-purple-100 dark:bg-purple-900 p-1 rounded text-purple-600"><Zap size={16}/></span> Registration
-                  </td>
-                  <td className="p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
-                    <div className="flex items-center justify-center gap-2 text-green-600 font-bold">
-                        <Check size={20} strokeWidth={3} /> <span>No Sign-up</span>
+                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">
+                    <div className="flex items-center gap-2">
+                        <span className="bg-purple-100 dark:bg-purple-900 p-1 rounded text-purple-600 shrink-0"><Zap size={16}/></span> 
+                        <span>Registration</span>
                     </div>
                   </td>
-                  <td className="p-6 text-center text-gray-400">
-                    <div className="flex items-center justify-center gap-2">
-                        <X size={20} /> <span>Required</span>
+                  <td className="p-3 sm:p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-green-600 font-bold">
+                        <Check size={20} strokeWidth={3} className="shrink-0" /> 
+                        <span className="text-center">No Sign-up</span>
                     </div>
                   </td>
                 </tr>
                  {/* Offline */}
                  <tr>
-                  <td className="p-6 font-medium text-gray-900 dark:text-white">Works Offline</td>
-                  <td className="p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
-                    <div className="flex items-center justify-center gap-2 text-green-600 font-bold">
-                        <Check size={20} strokeWidth={3} /> <span>Yes (PWA)</span>
-                    </div>
-                  </td>
-                  <td className="p-6 text-center text-gray-400">
-                    <div className="flex items-center justify-center gap-2">
-                        <X size={20} /> <span>No</span>
+                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">Works Offline</td>
+                  <td className="p-3 sm:p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-green-600 font-bold">
+                        <Check size={20} strokeWidth={3} className="shrink-0" /> 
+                        <span className="text-center">Yes (PWA)</span>
                     </div>
                   </td>
                 </tr>
                  {/* Installation */}
                  <tr>
-                  <td className="p-6 font-medium text-gray-900 dark:text-white">Installation</td>
-                  <td className="p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
-                    <div className="flex items-center justify-center gap-2 text-green-600 font-bold">
-                        <Check size={20} strokeWidth={3} /> <span>No Install</span>
-                    </div>
-                  </td>
-                  <td className="p-6 text-center text-gray-400">
-                    <div className="flex items-center justify-center gap-2">
-                        <X size={20} /> <span>Heavy Software</span>
+                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">Installation</td>
+                  <td className="p-3 sm:p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-green-600 font-bold">
+                        <Check size={20} strokeWidth={3} className="shrink-0" /> 
+                        <span className="text-center">No Install</span>
                     </div>
                   </td>
                 </tr>

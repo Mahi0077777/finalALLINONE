@@ -93,24 +93,6 @@ const PILLAR_POSTS: BlogPost[] = [
       <h3>Perfect for Scanned Documents</h3>
       <p>If you've used your phone to scan receipts or contracts, you likely have a folder full of images. Use our <strong>JPG to PDF</strong> tool to stitch them together into one official-looking document.</p>
     `
-  },
-  {
-    id: '5',
-    title: "Securely Protect Your PDF with a Password",
-    slug: "securely-protect-pdf-with-password",
-    excerpt: "Keep your sensitive data safe. Learn how to add military-grade encryption to your PDF files for free.",
-    date: "2024-03-08",
-    author: "Security Team",
-    category: "Security",
-    relatedToolId: ToolType.PROTECT,
-    tags: ["security", "encryption", "password"],
-    content: `
-      <h2>Why You Need PDF Encryption</h2>
-      <p>Bank statements, medical records, and legal contracts should never be sent unencrypted. If an email is intercepted, your private data is exposed.</p>
-      
-      <h3>Client-Side Encryption is Key</h3>
-      <p>Most "secure" online tools require you to upload the file to their server to encrypt it. This defeats the purpose! FreePDFPro encrypts the file on your device, so we never see your password or your content.</p>
-    `
   }
 ];
 
@@ -118,7 +100,7 @@ const PILLAR_POSTS: BlogPost[] = [
 // Generates 50+ variations targeting long-tail keywords
 const GENERATED_POSTS: BlogPost[] = [];
 
-// Expanded audience list to ensure we hit 50+ posts (10 audiences x 5 actions = 50 generated + 5 pillar = 55 total)
+// Expanded audience list to ensure we hit 50+ posts (10 audiences x 4 actions = 40 generated + 4 pillar = 44 total)
 const TARGET_AUDIENCES = [
   "Students", "Lawyers", "Teachers", "Real Estate Agents", "Small Business Owners",
   "Freelancers", "Accountants", "Architects", "Recruiters", "Consultants"
@@ -128,7 +110,6 @@ const ACTIONS = [
   { tool: ToolType.MERGE, verb: "Merge", topic: "Contracts", keyword: "combine" },
   { tool: ToolType.SPLIT, verb: "Split", topic: "Research Papers", keyword: "extract pages" },
   { tool: ToolType.COMPRESS, verb: "Compress", topic: "Portfolios", keyword: "reduce file size" },
-  { tool: ToolType.PROTECT, verb: "Encrypt", topic: "Financial Records", keyword: "password protect" },
   { tool: ToolType.WATERMARK, verb: "Watermark", topic: "Drafts", keyword: "copyright" },
 ];
 

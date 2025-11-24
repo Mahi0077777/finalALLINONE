@@ -78,9 +78,9 @@ export const TOOLS: ToolInfo[] = [
       { question: "Can I reorder the files before merging?", answer: "Yes, simply upload your files. (Drag-and-drop reordering is coming in the next update, currently files merge in selection order)." },
       { question: "Does it work offline?", answer: "Yes! If you have installed our PWA or cached the site, you can merge files even without an internet connection." },
       { question: "Is this service really free?", answer: "Yes, FreePDFPro is supported by unobtrusive advertising and is 100% free for all users." },
-      { question: "Can I merge password-protected PDFs?", answer: "You will need to unlock them first using our Unlock PDF tool before merging them." }
+      { question: "Can I merge password-protected PDFs?", answer: "You will need to unlock them first before merging them." }
     ],
-    relatedTools: [ToolType.COMPRESS, ToolType.PROTECT]
+    relatedTools: [ToolType.COMPRESS]
   },
   {
     id: ToolType.SPLIT,
@@ -127,7 +127,7 @@ export const TOOLS: ToolInfo[] = [
       { question: "Can I extract pages from multiple files at once?", answer: "Currently, the tool processes one file at a time to ensure maximum accuracy." },
       { question: "What happens to bookmarks/outlines?", answer: "We attempt to preserve content streams, but some advanced bookmarks might be reset depending on the new page structure." },
       { question: "Is there a page limit?", answer: "Technically no, but very large files (500MB+) might be slower depending on your computer's RAM." },
-      { question: "Can I split a password protected PDF?", answer: "You must unlock the file first using our Unlock tool." },
+      { question: "Can I split a password protected PDF?", answer: "You must unlock the file first." },
       { question: "Is it free?", answer: "Yes, completely free." },
       { question: "How do I select the last page?", answer: "Check your PDF viewer for the total page count and use that number." }
     ],
@@ -177,7 +177,7 @@ export const TOOLS: ToolInfo[] = [
       { question: "Can I compress an encrypted PDF?", answer: "No, please unlock it first." },
       { question: "Is this better than Zip?", answer: "Yes, because you don't need to unzip it to view it. It remains a standard PDF." }
     ],
-    relatedTools: [ToolType.MERGE, ToolType.PROTECT]
+    relatedTools: [ToolType.MERGE]
   },
   {
     id: ToolType.PDF_TO_IMG,
@@ -185,7 +185,7 @@ export const TOOLS: ToolInfo[] = [
     shortTitle: 'PDF to JPG',
     metaTitle: 'Convert PDF to JPG Online High Quality',
     metaDescription: 'Turn PDF pages into high-quality JPG images. Extract images from PDF securely in your browser.',
-    description: 'Convert each PDF page into a high-quality JPG image. Secure & High Resolution.',
+    description: 'Convert every PDF page into high-quality JPG images. Secure & High Resolution.',
     longDescription: `
       <h2 class="text-3xl font-bold mt-8 mb-4">Convert PDF Pages to Images Instantly</h2>
       <p>Sometimes you need a PDF page as an image for a PowerPoint presentation, a social media post, or a website thumbnail. Taking a screenshot is low quality. <strong>FreePDFPro's PDF to JPG converter</strong> renders the page at high resolution and saves it as a clean image file.</p>
@@ -194,23 +194,23 @@ export const TOOLS: ToolInfo[] = [
       <p>We use the Mozilla PDF.js engine—the same technology that powers the Firefox PDF viewer—to render your document with pixel-perfect accuracy before converting it to an image format.</p>
 
       <div class="my-8 border-l-4 border-brand-500 pl-6 py-2 bg-gray-50 dark:bg-gray-800">
-        <strong>Note:</strong> Currently, this tool converts the first page of your PDF to an image. Multi-page conversion is coming in the next update!
+        <strong>Feature Update:</strong> We now convert <strong>all pages</strong> of your PDF and package them into a convenient ZIP file for you to download!
       </div>
     `,
     howToSteps: [
       "Upload your PDF document.",
-      "The tool instantly renders the first page into memory.",
-      "Click 'Process PDF' to convert the rendering into a JPG format.",
-      "Download the high-quality image file."
+      "The tool renders all pages of the PDF into memory.",
+      "Click 'Process PDF' to convert the pages into JPGs and ZIP them.",
+      "Download the ZIP file containing all your high-quality images."
     ],
     icon: 'Image',
     color: 'text-yellow-500',
     path: '/pdf-to-jpg',
     keywords: ['pdf to jpg', 'pdf to image', 'convert pdf to jpg', 'save pdf as picture', 'pdf to png', 'pdf page to image', 'pdf converter'],
     faqs: [
-      { question: "What format is the image?", answer: "We output standard JPG files, compatible with all devices." },
+      { question: "What format is the image?", answer: "We output standard JPG files inside a ZIP archive." },
       { question: "What is the resolution?", answer: "We render at a high scale factor (2.0x) to ensure crisp text and sharp images." },
-      { question: "Can I convert all pages?", answer: "Currently we generate a preview image of the first page. Full document conversion is in development." },
+      { question: "Can I convert all pages?", answer: "Yes! We extract every single page of your document." },
       { question: "Is it private?", answer: "Yes, the rendering happens in your browser's canvas element. No server sees the file." },
       { question: "Can I convert JPG back to PDF?", answer: "Yes! Use our JPG to PDF tool for that." },
       { question: "Does it work on mobile?", answer: "Yes, works perfectly on iOS and Android browsers." },
@@ -302,82 +302,6 @@ export const TOOLS: ToolInfo[] = [
     relatedTools: [ToolType.MERGE, ToolType.NUMBERING]
   },
   {
-    id: ToolType.PROTECT,
-    title: 'Protect PDF',
-    shortTitle: 'Protect PDF',
-    metaTitle: 'Encrypt PDF - Password Protect PDF Online Free',
-    metaDescription: 'Secure your PDF with strong encryption. Add a password to prevent unauthorized access.',
-    description: 'Encrypt your PDF with a password. Ensure sensitive data is 100% secure.',
-    longDescription: `
-      <h2 class="text-3xl font-bold mt-8 mb-4">Secure Your Sensitive Documents</h2>
-      <p>In an age of data leaks, sending unprotected contracts, financial statements, or medical records is risky. <strong>FreePDFPro Protect</strong> allows you to wrap your PDF in a layer of military-grade encryption.</p>
-      
-      <h3 class="text-2xl font-bold mt-8 mb-4">Client-Side Encryption = Ultimate Trust</h3>
-      <p>This is the most important feature of our tool: <strong>We never see your password.</strong> Because the encryption happens in your browser, your secret password never travels over the internet. It is mathematically impossible for us to leak your password because we never receive it.</p>
-    `,
-    howToSteps: [
-      "Upload the sensitive PDF file.",
-      "Enter a strong password in the text field.",
-      "Click 'Process PDF' to generate the encrypted file.",
-      "Download the protected file. It will now require the password to open."
-    ],
-    icon: 'Lock',
-    color: 'text-blue-500',
-    path: '/protect-pdf',
-    keywords: ['protect pdf', 'encrypt pdf', 'password protect pdf', 'secure pdf', 'lock pdf', 'add password to pdf', 'pdf security'],
-    faqs: [
-      { question: "How strong is the encryption?", answer: "We use standard PDF encryption compatibility. It effectively stops unauthorized users from opening the file." },
-      { question: "Can you recover my password?", answer: "No! We do not know your password. If you forget it, the file is lost forever." },
-      { question: "Do you store the file?", answer: "No. Everything is local." },
-      { question: "Is it free?", answer: "Yes." },
-      { question: "Can I restrict printing?", answer: "Our tool applies a general lock that restricts opening without a password." },
-      { question: "Does it work on Mac?", answer: "Yes." },
-      { question: "Can hackers open it?", answer: "Without the password, it is extremely difficult and computationally expensive to brute-force modern PDF encryption." },
-      { question: "Can I change the password later?", answer: "Yes, simply unlock it and re-protect it with a new password." },
-      { question: "Does it work on mobile?", answer: "Yes." },
-      { question: "Is my password sent to your server?", answer: "Never." }
-    ],
-    relatedTools: [ToolType.UNLOCK, ToolType.WATERMARK]
-  },
-  {
-    id: ToolType.UNLOCK,
-    title: 'Unlock PDF',
-    shortTitle: 'Unlock PDF',
-    metaTitle: 'Unlock PDF - Remove Password from PDF Online',
-    metaDescription: 'Remove passwords from PDFs you own. Decrypt PDF files instantly in your browser.',
-    description: 'Remove password security from PDFs if you know the password. Instant unlock.',
-    longDescription: `
-      <h2 class="text-3xl font-bold mt-8 mb-4">Remove Annoying Passwords</h2>
-      <p>Do you have a bank statement or payslip that requires a password every time you open it? If you know the password, you can use <strong>FreePDFPro Unlock</strong> to permanently remove the security layer, creating a standard PDF that opens instantly.</p>
-      
-      <h3 class="text-2xl font-bold mt-8 mb-4">Legal Note</h3>
-      <p>This tool is designed to help owners of documents remove their own passwords for convenience. It is not a hacking tool intended to crack unknown passwords.</p>
-    `,
-    howToSteps: [
-      "Select the password-protected PDF.",
-      "Enter the current valid password.",
-      "Click 'Process PDF' to decrypt the file structure.",
-      "Download the unlocked version for easier sharing."
-    ],
-    icon: 'Unlock',
-    color: 'text-indigo-500',
-    path: '/unlock-pdf',
-    keywords: ['unlock pdf', 'remove pdf password', 'decrypt pdf', 'pdf password remover', 'open secured pdf'],
-    faqs: [
-      { question: "Does this crack passwords?", answer: "No. You must provide the valid password to unlock the file." },
-      { question: "Is it safe?", answer: "Yes, your password is used locally to decrypt the file and is never sent to us." },
-      { question: "Can I remove owner passwords?", answer: "If the file opens without a password but has printing restrictions, this tool can often remove those restrictions." },
-      { question: "Is it free?", answer: "Yes." },
-      { question: "Does it work on all PDFs?", answer: "It works on standard standard encrypted PDFs." },
-      { question: "Do I need to upload the file?", answer: "No, it stays in your browser." },
-      { question: "Why is it better than doing it in Chrome?", answer: "Chrome's 'Save as PDF' can unlock files, but sometimes messes up the layout. Our tool preserves the original file structure." },
-      { question: "Can I unlock multiple files?", answer: "One at a time currently." },
-      { question: "Is it legal?", answer: "Yes, as long as you have the right to access the document." },
-      { question: "Does it work on mobile?", answer: "Yes." }
-    ],
-    relatedTools: [ToolType.PROTECT, ToolType.MERGE]
-  },
-  {
     id: ToolType.NUMBERING,
     title: 'Page Numbers',
     shortTitle: 'Page Numbers',
@@ -451,7 +375,7 @@ export const TOOLS: ToolInfo[] = [
       { question: "Can I customize the font?", answer: "It uses a standard bold font for clarity." },
       { question: "Does it work on mobile?", answer: "Yes." }
     ],
-    relatedTools: [ToolType.PROTECT, ToolType.NUMBERING]
+    relatedTools: [ToolType.NUMBERING]
   }
 ];
 

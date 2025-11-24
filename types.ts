@@ -5,8 +5,6 @@ export enum ToolType {
   PDF_TO_IMG = 'pdf-to-jpg',
   IMG_TO_PDF = 'jpg-to-pdf',
   ROTATE = 'rotate-pdf',
-  PROTECT = 'protect-pdf',
-  UNLOCK = 'unlock-pdf',
   NUMBERING = 'page-numbers',
   WATERMARK = 'watermark-pdf'
 }
@@ -48,8 +46,6 @@ export interface ProcessingOptions {
   rotationDegrees?: 90 | 180 | 270;
   // Image options
   imageQuality?: number;
-  // Protect / Unlock
-  password?: string;
   // Watermark
   watermarkText?: string;
 }

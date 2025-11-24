@@ -1,9 +1,12 @@
 import { PDFDocument, degrees, rgb, StandardFonts } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
+// @ts-ignore
+import JSZip from 'jszip';
 import { ProcessedFile } from '../types';
 
 // Initialize PDF.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+// Using unpkg with .mjs extension for v5+ compatibility
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
 /**
  * Merge multiple PDFs into one
@@ -13,7 +16,7 @@ export const mergePDFs = async (files: File[]): Promise<ProcessedFile> => {
 
   for (const file of files) {
     const arrayBuffer = await file.arrayBuffer();
-    const pdf = await PDFDocument.load(arrayBuffer);
+    const pdf = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
     const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
     copiedPages.forEach((page) => mergedPdf.addPage(page));
   }
@@ -27,11 +30,100 @@ export const mergePDFs = async (files: File[]): Promise<ProcessedFile> => {
 };
 
 /**
+ * Compress PDF (Client-Side)
+ * Implements "Rasterize & Downsample" strategy:
+ * 1. Renders pages to Canvas using PDF.js at lower resolution
+ * 2. Converts Canvas to JPEG
+ * 3. Rebuilds PDF from images
+ */
+export const compressPDF = async (files: File[], quality: number = 0.6): Promise<ProcessedFile> => {
+  if (files.length === 0) throw new Error("No file provided");
+  const file = files[0];
+  const arrayBuffer = await file.arrayBuffer();
+  const originalSize = arrayBuffer.byteLength;
+  
+  // Load using PDF.js to render images
+  const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
+  const originalPdf = await loadingTask.promise;
+  
+  const newPdf = await PDFDocument.create();
+  const totalPages = originalPdf.numPages;
+
+  // Determine Scale based on quality preference
+  // 1.0 = 72 DPI (Standard Screen) - Good for High Quality
+  // 0.8 = ~57 DPI (Good for email)
+  // 0.6 = ~43 DPI (Extreme compression)
+  let viewportScale = 0.8; 
+  if (quality <= 0.4) viewportScale = 0.6;
+  if (quality >= 0.8) viewportScale = 1.0;
+  
+  for (let i = 1; i <= totalPages; i++) {
+    try {
+      const page = await originalPdf.getPage(i);
+      const viewport = page.getViewport({ scale: viewportScale }); 
+      
+      const canvas = document.createElement('canvas');
+      // Use integer dimensions to avoid browser bugs
+      canvas.width = Math.floor(viewport.width);
+      canvas.height = Math.floor(viewport.height);
+
+      // alpha: false saves memory and improves performance for standard PDFs
+      const context = canvas.getContext('2d', { alpha: false, willReadFrequently: true });
+      
+      if (!context) {
+        continue;
+      }
+      
+      // Render page to canvas
+      // Cast to any to avoid type mismatch where RenderParameters expects 'canvas' property
+      await page.render({ canvasContext: context, viewport } as any).promise;
+      
+      // Convert to JPEG with specified quality
+      const blob = await new Promise<Blob | null>(r => canvas.toBlob(r, 'image/jpeg', quality));
+      
+      if (blob) {
+         const buffer = await blob.arrayBuffer();
+         const embeddedImage = await newPdf.embedJpg(buffer);
+         const newPage = newPdf.addPage([viewport.width, viewport.height]);
+         newPage.drawImage(embeddedImage, {
+           x: 0, y: 0, width: viewport.width, height: viewport.height
+         });
+      }
+
+      // Explicitly clear canvas to help GC
+      canvas.width = 0;
+      canvas.height = 0;
+    } catch (e) {
+      console.warn(`Error compressing page ${i}, skipping optimization for this page.`);
+    }
+  }
+  
+  // Save with optimization
+  const pdfBytes = await newPdf.save();
+  
+  // FAILSAFE: If the "compressed" file is larger than original (common with text-only PDFs),
+  // return the original file to avoid "increasing" the size.
+  if (pdfBytes.byteLength >= originalSize) {
+     return {
+        name: `compressed-${file.name}`,
+        data: new Uint8Array(arrayBuffer),
+        mimeType: 'application/pdf',
+     };
+  }
+  
+  return {
+    name: `compressed-${file.name}`,
+    data: pdfBytes,
+    mimeType: 'application/pdf',
+  };
+};
+
+/**
  * Split PDF (Extract specific pages or range)
  */
 export const splitPDF = async (file: File, rangeStr: string): Promise<ProcessedFile> => {
   const arrayBuffer = await file.arrayBuffer();
-  const pdfDoc = await PDFDocument.load(arrayBuffer);
+  const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
   const newPdf = await PDFDocument.create();
   const totalPages = pdfDoc.getPageCount();
 
@@ -59,7 +151,6 @@ export const splitPDF = async (file: File, rangeStr: string): Promise<ProcessedF
   const uniqueIndices = [...new Set(pageIndices)].sort((a, b) => a - b);
 
   if (uniqueIndices.length === 0) {
-    // Default to first page if input invalid
     uniqueIndices.push(0);
   }
 
@@ -114,7 +205,7 @@ export const imagesToPDF = async (files: File[]): Promise<ProcessedFile> => {
  */
 export const rotatePDF = async (file: File, rotation: 90 | 180 | 270): Promise<ProcessedFile> => {
   const arrayBuffer = await file.arrayBuffer();
-  const pdfDoc = await PDFDocument.load(arrayBuffer);
+  const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
   const pages = pdfDoc.getPages();
 
   pages.forEach((page) => {
@@ -131,41 +222,52 @@ export const rotatePDF = async (file: File, rotation: 90 | 180 | 270): Promise<P
 };
 
 /**
- * Convert PDF to Images (First page preview)
+ * Convert PDF to Images (All pages to ZIP)
  */
 export const pdfToImage = async (file: File): Promise<ProcessedFile> => {
   const arrayBuffer = await file.arrayBuffer();
   const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
   const pdf = await loadingTask.promise;
-  const page = await pdf.getPage(1);
+  const totalPages = pdf.numPages;
+  
+  // Initialize JSZip
+  const zip = new JSZip();
+  const folder = zip.folder("images");
+  
+  const scale = 2.0; // High quality
 
-  const scale = 2.0; 
-  const viewport = page.getViewport({ scale });
+  for (let i = 1; i <= totalPages; i++) {
+    const page = await pdf.getPage(i);
+    const viewport = page.getViewport({ scale });
 
-  const canvas = document.createElement('canvas');
-  const context = canvas.getContext('2d');
-  if (!context) throw new Error("Canvas context unavailable");
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d', { alpha: false });
+    if (!context) continue;
 
-  canvas.height = viewport.height;
-  canvas.width = viewport.width;
+    canvas.height = Math.floor(viewport.height);
+    canvas.width = Math.floor(viewport.width);
 
-  // Using 'as any' to bypass strict type checks that may not match this version of pdfjs-dist
-  // This is safe as standard usage.
-  await page.render({ canvasContext: context, viewport } as any).promise;
+    await page.render({ canvasContext: context, viewport } as any).promise;
 
-  return new Promise((resolve, reject) => {
-    canvas.toBlob((blob) => {
-      if (blob) {
-        resolve({
-          name: `${file.name.replace('.pdf', '')}-page1.jpg`,
-          data: blob,
-          mimeType: 'image/jpeg',
-        });
-      } else {
-        reject(new Error("Image generation failed"));
-      }
-    }, 'image/jpeg', 0.95);
-  });
+    const blob = await new Promise<Blob | null>((resolve) => {
+      canvas.toBlob((b) => resolve(b), 'image/jpeg', 0.95);
+    });
+
+    if (blob) {
+      zip.file(`page-${i}.jpg`, blob);
+    }
+    
+    canvas.width = 0;
+    canvas.height = 0;
+  }
+
+  const content = await zip.generateAsync({ type: 'blob' });
+
+  return {
+    name: `${file.name.replace('.pdf', '')}-images.zip`,
+    data: content,
+    mimeType: 'application/zip',
+  };
 };
 
 /**
@@ -173,7 +275,7 @@ export const pdfToImage = async (file: File): Promise<ProcessedFile> => {
  */
 export const watermarkPDF = async (file: File, text: string): Promise<ProcessedFile> => {
   const arrayBuffer = await file.arrayBuffer();
-  const pdfDoc = await PDFDocument.load(arrayBuffer);
+  const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
   const pages = pdfDoc.getPages();
   const font = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
 
@@ -202,79 +304,11 @@ export const watermarkPDF = async (file: File, text: string): Promise<ProcessedF
 };
 
 /**
- * Protect PDF
- */
-export const protectPDF = async (file: File, password: string): Promise<ProcessedFile> => {
-  const arrayBuffer = await file.arrayBuffer();
-  const pdfDoc = await PDFDocument.load(arrayBuffer);
-
-  // Apply encryption
-  (pdfDoc as any).encrypt({
-    userPassword: password,
-    ownerPassword: password,
-    permissions: {
-      printing: 'highResolution',
-      modifying: false,
-      copying: false,
-      annotating: false,
-      fillingForms: false,
-      contentAccessibility: false,
-      documentAssembly: false,
-    },
-  });
-
-  const pdfBytes = await pdfDoc.save();
-
-  return {
-    name: `protected-${file.name}`,
-    data: pdfBytes,
-    mimeType: 'application/pdf',
-  };
-};
-
-/**
- * Unlock PDF (Remove Password)
- */
-export const unlockPDF = async (file: File, password: string): Promise<ProcessedFile> => {
-  try {
-    const arrayBuffer = await file.arrayBuffer();
-    
-    // NOTE: pdf-lib's Standard build often cannot decrypt/read encrypted files easily
-    // without the encryption module or specific config.
-    // However, we can try to load it. If it's encrypted, pdf-lib usually throws.
-    // In a full environment, we would use `pdf-lib` with `@pdf-lib/fontkit` or specific build
-    // or use `pdfjs` to read and `pdf-lib` to write. 
-    // For this strictly client-side demo without complex webpack:
-    // We attempt to load. If it requires password, it might throw if we don't pass it correctly.
-    // Unfortunately pdf-lib load() API doesn't accept password in all versions.
-    
-    // Workaround attempt: simple load. If it fails, we inform the user.
-    const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true }); 
-    
-    // If we ignored encryption, we can save it, but the content might be unreadable if it was truly encrypted.
-    // BUT, if the user PROVIDED the password, we effectively want to re-save it without encryption.
-    // Since pdf-lib client-side can't easily "decrypt" using the password param in `load` (it's not standard API),
-    // we will just save it. If it was encrypted, this might result in an error or limited file.
-    
-    // FOR DEMO STABILITY: We will save it.
-    const pdfBytes = await pdfDoc.save();
-    return {
-      name: `unlocked-${file.name}`,
-      data: pdfBytes,
-      mimeType: 'application/pdf',
-    };
-  } catch (e) {
-    console.error(e);
-    throw new Error("Could not unlock PDF. This file's encryption might be too strong for browser-only unlocking.");
-  }
-};
-
-/**
  * Add Page Numbers
  */
 export const addPageNumbers = async (file: File): Promise<ProcessedFile> => {
   const arrayBuffer = await file.arrayBuffer();
-  const pdfDoc = await PDFDocument.load(arrayBuffer);
+  const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const pages = pdfDoc.getPages();
   const totalPages = pages.length;

@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
               <li><Link to="/merge-pdf" className="text-gray-600 dark:text-gray-400 hover:text-brand-600 text-sm">Merge PDF</Link></li>
               <li><Link to="/split-pdf" className="text-gray-600 dark:text-gray-400 hover:text-brand-600 text-sm">Split PDF</Link></li>
               <li><Link to="/compress-pdf" className="text-gray-600 dark:text-gray-400 hover:text-brand-600 text-sm">Compress PDF</Link></li>
-              <li><Link to="/protect-pdf" className="text-gray-600 dark:text-gray-400 hover:text-brand-600 text-sm">Protect PDF</Link></li>
             </ul>
           </div>
 
