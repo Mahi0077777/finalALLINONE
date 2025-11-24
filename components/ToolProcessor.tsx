@@ -400,8 +400,7 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
              <label className="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-3">Compression Level</label>
              <div className="grid grid-cols-1 gap-3">
                {[
-                 { label: "Recommended (Good Quality)", val: 0.6, desc: "~40% Size Reduction" },
-                 { label: "Extreme (Low Quality)", val: 0.3, desc: "~70% Size Reduction" }
+                 { label: "Recommended (Good Quality)", val: 0.6, desc: "~40% Size Reduction" }
                ].map((opt) => (
                  <button
                    key={opt.val}
