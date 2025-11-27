@@ -17,14 +17,14 @@ const SEO: React.FC<SEOProps> = ({
   title, 
   description, 
   canonicalUrl, 
-  ogImage = "https://freepdfpro.com/og-image.jpg", 
+  ogImage = "https://freepropdf.com/og-image.jpg", 
   ogType = "website",
   keywords,
   schema 
 }) => {
   const location = useLocation();
   const { language } = useLanguage();
-  const domain = "https://freepdfpro.com";
+  const domain = "https://freepropdf.com";
   const currentPath = location.pathname;
   const currentUrl = canonicalUrl || `${domain}/#${currentPath}`;
 
@@ -105,7 +105,7 @@ const SEO: React.FC<SEOProps> = ({
       script.text = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "FreePDFPro",
+        "name": "FreeProPDF",
         "url": domain,
         "inLanguage": language
       });

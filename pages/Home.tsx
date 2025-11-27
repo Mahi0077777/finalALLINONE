@@ -29,7 +29,7 @@ const Home: React.FC = () => {
     {
       name: "Sarah Jenkins",
       role: "Freelance Designer",
-      text: "I used to pay $20/month for Adobe Acrobat just to combine files. FreePDFPro does it instantly for free. The offline mode is a lifesaver.",
+      text: "I used to pay $20/month for Adobe Acrobat just to combine files. FreeProPDF does it instantly for free. The offline mode is a lifesaver.",
       stars: 5
     },
     {
@@ -49,13 +49,13 @@ const Home: React.FC = () => {
   return (
     <div className="space-y-24 pb-20">
       <SEO 
-        title={`${t('heroTitle')} - FreePDFPro`}
+        title={`${t('heroTitle')} - FreeProPDF`}
         description={t('heroSubtitle')}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "FreePDFPro",
-          "url": "https://freepdfpro.com",
+          "name": "FreeProPDF",
+          "url": "https://freepropdf.com",
           "applicationCategory": "Productivity",
           "operatingSystem": "Any",
           "offers": {
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Stop Overpaying for PDF Tools</h2>
-          <p className="text-xl text-gray-500 dark:text-gray-400">See why smart users are switching to FreePDFPro.</p>
+          <p className="text-xl text-gray-500 dark:text-gray-400">See why smart users are switching to FreeProPDF.</p>
         </div>
         
         <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700 shadow-xl mt-8">
@@ -149,7 +149,7 @@ const Home: React.FC = () => {
               <thead>
                 <tr className="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
                   <th className="p-3 sm:p-6 text-left text-gray-500 dark:text-gray-400 font-medium w-1/2">Feature</th>
-                  <th className="p-3 sm:p-6 text-center text-brand-600 dark:text-brand-400 font-bold text-lg bg-brand-50 dark:bg-brand-900/20 w-1/2">FreePDFPro</th>
+                  <th className="p-3 sm:p-6 text-center text-brand-600 dark:text-brand-400 font-bold text-lg bg-brand-50 dark:bg-brand-900/20 w-1/2">FreeProPDF</th>
                 </tr>
               </thead>
               <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
@@ -226,7 +226,7 @@ const Home: React.FC = () => {
               Trusted by <span className="text-brand-600">10,000+</span> Users
             </h2>
             <p className="mt-4 text-xl text-gray-500 dark:text-gray-400">
-              See why people are switching to FreePDFPro.
+              See why people are switching to FreeProPDF.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

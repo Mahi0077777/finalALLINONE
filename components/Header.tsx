@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <Link to="/" className="flex items-center gap-2">
               <FileCheck className="h-8 w-8 text-brand-600 dark:text-brand-500" />
               <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">
-                FreePDF<span className="text-brand-600 dark:text-brand-500">Pro</span>
+                FreePro<span className="text-brand-600 dark:text-brand-500">PDF</span>
               </span>
             </Link>
           </div>

@@ -6,22 +6,22 @@ const About: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <SEO 
-        title="About FreePDFPro - Secure Client-Side PDF Tools"
-        description="Learn about FreePDFPro's mission to provide free, private, and fast PDF tools running entirely in your browser using WebAssembly."
+        title="About FreeProPDF - Secure Client-Side PDF Tools"
+        description="Learn about FreeProPDF's mission to provide free, private, and fast PDF tools running entirely in your browser using WebAssembly."
         schema={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          "name": "About FreePDFPro",
-          "url": "https://freepdfpro.com/#/about",
+          "name": "About FreeProPDF",
+          "url": "https://freepropdf.com/#/about",
           "mainEntity": {
              "@type": "Organization",
-             "name": "FreePDFPro",
+             "name": "FreeProPDF",
              "slogan": "All PDF tools. Free. Fast. No uploads. 100% private."
           }
         }}
       />
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">About FreePDFPro</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">About FreeProPDF</h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           Our mission is to make PDF editing free, fast, and privacy-focused for everyone.
         </p>
@@ -32,7 +32,7 @@ const About: React.FC = () => {
         <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
           Most online PDF tools require you to upload your sensitive documents to a remote server. 
           We believe you shouldn't have to trade your privacy for convenience. 
-          FreePDFPro was built using modern WebAssembly technology to run powerful PDF processing engines directly in your web browser.
+          FreeProPDF was built using modern WebAssembly technology to run powerful PDF processing engines directly in your web browser.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">

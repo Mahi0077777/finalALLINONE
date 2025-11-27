@@ -8,7 +8,7 @@ const PILLAR_POSTS: BlogPost[] = [
     slug: "how-to-merge-pdf-files-online-free",
     excerpt: "Learn the fastest way to combine multiple PDF documents into one file without downloading software. 100% private and secure.",
     date: "2024-03-15",
-    author: "FreePDFPro Team",
+    author: "FreeProPDF Team",
     category: "Tutorials",
     relatedToolId: ToolType.MERGE,
     tags: ["merge pdf", "combine pdf", "tutorial"],
@@ -19,8 +19,8 @@ const PILLAR_POSTS: BlogPost[] = [
       <h3>Why Merge Online?</h3>
       <p>Traditional desktop software like Adobe Acrobat can be expensive and heavy on your system resources. Online tools offer a lightweight alternative. However, most online tools require you to upload your sensitive documents to a remote server.</p>
       
-      <h3>The FreePDFPro Advantage</h3>
-      <p>FreePDFPro solves the privacy issue by processing your files <strong>locally in your browser</strong>. This means you get the convenience of an online tool with the security of offline software.</p>
+      <h3>The FreeProPDF Advantage</h3>
+      <p>FreeProPDF solves the privacy issue by processing your files <strong>locally in your browser</strong>. This means you get the convenience of an online tool with the security of offline software.</p>
       
       <h3>Step-by-Step Guide</h3>
       <ol>
@@ -48,7 +48,7 @@ const PILLAR_POSTS: BlogPost[] = [
       <h3>How Compression Works</h3>
       <p>PDF compression works by removing redundant metadata, optimizing font embedding, and downsampling images. A good compressor balances file size reduction with visual quality.</p>
       
-      <h3>Using FreePDFPro to Shrink Files</h3>
+      <h3>Using FreeProPDF to Shrink Files</h3>
       <p>Our client-side compressor uses advanced algorithms to strip unnecessary data while keeping your text sharp and your images clear. It's perfect for submitting applications, sharing portfolios, or archiving documents.</p>
     `
   },
@@ -82,7 +82,7 @@ const PILLAR_POSTS: BlogPost[] = [
     slug: "how-to-convert-images-into-single-pdf",
     excerpt: "Turn your holiday photos or scanned documents into a neat, shareable PDF album. Supports JPG and PNG.",
     date: "2024-03-10",
-    author: "FreePDFPro Team",
+    author: "FreeProPDF Team",
     category: "Conversion",
     relatedToolId: ToolType.IMG_TO_PDF,
     tags: ["jpg to pdf", "images", "conversion"],
@@ -124,9 +124,9 @@ ACTIONS.forEach(action => {
       id: idCounter.toString(),
       title: title,
       slug: slug,
-      excerpt: `A specialized guide for ${audience} looking to ${action.keyword} in their daily workflow. Save time and money with FreePDFPro's secure tools.`,
+      excerpt: `A specialized guide for ${audience} looking to ${action.keyword} in their daily workflow. Save time and money with FreeProPDF's secure tools.`,
       date: "2024-02-20",
-      author: "FreePDFPro Team",
+      author: "FreeProPDF Team",
       category: "Industry Guides",
       relatedToolId: action.tool,
       tags: [action.keyword, audience, "guide", "productivity"],
@@ -135,7 +135,7 @@ ACTIONS.forEach(action => {
         <p>${audience} often deal with ${action.topic} that need to be managed efficiently. The ability to ${action.verb.toLowerCase()} these documents without relying on expensive software like Adobe Acrobat is a game changer.</p>
         
         <h3>Why Privacy Matters for ${audience}</h3>
-        <p>In your profession, data security is likely a top priority. Uploading client documents to random servers is a risk. That's why FreePDFPro's client-side technology is the perfect solution for ${audience}.</p>
+        <p>In your profession, data security is likely a top priority. Uploading client documents to random servers is a risk. That's why FreeProPDF's client-side technology is the perfect solution for ${audience}.</p>
         
         <h3>How to ${action.verb} Your ${action.topic}</h3>
         <p>Simply use our <strong>${action.verb} PDF</strong> tool linked on this page. It's fast, free, and runs entirely in your browser.</p>

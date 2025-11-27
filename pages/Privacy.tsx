@@ -6,8 +6,8 @@ const Privacy: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <SEO 
-        title="Privacy Policy - FreePDFPro"
-        description="Read the FreePDFPro Privacy Policy. We explain why our client-side technology ensures your documents are never uploaded to any server."
+        title="Privacy Policy - FreeProPDF"
+        description="Read the FreeProPDF Privacy Policy. We explain why our client-side technology ensures your documents are never uploaded to any server."
       />
       <div className="text-center mb-12">
         <ShieldCheck className="w-16 h-16 text-brand-600 mx-auto mb-4" />
@@ -18,7 +18,7 @@ const Privacy: React.FC = () => {
       <div className="prose dark:prose-invert max-w-none bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
         <h3>1. No File Uploads (Client-Side Processing)</h3>
         <p>
-          FreePDFPro operates uniquely compared to other PDF tools. <strong>We do not upload your files to any server.</strong> 
+          FreeProPDF operates uniquely compared to other PDF tools. <strong>We do not upload your files to any server.</strong> 
           All processing (Merging, Splitting, Compressing, etc.) happens locally within your web browser using WebAssembly technology. 
           This means your documents never leave your device, ensuring 100% privacy for sensitive data.
         </p>

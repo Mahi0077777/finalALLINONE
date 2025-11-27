@@ -3,7 +3,7 @@ Allow: /
 Disallow: /cdn-cgi/
 
 # Sitemap location
-Sitemap: https://freepdfpro.com/sitemap.xml
+Sitemap: https://freepropdf.com/sitemap.xml
 
 # Host definition
-Host: https://freepdfpro.com
+Host: https://freepropdf.com

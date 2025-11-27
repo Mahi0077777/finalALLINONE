@@ -15,7 +15,7 @@ const BlogIndex: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <SEO 
-        title="PDF Tips & Tutorials Blog - FreePDFPro"
+        title="PDF Tips & Tutorials Blog - FreeProPDF"
         description="Expert guides on how to merge, split, compress, and secure PDF files. Tips for students, professionals, and businesses."
       />
       

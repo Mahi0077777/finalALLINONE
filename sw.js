@@ -1,4 +1,4 @@
-const CACHE_NAME = 'freepdfpro-v2';
+const CACHE_NAME = 'freepropdf-v1';
 const urlsToCache = [
   '/',
   '/index.html',

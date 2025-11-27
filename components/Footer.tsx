@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">FreePDFPro</h3>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">FreeProPDF</h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-xs">
               The #1 Free PDF Tool Suite. 100% Client-side processing means your files never leave your device.
               Secure, Fast, and Free Forever.
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} FreePDFPro. All rights reserved.
+            &copy; {new Date().getFullYear()} FreeProPDF. All rights reserved.
           </p>
         </div>
       </div>

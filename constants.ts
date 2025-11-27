@@ -10,17 +10,17 @@ export const TOOLS: ToolInfo[] = [
     description: 'The #1 Free PDF Merger. Combine multiple PDFs into one file instantly.',
     longDescription: `
       <h2 class="text-3xl font-bold mt-8 mb-4">The Ultimate Guide to Merging PDFs Online</h2>
-      <p>In the modern digital workspace, the ability to <strong>merge PDF files</strong> is essential. Whether you are compiling a business report, combining invoices for tax season, or putting together a portfolio, scattered PDF files can be a nightmare to manage. FreePDFPro offers a seamless, secure, and completely free solution to combine your documents.</p>
+      <p>In the modern digital workspace, the ability to <strong>merge PDF files</strong> is essential. Whether you are compiling a business report, combining invoices for tax season, or putting together a portfolio, scattered PDF files can be a nightmare to manage. FreeProPDF offers a seamless, secure, and completely free solution to combine your documents.</p>
       
-      <h3 class="text-2xl font-bold mt-8 mb-4">Why FreePDFPro is the Best Choice in 2025</h3>
-      <p>Most online PDF tools require you to upload your private documents to a cloud server. This creates a security risk. FreePDFPro is different. We utilize <strong>WebAssembly</strong> technology to process your files <em>locally</em> on your device.</p>
+      <h3 class="text-2xl font-bold mt-8 mb-4">Why FreeProPDF is the Best Choice in 2025</h3>
+      <p>Most online PDF tools require you to upload your private documents to a cloud server. This creates a security risk. FreeProPDF is different. We utilize <strong>WebAssembly</strong> technology to process your files <em>locally</em> on your device.</p>
       
       <div class="my-8 overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
         <table class="min-w-full bg-white dark:bg-gray-800 text-left">
           <thead>
             <tr class="bg-gray-50 dark:bg-gray-700 border-b dark:border-gray-600">
               <th class="px-6 py-3 font-bold">Feature</th>
-              <th class="px-6 py-3 font-bold text-brand-600">FreePDFPro</th>
+              <th class="px-6 py-3 font-bold text-brand-600">FreeProPDF</th>
               <th class="px-6 py-3 font-bold">Adobe Acrobat Pro</th>
               <th class="px-6 py-3 font-bold">iLovePDF</th>
             </tr>
@@ -71,13 +71,13 @@ export const TOOLS: ToolInfo[] = [
     faqs: [
       { question: "Is it safe to merge confidential legal documents?", answer: "Yes, absolutely. Unlike other sites, we do not upload your files to any server. The merging happens 100% on your computer, so your data remains private." },
       { question: "Is there a limit on the number of files I can merge?", answer: "No. You can merge as many files as your computer's memory can handle. We do not impose artificial limits." },
-      { question: "Do I need to install any software?", answer: "No software installation is required. FreePDFPro works entirely in your web browser (Chrome, Safari, Edge, Firefox)." },
+      { question: "Do I need to install any software?", answer: "No software installation is required. FreeProPDF works entirely in your web browser (Chrome, Safari, Edge, Firefox)." },
       { question: "Can I merge PDF files on Mac and Windows?", answer: "Yes! Our tool is platform-independent and works on Windows, macOS, Linux, and even mobile devices like iPhone and Android." },
       { question: "Will the quality of my PDF decrease?", answer: "No. We merge the original data streams of your PDF files, preserving their original quality, text vectors, and image resolution." },
       { question: "How long does it take to merge?", answer: "It's almost instant. Because there is no upload or download time for the processing, it is significantly faster than server-based tools." },
       { question: "Can I reorder the files before merging?", answer: "Yes, simply upload your files. (Drag-and-drop reordering is coming in the next update, currently files merge in selection order)." },
       { question: "Does it work offline?", answer: "Yes! If you have installed our PWA or cached the site, you can merge files even without an internet connection." },
-      { question: "Is this service really free?", answer: "Yes, FreePDFPro is supported by unobtrusive advertising and is 100% free for all users." },
+      { question: "Is this service really free?", answer: "Yes, FreeProPDF is supported by unobtrusive advertising and is 100% free for all users." },
       { question: "Can I merge password-protected PDFs?", answer: "You will need to unlock them first before merging them." }
     ],
     relatedTools: [ToolType.COMPRESS]
@@ -91,7 +91,7 @@ export const TOOLS: ToolInfo[] = [
     description: 'Extract pages from your PDF or split large files into separate documents.',
     longDescription: `
       <h2 class="text-3xl font-bold mt-8 mb-4">How to Split PDF Files Effectively</h2>
-      <p>Large PDF documents can be unwieldy. Whether you need to extract a single invoice from a 100-page ledger or separate chapters of an ebook, the <strong>FreePDFPro Split Tool</strong> is the fastest way to do it.</p>
+      <p>Large PDF documents can be unwieldy. Whether you need to extract a single invoice from a 100-page ledger or separate chapters of an ebook, the <strong>FreeProPDF Split Tool</strong> is the fastest way to do it.</p>
 
       <h3 class="text-2xl font-bold mt-8 mb-4">Range Extraction Syntax</h3>
       <p>We use a simple but powerful syntax for defining which pages to keep:</p>
@@ -107,7 +107,7 @@ export const TOOLS: ToolInfo[] = [
       </div>
 
       <h3 class="text-2xl font-bold mt-8 mb-4">Comparison with Desktop Software</h3>
-      <p>Why pay $15/month for Adobe Acrobat just to split a file once a month? FreePDFPro offers the same "Extract Pages" functionality for free, without the bloat of installing heavy desktop software.</p>
+      <p>Why pay $15/month for Adobe Acrobat just to split a file once a month? FreeProPDF offers the same "Extract Pages" functionality for free, without the bloat of installing heavy desktop software.</p>
     `,
     howToSteps: [
       "Upload the PDF file you want to split.",
@@ -142,7 +142,7 @@ export const TOOLS: ToolInfo[] = [
     description: 'Reduce PDF file size while maintaining the best quality. Optimize your documents.',
     longDescription: `
       <h2 class="text-3xl font-bold mt-8 mb-4">Reduce PDF File Size Without Quality Loss</h2>
-      <p>Sending large PDFs via email is frustrating. Most email providers have a 25MB limit. The <strong>FreePDFPro Compressor</strong> solves this by optimizing the internal structure of your PDF file, removing redundant metadata, and efficiently encoding streams.</p>
+      <p>Sending large PDFs via email is frustrating. Most email providers have a 25MB limit. The <strong>FreeProPDF Compressor</strong> solves this by optimizing the internal structure of your PDF file, removing redundant metadata, and efficiently encoding streams.</p>
 
       <h3 class="text-2xl font-bold mt-8 mb-4">How Compression Works</h3>
       <p>Our tool analyzes your PDF for:</p>
@@ -153,7 +153,7 @@ export const TOOLS: ToolInfo[] = [
       </ul>
 
       <h3 class="text-2xl font-bold mt-8 mb-4">Why Compress Locally?</h3>
-      <p>Uploading a 100MB file to a server just to compress it takes time and eats bandwidth. With FreePDFPro, the file is read instantly by your browser, processed, and saved. It's the fastest way to compress PDFs on the web.</p>
+      <p>Uploading a 100MB file to a server just to compress it takes time and eats bandwidth. With FreeProPDF, the file is read instantly by your browser, processed, and saved. It's the fastest way to compress PDFs on the web.</p>
     `,
     howToSteps: [
       "Select the large PDF file you need to compress.",
@@ -188,7 +188,7 @@ export const TOOLS: ToolInfo[] = [
     description: 'Convert every PDF page into high-quality JPG images. Secure & High Resolution.',
     longDescription: `
       <h2 class="text-3xl font-bold mt-8 mb-4">Convert PDF Pages to Images Instantly</h2>
-      <p>Sometimes you need a PDF page as an image for a PowerPoint presentation, a social media post, or a website thumbnail. Taking a screenshot is low quality. <strong>FreePDFPro's PDF to JPG converter</strong> renders the page at high resolution and saves it as a clean image file.</p>
+      <p>Sometimes you need a PDF page as an image for a PowerPoint presentation, a social media post, or a website thumbnail. Taking a screenshot is low quality. <strong>FreeProPDF's PDF to JPG converter</strong> renders the page at high resolution and saves it as a clean image file.</p>
       
       <h3 class="text-2xl font-bold mt-8 mb-4">High Fidelity Rendering</h3>
       <p>We use the Mozilla PDF.js engine—the same technology that powers the Firefox PDF viewer—to render your document with pixel-perfect accuracy before converting it to an image format.</p>
@@ -272,7 +272,7 @@ export const TOOLS: ToolInfo[] = [
     description: 'Permanently rotate your PDF pages. Landscape to Portrait or vice versa.',
     longDescription: `
       <h2 class="text-3xl font-bold mt-8 mb-4">Fix Upside-Down PDFs Permanently</h2>
-      <p>Scanning documents often results in pages being upside down or sideways. Viewing them is annoying, but sending them to a client looks unprofessional. <strong>FreePDFPro Rotate</strong> allows you to fix the orientation of your document permanently.</p>
+      <p>Scanning documents often results in pages being upside down or sideways. Viewing them is annoying, but sending them to a client looks unprofessional. <strong>FreeProPDF Rotate</strong> allows you to fix the orientation of your document permanently.</p>
       
       <h3 class="text-2xl font-bold mt-8 mb-4">Not Just a "View" Change</h3>
       <p>Unlike rotating a page in a PDF viewer (which only affects your current view), this tool modifies the file's metadata. When you save and share the file, it will open in the correct orientation for everyone.</p>
@@ -310,7 +310,7 @@ export const TOOLS: ToolInfo[] = [
     description: 'Add page numbers to your PDF files with ease. Organize your documents.',
     longDescription: `
       <h2 class="text-3xl font-bold mt-8 mb-4">Organize Your Documents Professionally</h2>
-      <p>Submitting a thesis, legal contract, or manuscript without page numbers is unprofessional and risky. If pages get mixed up, the document loses its integrity. <strong>FreePDFPro Pagination</strong> inserts clear, readable page numbers at the bottom of every page.</p>
+      <p>Submitting a thesis, legal contract, or manuscript without page numbers is unprofessional and risky. If pages get mixed up, the document loses its integrity. <strong>FreeProPDF Pagination</strong> inserts clear, readable page numbers at the bottom of every page.</p>
       
       <h3 class="text-2xl font-bold mt-8 mb-4">Automatic Calculation</h3>
       <p>You don't need to manually type numbers. Our tool reads the total page count and inserts "1 / 10", "2 / 10", etc., ensuring perfect accuracy even for massive documents.</p>

@@ -6,16 +6,16 @@ const Contact: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <SEO 
-        title="Contact FreePDFPro - Support & Inquiries"
-        description="Contact the FreePDFPro team for support, bug reports, or partnership inquiries. Email us directly for assistance."
+        title="Contact FreeProPDF - Support & Inquiries"
+        description="Contact the FreeProPDF team for support, bug reports, or partnership inquiries. Email us directly for assistance."
         schema={{
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "name": "Contact FreePDFPro",
-          "url": "https://freepdfpro.com/#/contact",
+          "name": "Contact FreeProPDF",
+          "url": "https://freepropdf.com/#/contact",
           "mainEntity": {
              "@type": "Organization",
-             "name": "FreePDFPro",
+             "name": "FreeProPDF",
              "email": "er.mahendramali@gmail.com"
           }
         }}
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Feedback</h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Found a bug or have a cool idea for a new PDF tool? Let us know! We are constantly improving FreePDFPro based on user feedback.
+            Found a bug or have a cool idea for a new PDF tool? Let us know! We are constantly improving FreeProPDF based on user feedback.
           </p>
           <span className="text-sm text-gray-500 font-medium px-4 py-2 bg-gray-50 dark:bg-gray-700 rounded-lg">
             Response time: Usually within 24 hours
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
       <div className="mt-16 bg-gray-50 dark:bg-gray-800/50 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 text-center">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">About the Developer</h3>
         <p className="text-gray-600 dark:text-gray-400">
-          FreePDFPro is built and maintained by <strong>Mahendra Mali</strong>. 
+          FreeProPDF is built and maintained by <strong>Mahendra Mali</strong>. 
           <br />
           Contact directly: <a href="mailto:er.mahendramali@gmail.com" className="text-brand-600 hover:underline">er.mahendramali@gmail.com</a>
         </p>
