@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+
+# Sitemap location
+Sitemap: https://freepropdf.com/sitemap.xml
+
+# Host definition
+Host: https://freepropdf.com
