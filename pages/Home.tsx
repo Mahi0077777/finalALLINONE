@@ -62,7 +62,7 @@ const Home: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="space-y-6 pb-4">
+    <div className="space-y-4 pb-2">
       <SEO 
         title={`${t('heroTitle')} - FreeProPDF`}
         description={t('heroSubtitle')}
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-4 sm:px-6 pt-4 pb-6 sm:pt-6 sm:pb-6 bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+      <section className="relative overflow-hidden px-3 sm:px-4 pt-3 pb-4 sm:pt-4 sm:pb-4 bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 opacity-30 pointer-events-none">
            <div className="absolute top-20 left-20 w-72 h-72 bg-brand-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
            <div className="absolute top-20 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
@@ -98,15 +98,15 @@ const Home: React.FC = () => {
             {counter.toLocaleString()} {t('processedToday')}
           </div>
           
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2 leading-tight">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-1 leading-tight">
             {t('heroTitle')}
           </h1>
 
-          <p className="text-sm sm:text-base font-bold text-brand-600 dark:text-brand-400 mb-2 animate-fade-in-up">
+          <p className="text-xs sm:text-sm font-bold text-brand-600 dark:text-brand-400 mb-1 animate-fade-in-up">
             {t('privacyBadge')}
           </p>
           
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-3">
             {t('heroSubtitle')}
           </p>
 
@@ -126,15 +126,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* Tools Grid */}
-      <section id="tools" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-0 relative z-20">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <section id="tools" className="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6 -mt-0 relative z-20">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {TOOLS.map((tool) => {
             const IconComponent = (Icons as any)[tool.icon] || Icons.FileQuestion;
             return (
               <Link 
                 key={tool.id} 
                 to={tool.path}
-                className="group relative block p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 border border-gray-100 dark:border-gray-700 overflow-hidden h-full"
+                className="group relative block p-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 border border-gray-100 dark:border-gray-700 overflow-hidden h-full"
               >
                 <div className={`mb-2 inline-block p-1.5 rounded-md bg-gray-50 dark:bg-gray-700 group-hover:scale-105 transition-transform duration-150`}>
                   <IconComponent className={`h-5 w-5 ${tool.color}`} />
@@ -153,34 +153,34 @@ const Home: React.FC = () => {
       </section>
 
       {/* Comparison Table */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <section className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-6 py-4">
         <div className="text-center mb-4">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Stop Overpaying for PDF Tools</h2>
-          <p className="text-lg text-gray-500 dark:text-gray-400">See why smart users are switching to FreeProPDF.</p>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Stop Overpaying for PDF Tools</h2>
+          <p className="text-base text-gray-500 dark:text-gray-400">See why smart users are switching to FreeProPDF.</p>
         </div>
         
         <div className="overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg mt-6">
             <table className="w-full text-sm sm:text-base">
               <thead>
                 <tr className="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                  <th className="p-3 sm:p-6 text-left text-gray-500 dark:text-gray-400 font-medium w-1/2">Feature</th>
-                  <th className="p-3 sm:p-6 text-center text-brand-600 dark:text-brand-400 font-bold text-lg bg-brand-50 dark:bg-brand-900/20 w-1/2">FreeProPDF</th>
+                  <th className="p-2 sm:p-3 text-left text-gray-500 dark:text-gray-400 font-medium w-1/2">Feature</th>
+                  <th className="p-2 sm:p-3 text-center text-brand-600 dark:text-brand-400 font-bold text-base bg-brand-50 dark:bg-brand-900/20 w-1/2">FreeProPDF</th>
                 </tr>
               </thead>
               <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
                 {/* Price */}
                 <tr>
-                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">
+                  <td className="p-2 sm:p-3 font-medium text-gray-900 dark:text-white text-sm">
                     <div className="flex items-center gap-2">
                         <span className="bg-green-100 dark:bg-green-900 p-1 rounded text-green-600 shrink-0"><DollarSign size={16}/></span> 
                         <span>Price</span>
                     </div>
                   </td>
-                  <td className="p-3 sm:p-6 text-center font-bold text-green-600 bg-brand-50/30 dark:bg-brand-900/10">$0 (Free Forever)</td>
+                  <td className="p-2 sm:p-3 text-center font-bold text-green-600 bg-brand-50/30 dark:bg-brand-900/10 text-sm">$0 (Free Forever)</td>
                 </tr>
                 {/* Privacy */}
                 <tr>
-                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">
+                  <td className="p-2 sm:p-3 font-medium text-gray-900 dark:text-white text-sm">
                     <div className="flex items-center gap-2">
                         <span className="bg-blue-100 dark:bg-blue-900 p-1 rounded text-blue-600 shrink-0"><Shield size={16}/></span> 
                         <span>Privacy (No Uploads)</span>
@@ -195,7 +195,7 @@ const Home: React.FC = () => {
                 </tr>
                  {/* Registration */}
                  <tr>
-                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">
+                  <td className="p-2 sm:p-3 font-medium text-gray-900 dark:text-white text-sm">
                     <div className="flex items-center gap-2">
                         <span className="bg-purple-100 dark:bg-purple-900 p-1 rounded text-purple-600 shrink-0"><Zap size={16}/></span> 
                         <span>Registration</span>
@@ -210,7 +210,7 @@ const Home: React.FC = () => {
                 </tr>
                  {/* Offline */}
                  <tr>
-                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">Works Offline</td>
+                  <td className="p-2 sm:p-3 font-medium text-gray-900 dark:text-white text-sm">Works Offline</td>
                   <td className="p-3 sm:p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-green-600 font-bold">
                         <Check size={20} strokeWidth={3} className="shrink-0" /> 
@@ -220,7 +220,7 @@ const Home: React.FC = () => {
                 </tr>
                  {/* Installation */}
                  <tr>
-                  <td className="p-3 sm:p-6 font-medium text-gray-900 dark:text-white">Installation</td>
+                  <td className="p-2 sm:p-3 font-medium text-gray-900 dark:text-white text-sm">Installation</td>
                   <td className="p-3 sm:p-6 text-center bg-brand-50/30 dark:bg-brand-900/10">
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-green-600 font-bold">
                         <Check size={20} strokeWidth={3} className="shrink-0" /> 
@@ -234,26 +234,26 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-white dark:bg-gray-800 py-8 border-t border-gray-100 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+      <section className="bg-white dark:bg-gray-800 py-4 border-t border-gray-100 dark:border-gray-700">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
+          <div className="text-center mb-4">
+            <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white sm:text-3xl">
               Trusted by <span className="text-brand-600">10,000+</span> Users
             </h2>
-            <p className="mt-2 text-lg text-gray-500 dark:text-gray-400">
+            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
               See why people are switching to FreeProPDF.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {TESTIMONIALS.map((item, idx) => (
-              <div key={idx} className="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl relative hover:-translate-y-0.5 transition-transform duration-200 shadow-sm">
-                <Quote className="absolute top-6 right-6 text-brand-200 dark:text-brand-900 h-12 w-12 rotate-180" />
-                <div className="flex text-yellow-400 mb-4">
-                  {[...Array(item.stars)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+              <div key={idx} className="bg-gray-50 dark:bg-gray-900 p-3 rounded-xl relative hover:-translate-y-0.5 transition-transform duration-200 shadow-sm">
+                <Quote className="absolute top-4 right-4 text-brand-200 dark:text-brand-900 h-8 w-8 rotate-180" />
+                <div className="flex text-yellow-400 mb-2">
+                  {[...Array(item.stars)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 italic mb-6 relative z-10">"{item.text}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-brand-400 to-blue-500 flex items-center justify-center text-white font-bold">
+                <p className="text-sm text-gray-700 dark:text-gray-300 italic mb-4">"{item.text}"</p>
+                <div className="flex items-center gap-2">
+                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-brand-400 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
                     {item.name.charAt(0)}
                   </div>
                   <div>
@@ -266,6 +266,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };

@@ -467,7 +467,7 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
   : 0;
 
   return (
-    <div className="flex flex-col items-center justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div className="flex flex-col items-center justify-center py-4 sm:py-6 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       
       {toolInfo && (
         <SEO 
@@ -493,38 +493,34 @@ const ToolProcessor: React.FC<ToolProcessorProps> = ({ toolType, title, descript
         </div>
       )}
 
-      <div className="text-center mb-10 animate-fade-in-up">
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl mb-4">{title}</h1>
-        <p className="max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-400">{description}</p>
+      <div className="text-center mb-4 animate-fade-in-up">
+        <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white sm:text-3xl mb-1">{title}</h1>
+        <p className="max-w-2xl mx-auto text-base text-gray-500 dark:text-gray-400">{description}</p>
       </div>
 
-      <div className="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300 min-h-[500px] flex flex-col relative">
+      <div className="w-auto inline-block bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300 min-h-[60px] flex flex-col relative mb-4">
         
         {/* STEP 1: UPLOAD */}
         {step === 1 && (
-          <div 
-            className={`flex-1 flex flex-col items-center justify-center p-12 border-4 border-dashed transition-all duration-200 m-4 rounded-2xl cursor-pointer ${
-              isDragging ? 'border-brand-500 bg-brand-50' : 'border-gray-200 dark:border-gray-700 hover:border-brand-400'
-            }`}
-            onDragEnter={handleDrag}
-            onDragLeave={handleDrag}
-            onDragOver={handleDrag}
-            onDrop={handleDrop}
-            onClick={() => fileInputRef.current?.click()}
-          >
-            <div className="bg-brand-100 dark:bg-brand-900/50 p-6 rounded-full mb-6 pointer-events-none">
-              <Upload className="h-12 w-12 text-brand-600 dark:text-brand-400" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 pointer-events-none">
-              {t('upload')}
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-8 text-center pointer-events-none">
-              {t('uploadText')}
-            </p>
-            <span className="relative flex items-center gap-2 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-sm border border-gray-200 dark:border-gray-600">
-              <Upload size={20}/> {t('selectFiles')}
-            </span>
-            <input ref={fileInputRef} type="file" className="hidden" accept={accept} multiple={multiple} onChange={handleFileInput} />
+          <div className="flex justify-center w-full">
+            <button 
+              onClick={() => fileInputRef.current?.click()}
+              className="px-10 py-5 text-xl font-bold bg-brand-600 hover:bg-brand-700 text-white rounded-xl shadow-lg transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-brand-500 focus:ring-offset-2"
+            >
+              Select PDF Files
+            </button>
+            <input 
+              ref={fileInputRef} 
+              type="file" 
+              className="hidden" 
+              accept={accept} 
+              multiple={multiple} 
+              onChange={handleFileInput} 
+              onDragEnter={handleDrag}
+              onDragLeave={handleDrag}
+              onDragOver={handleDrag}
+              onDrop={handleDrop}
+            />
           </div>
         )}
 
