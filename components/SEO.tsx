@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { SUPPORTED_LANGUAGES } from '../i18n/languages';
 import { useLanguage } from '../contexts/LanguageContext';
 
-interface SEOProps {
+export interface SEOProps {
   title: string;
   description: string;
   canonicalUrl?: string;
@@ -11,107 +11,171 @@ interface SEOProps {
   ogType?: 'website' | 'article';
   keywords?: string[];
   schema?: object | object[];
+  toolType?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ 
-  title, 
-  description, 
-  canonicalUrl, 
-  ogImage = "https://freepropdf.com/og-image.jpg", 
-  ogType = "website",
-  keywords,
-  schema 
+const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  canonicalUrl,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  keywords = [],
+  schema,
+  toolType
 }) => {
   const location = useLocation();
   const { language } = useLanguage();
-  const domain = "https://freepropdf.com";
+  const domain = 'https://freepropdf.com';
   const currentPath = location.pathname;
-  const currentUrl = canonicalUrl || `${domain}/#${currentPath}`;
+  const currentUrl = canonicalUrl || `${domain}${currentPath}`;
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${domain}${ogImage}`;
 
+  // Clean and truncate title and description for SEO
   const cleanTitle = title.length > 60 ? `${title.substring(0, 57)}...` : title;
   const cleanDesc = description.length > 155 ? `${description.substring(0, 152)}...` : description;
+  const cleanKeywords = Array.isArray(keywords) ? keywords.join(', ') : '';
 
   useEffect(() => {
+    // Set document title
     document.title = cleanTitle;
 
+    // Helper function to set or update meta tags
     const setMeta = (selector: string, content: string) => {
-      let el = document.querySelector(selector);
-      if (!el) {
-        el = document.createElement('meta');
+      let element = document.querySelector(selector);
+      if (!element) {
+        element = document.createElement('meta');
         if (selector.includes('name=')) {
           const name = selector.match(/name="([^"]+)"/)?.[1];
-          if (name) el.setAttribute('name', name);
+          if (name) element.setAttribute('name', name);
         } else if (selector.includes('property=')) {
           const property = selector.match(/property="([^"]+)"/)?.[1];
-          if (property) el.setAttribute('property', property);
+          if (property) element.setAttribute('property', property);
         }
-        document.head.appendChild(el);
+        document.head.appendChild(element);
       }
-      el.setAttribute('content', content);
+      element.setAttribute('content', content);
+      return element;
     };
 
+    // Set meta title
     setMeta('meta[name="title"]', cleanTitle);
-    setMeta('meta[name="description"]', cleanDesc);
-    if (keywords && keywords.length > 0) {
-      setMeta('meta[name="keywords"]', keywords.join(', '));
-    }
-    setMeta('meta[name="language"]', language);
 
-    setMeta('meta[property="og:url"]', currentUrl);
-    setMeta('meta[property="og:type"]', ogType);
+    // Set meta description
+    setMeta('meta[name="description"]', cleanDesc);
+
+    // Set OpenGraph tags
     setMeta('meta[property="og:title"]', cleanTitle);
     setMeta('meta[property="og:description"]', cleanDesc);
-    setMeta('meta[property="og:image"]', ogImage);
+    setMeta('meta[property="og:type"]', ogType);
+    setMeta('meta[property="og:url"]', currentUrl);
+    setMeta('meta[property="og:image"]', fullOgImage);
+    setMeta('meta[property="og:site_name"]', 'FreeProPDF');
+    setMeta('meta[property="og:locale"]', language || 'en');
 
-    setMeta('meta[property="twitter:url"]', currentUrl);
-    setMeta('meta[property="twitter:title"]', cleanTitle);
-    setMeta('meta[property="twitter:description"]', cleanDesc);
-    setMeta('meta[property="twitter:image"]', ogImage);
+    // Set Twitter Card tags
+    setMeta('meta[name="twitter:card"]', 'summary_large_image');
+    setMeta('meta[name="twitter:title"]', cleanTitle);
+    setMeta('meta[name="twitter:description"]', cleanDesc);
+    setMeta('meta[name="twitter:image"]', fullOgImage);
 
-    let linkCanonical = document.querySelector('link[rel="canonical"]');
-    if (!linkCanonical) {
-      linkCanonical = document.createElement('link');
-      linkCanonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(linkCanonical);
+    // Set viewport for mobile
+    setMeta('meta[name="viewport"]', 'width=device-width, initial-scale=1.0');
+
+    // Set theme color
+    setMeta('meta[name="theme-color"]', '#4f46e5');
+
+    // Set keywords if provided
+    if (cleanKeywords) {
+      setMeta('meta[name="keywords"]', cleanKeywords);
     }
-    linkCanonical.setAttribute('href', currentUrl);
 
-    // Inject hreflang tags for all 20 languages
-    SUPPORTED_LANGUAGES.forEach(lang => {
-      let link = document.querySelector(`link[rel="alternate"][hreflang="${lang.code}"]`);
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'alternate');
-        link.setAttribute('hreflang', lang.code);
-        document.head.appendChild(link);
+    // Set canonical URL
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'canonical';
+      document.head.appendChild(link);
+    }
+    link.href = currentUrl;
+
+    // Set hreflang for all supported languages
+    SUPPORTED_LANGUAGES.forEach(({ code }) => {
+      let hreflang = document.querySelector(`link[rel="alternate"][hreflang="${code}"]`) as HTMLLinkElement;
+      if (!hreflang) {
+        hreflang = document.createElement('link');
+        hreflang.rel = 'alternate';
+        hreflang.hrefLang = code;
+        document.head.appendChild(hreflang);
       }
-      // In a real router, we might have /es/merge-pdf. Here we use hash routing param logic conceptually
-      // For now, pointing to main domain as it's a SPA
-      link.setAttribute('href', `${domain}/#${currentPath}?lang=${lang.code}`);
+      hreflang.href = `${domain}/${code}${currentPath}`;
     });
 
-    const scriptId = 'dynamic-json-ld';
-    let script = document.getElementById(scriptId) as HTMLScriptElement;
+    // Add JSON-LD schema
+    let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
     if (!script) {
       script = document.createElement('script');
-      script.id = scriptId;
       script.type = 'application/ld+json';
       document.head.appendChild(script);
     }
 
-    if (schema) {
-      script.text = JSON.stringify(schema);
-    } else {
-      script.text = JSON.stringify({
+    // Generate schema based on tool type
+    const generateSchema = () => {
+      const baseSchema = {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "FreeProPDF",
-        "url": domain,
-        "inLanguage": language
-      });
-    }
+        "@type": "WebApplication",
+        "name": cleanTitle,
+        "description": cleanDesc,
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": currentUrl
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "FreeProPDF",
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${domain}/logo.png`
+          }
+        }
+      };
 
-  }, [cleanTitle, cleanDesc, currentUrl, ogImage, ogType, keywords, schema, language, currentPath]);
+      // Add FAQ schema if available
+      if (toolType && TOOLS.find(t => t.id === toolType)?.faqs?.length) {
+        const faqSchema = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": TOOLS.find(t => t.id === toolType)?.faqs?.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        };
+        return [baseSchema, faqSchema];
+      }
+
+      return baseSchema;
+    };
+
+    // Use provided schema or generate one
+    const finalSchema = schema || generateSchema();
+    script.text = JSON.stringify(finalSchema);
+
+    // Cleanup function to remove dynamically added elements
+    return () => {
+      // Clean up any dynamically added elements if needed
+    };
+  }, [cleanTitle, cleanDesc, currentUrl, ogType, fullOgImage, cleanKeywords, language, toolType]);
 
   return null;
 };
