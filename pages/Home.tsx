@@ -46,8 +46,23 @@ const Home: React.FC = () => {
     }
   ];
 
+  // Get all tools for navigation
+  const navTools = [
+    { id: 'merge-pdf', name: 'Merge PDF' },
+    { id: 'split-pdf', name: 'Split PDF' },
+    { id: 'compress-pdf', name: 'Compress PDF' },
+    { id: 'pdf-to-jpg', name: 'PDF to JPG' },
+    { id: 'jpg-to-pdf', name: 'JPG to PDF' },
+    { id: 'rotate-pdf', name: 'Rotate PDF' },
+    { id: 'page-numbers', name: 'Page Numbers' },
+    { id: 'watermark-pdf', name: 'Watermark' }
+  ];
+
+  // Mobile menu state
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <div className="space-y-24 pb-20">
+    <div className="space-y-6 pb-4">
       <SEO 
         title={`${t('heroTitle')} - FreeProPDF`}
         description={t('heroSubtitle')}
@@ -68,14 +83,14 @@ const Home: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-4 sm:px-6 pt-20 pb-16 sm:pt-32 sm:pb-24 bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+      <section className="relative overflow-hidden px-4 sm:px-6 pt-4 pb-6 sm:pt-6 sm:pb-6 bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 opacity-30 pointer-events-none">
            <div className="absolute top-20 left-20 w-72 h-72 bg-brand-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
            <div className="absolute top-20 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 text-sm font-bold mb-8 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 text-xs font-bold mb-4 animate-fade-in-up">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
@@ -83,15 +98,15 @@ const Home: React.FC = () => {
             {counter.toLocaleString()} {t('processedToday')}
           </div>
           
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2 leading-tight">
             {t('heroTitle')}
           </h1>
 
-          <p className="text-lg sm:text-xl font-bold text-brand-600 dark:text-brand-400 mb-4 animate-fade-in-up">
+          <p className="text-sm sm:text-base font-bold text-brand-600 dark:text-brand-400 mb-2 animate-fade-in-up">
             {t('privacyBadge')}
           </p>
           
-          <p className="max-w-2xl mx-auto text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed mb-12">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
             {t('heroSubtitle')}
           </p>
 
@@ -99,11 +114,11 @@ const Home: React.FC = () => {
              <a 
                href="#tools" 
                onClick={scrollToTools}
-               className="w-full sm:w-auto px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-1 cursor-pointer"
+               className="w-full sm:w-auto px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-md font-medium text-sm shadow-md shadow-brand-500/20 transition-all transform hover:-translate-y-0.5 cursor-pointer"
              >
                {t('getStarted')}
              </a>
-             <Link to="/merge-pdf" className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-gray-800 text-gray-700 dark:text-white border border-gray-200 dark:border-gray-700 rounded-xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+             <Link to="/merge-pdf" className="w-full sm:w-auto px-4 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-white border border-gray-200 dark:border-gray-700 rounded-md font-medium text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
                {t('mergeNow')}
              </Link>
           </div>
@@ -111,23 +126,23 @@ const Home: React.FC = () => {
       </section>
 
       {/* Tools Grid */}
-      <section id="tools" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <section id="tools" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-0 relative z-20">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {TOOLS.map((tool) => {
             const IconComponent = (Icons as any)[tool.icon] || Icons.FileQuestion;
             return (
               <Link 
                 key={tool.id} 
                 to={tool.path}
-                className="group relative block p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 dark:border-gray-700 overflow-hidden"
+                className="group relative block p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 border border-gray-100 dark:border-gray-700 overflow-hidden h-full"
               >
-                <div className={`mb-6 inline-block p-4 rounded-2xl bg-gray-50 dark:bg-gray-700 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className={`h-8 w-8 ${tool.color}`} />
+                <div className={`mb-2 inline-block p-1.5 rounded-md bg-gray-50 dark:bg-gray-700 group-hover:scale-105 transition-transform duration-150`}>
+                  <IconComponent className={`h-5 w-5 ${tool.color}`} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-1">
                   {tool.title}
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-sm">
+                <p className="text-xs text-gray-500 dark:text-gray-400 leading-tight line-clamp-2">
                   {tool.description}
                 </p>
                 <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-brand-400 to-brand-600 group-hover:w-full transition-all duration-300"></div>
@@ -138,13 +153,13 @@ const Home: React.FC = () => {
       </section>
 
       {/* Comparison Table */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-10">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="text-center mb-4">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Stop Overpaying for PDF Tools</h2>
-          <p className="text-xl text-gray-500 dark:text-gray-400">See why smart users are switching to FreeProPDF.</p>
+          <p className="text-lg text-gray-500 dark:text-gray-400">See why smart users are switching to FreeProPDF.</p>
         </div>
         
-        <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700 shadow-xl mt-8">
+        <div className="overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg mt-6">
             <table className="w-full text-sm sm:text-base">
               <thead>
                 <tr className="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
@@ -219,19 +234,19 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-white dark:bg-gray-800 py-20 border-t border-gray-100 dark:border-gray-700">
+      <section className="bg-white dark:bg-gray-800 py-8 border-t border-gray-100 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-6">
             <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
               Trusted by <span className="text-brand-600">10,000+</span> Users
             </h2>
-            <p className="mt-4 text-xl text-gray-500 dark:text-gray-400">
+            <p className="mt-2 text-lg text-gray-500 dark:text-gray-400">
               See why people are switching to FreeProPDF.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {TESTIMONIALS.map((item, idx) => (
-              <div key={idx} className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl relative hover:-translate-y-1 transition-transform duration-300 shadow-sm">
+              <div key={idx} className="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl relative hover:-translate-y-0.5 transition-transform duration-200 shadow-sm">
                 <Quote className="absolute top-6 right-6 text-brand-200 dark:text-brand-900 h-12 w-12 rotate-180" />
                 <div className="flex text-yellow-400 mb-4">
                   {[...Array(item.stars)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
