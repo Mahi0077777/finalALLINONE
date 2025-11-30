@@ -796,19 +796,17 @@ export const TOOLS: ToolInfo[] = [
       {
         question: "How do I change the order of images in my PDF?",
         answer: "After uploading, you'll see a preview of all your images. Simply click and drag the images to reorder them before converting. The order you see in the preview is exactly how they'll appear in your PDF."
-      },
-      {
-        question: "Can I add page numbers or watermarks to my PDF?",
-        answer: "While this tool focuses on converting images to PDF, you can use our 'Watermark PDF' tool to add watermarks after conversion. For page numbers, you can use the 'Page Numbers' tool in our PDF tools collection."
-      },
-      {
-        question: "What happens to the EXIF data in my photos?",
-        answer: "By default, we preserve most EXIF data (like camera settings and timestamps) in the PDF's metadata. However, for privacy reasons, location data (GPS coordinates) is automatically removed during the conversion process."
-    title: 'Rotate PDF - Fix Page Orientation Online Free | FreeProPDF',
+      }
+    ],
+    relatedTools: [ToolType.MERGE, ToolType.NUMBERING]
+  },
+  {
+    id: ToolType.ROTATE,
+    title: 'Fix PDF Page Orientation - Rotate PDFs Online Free',
     shortTitle: 'Rotate PDF',
-    metaTitle: 'Rotate PDF Pages Online - Fix Orientation Permanently | FreeProPDF',
-    metaDescription: 'Fix upside-down or sideways PDF pages in seconds. Rotate your document 90°, 180°, or 270° with our free online tool. No watermarks, no sign-up, 100% private.',
-    description: 'Permanently fix the orientation of your PDF pages. Rotate individual pages or entire documents in seconds. 100% free and secure',
+    metaTitle: 'Rotate PDF Online - Free PDF Rotator | FreeProPDF',
+    metaDescription: 'Permanently fix PDF page orientation with our free online PDF rotator. Rotate PDFs 90°, 180°, or 270° in seconds. No registration required.',
+    description: 'Rotate PDF pages online for free. Fix sideways or upside-down PDFs.',
     longDescription: `
       <h1 class="text-4xl font-bold mt-8 mb-6">Fix PDF Page Orientation - Rotate PDFs Online Free</h1>
       <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">Tired of viewing sideways or upside-down PDFs? Our free online PDF rotator lets you permanently fix page orientation with just a few clicks. Whether you scanned documents incorrectly or received a poorly oriented PDF, our tool ensures your pages display correctly on any device. No registration required - start rotating now!</p>
