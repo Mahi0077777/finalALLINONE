@@ -977,23 +977,116 @@ export const TOOLS: ToolInfo[] = [
   },
   {
     id: ToolType.NUMBERING,
-    title: 'Page Numbers',
+    title: 'Add Page Numbers to PDF - Free Online Numbering Tool | FreeProPDF',
     shortTitle: 'Page Numbers',
-    metaTitle: 'Add Page Numbers to PDF Online Free',
-    metaDescription: 'Insert page numbers into PDF documents. Professional pagination for legal documents and reports.',
-    description: 'Add page numbers to your PDF files with ease. Organize your documents.',
+    metaTitle: 'Add Page Numbers to PDF Online - Free & Easy | FreeProPDF',
+    metaDescription: 'Add professional page numbers to your PDF documents in seconds. Perfect for theses, reports, and legal documents. 100% free, no watermarks, no registration.',
+    description: 'Easily add page numbers to your PDF documents. Perfect for organizing and professionalizing your files.',
     longDescription: `
-      <h2 class="text-3xl font-bold mt-8 mb-4">Organize Your Documents Professionally</h2>
-      <p>Submitting a thesis, legal contract, or manuscript without page numbers is unprofessional and risky. If pages get mixed up, the document loses its integrity. <strong>FreeProPDF Pagination</strong> inserts clear, readable page numbers at the bottom of every page.</p>
+      <h1 class="text-4xl font-bold mt-8 mb-6">Add Page Numbers to PDF - Professional Document Formatting</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">Need to add page numbers to your PDF document? Our free online tool makes it easy to insert professional-looking page numbers to any PDF. Whether you're preparing a thesis, business report, or legal document, properly numbered pages are essential for organization and reference. Our tool works entirely in your browser - no uploads, no watermarks, no registration required.</p>
       
-      <h3 class="text-2xl font-bold mt-8 mb-4">Automatic Calculation</h3>
-      <p>You don't need to manually type numbers. Our tool reads the total page count and inserts "1 / 10", "2 / 10", etc., ensuring perfect accuracy even for massive documents.</p>
+      <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 mb-8">
+        <h3 class="text-xl font-semibold text-blue-800 dark:text-blue-300 mb-2">✨ Why Use Our PDF Page Numbering Tool?</h3>
+        <ul class="list-disc pl-6 space-y-1 text-blue-700 dark:text-blue-400">
+          <li><strong>100% Private:</strong> Your files never leave your computer</li>
+          <li><strong>Multiple Formats:</strong> Choose from various numbering styles (1, 2, 3... or i, ii, iii... or A, B, C...)</li>
+          <li><strong>Customizable:</strong> Adjust position, font, size, and color</li>
+          <li><strong>Automatic Counting:</strong> No need to manually enter each number</li>
+          <li><strong>Works on All Devices:</strong> Desktop, tablet, or mobile - no installation needed</li>
+        </ul>
+      </div>
+      
+      <h2 class="text-3xl font-bold mt-12 mb-4">How to Add Page Numbers in 3 Simple Steps</h2>
+      <div class="grid md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold mb-4">1</div>
+          <h3 class="text-xl font-semibold mb-2">Upload Your PDF</h3>
+          <p class="text-gray-600 dark:text-gray-400">Select your PDF file or drag and drop it into the upload area. Our tool supports files up to 100MB in size.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold mb-4">2</div>
+          <h3 class="text-xl font-semibold mb-2">Customize Numbers</h3>
+          <p class="text-gray-600 dark:text-gray-400">Choose your preferred format (1, 2, 3 or i, ii, iii, etc.), position, font, and size. Preview the changes in real-time.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold mb-4">3</div>
+          <h3 class="text-xl font-semibold mb-2">Download</h3>
+          <p class="text-gray-600 dark:text-gray-400">Click 'Add Page Numbers' and download your numbered PDF. The processing happens instantly in your browser.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold mt-12 mb-4">Advanced PDF Numbering Features</h2>
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <h3 class="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">🔢 Multiple Numbering Formats</h3>
+          <p class="text-gray-600 dark:text-gray-400">Choose from various numbering styles including Arabic numerals (1, 2, 3), Roman numerals (i, ii, iii), or letters (A, B, C). Perfect for different document types and sections.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <h3 class="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">🎨 Custom Styling</h3>
+          <p class="text-gray-600 dark:text-gray-400">Adjust the font, size, color, and opacity of your page numbers to match your document's style. Make them subtle or prominent as needed.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <h3 class="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">📐 Precise Positioning</h3>
+          <p class="text-gray-600 dark:text-gray-400">Place numbers at the top or bottom, left, center, or right of each page. Our tool ensures perfect alignment across all pages.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <h3 class="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">⚡ Instant Processing</h3>
+          <p class="text-gray-600 dark:text-gray-400">No waiting for uploads or downloads. The page numbers are added instantly, allowing you to quickly prepare your documents.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold mt-12 mb-4">Perfect for All Your Document Needs</h2>
+      <p>Our PDF Page Numbering tool is designed to handle all your document organization needs. Here are just a few examples of how people use our tool:</p>
+      
+      <div class="grid md:grid-cols-3 gap-6 my-8">
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/10 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+          <h3 class="text-xl font-semibold mb-2">👨‍💼 Business</h3>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-400">
+            <li>Number business reports and proposals</li>
+            <li>Add professional page numbers to contracts</li>
+            <li>Organize financial statements and audits</li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-900/10 p-6 rounded-xl border border-green-100 dark:border-green-800">
+          <h3 class="text-xl font-semibold mb-2">🎓 Education</h3>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-400">
+            <li>Format theses and dissertations</li>
+            <li>Number research papers and articles</li>
+            <li>Organize course materials and handouts</li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-900/10 p-6 rounded-xl border border-purple-100 dark:border-purple-800">
+          <h3 class="text-xl font-semibold mb-2">📚 Publishing</h3>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-400">
+            <li>Number book manuscripts</li>
+            <li>Format e-books and digital publications</li>
+            <li>Prepare documents for print</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="my-8 p-6 bg-yellow-50 dark:bg-yellow-900/20 rounded-xl border border-yellow-200 dark:border-yellow-800">
+        <h4 class="font-bold text-yellow-800 dark:text-yellow-300 mb-2">💡 Pro Tip: Best Practices for Page Numbering</h4>
+        <p class="text-yellow-700 dark:text-yellow-400">For professional documents, consider using Roman numerals (i, ii, iii) for front matter (table of contents, preface) and Arabic numerals (1, 2, 3) for the main content. Our tool makes it easy to create multiple PDFs with different numbering styles that you can later combine.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mt-8 mb-4">How It Works (Technical Deep Dive)</h3>
+      <p>When you add page numbers with our tool, we use advanced PDF processing to add a text layer with the page numbers. Here's what happens under the hood:</p>
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>PDF Analysis:</strong> The tool reads the document structure and calculates the total number of pages</li>
+        <li><strong>Font Embedding:</strong> The selected font is embedded to ensure consistent display across all devices</li>
+        <li><strong>Text Layer Addition:</strong> Page numbers are added as a new text layer, preserving the original content</li>
+        <li><strong>Position Calculation:</strong> Each number is precisely positioned based on your specifications</li>
+        <li><strong>Security:</strong> The entire process happens in your browser - your files never touch our servers</li>
+      </ul>
     `,
     howToSteps: [
-      "Upload the document that needs numbering.",
-      "The tool automatically calculates page counts.",
-      "Click 'Process PDF' to stamp numbers at the bottom center.",
-      "Download your organized document."
+      "<strong>Step 1:</strong> Click 'Select File' or drag and drop your PDF into the upload area. Our tool supports files up to 100MB in size.",
+      "<strong>Step 2:</strong> Choose your preferred numbering format (1, 2, 3 or i, ii, iii, etc.), position, and style. You can preview the changes in real-time.",
+      "<strong>Step 3:</strong> If needed, adjust the starting page number or apply different styles to specific page ranges.",
+      "<strong>Step 4:</strong> Click 'Add Page Numbers' to process your document. The numbers will be added to every page.",
+      "<strong>Step 5:</strong> Download your numbered PDF. The file is processed entirely in your browser for maximum privacy."
     ],
     icon: 'Hash',
     color: 'text-cyan-500',
@@ -1012,17 +1105,188 @@ export const TOOLS: ToolInfo[] = [
       'add page numbers to pdf c#', 'pdf page numbering start from 0', 'add page numbers to pdf android', 'pdf page numbering roman numerals'
     ],
     faqs: [
-      { question: "Where are numbers placed?", answer: "Bottom center of the page." },
-      { question: "Can I change the font?", answer: "Currently we use a standard Helvetica font for maximum readability." },
-      { question: "Does it overwrite text?", answer: "The numbers are placed in the margin. If your text goes to the very edge, it might overlap, but for standard documents, it fits perfectly." },
-      { question: "Is it free?", answer: "Yes." },
-      { question: "Can I start from page 5?", answer: "Currently it starts numbering from the first page of the file." },
-      { question: "Does it work on scanned PDFs?", answer: "Yes, it adds a text layer on top of the scan." },
-      { question: "Is it reversible?", answer: "The numbers become part of the PDF content. You would need a PDF editor to delete them later." },
-      { question: "Does it work on 500+ page files?", answer: "Yes, it handles large files easily." },
-      { question: "Does it work on mobile?", answer: "Yes." }
+      { 
+        question: "Where exactly are the page numbers placed?",
+        answer: "By default, page numbers are added to the bottom center of each page. However, you can customize the position to be at the top or bottom, and aligned to the left, center, or right. The numbers are placed in the margin area to avoid overlapping with your content."
+      },
+      { 
+        question: "Can I use different numbering formats in the same document?",
+        answer: "While our tool applies a single numbering style to the entire document, you can easily achieve different formats by splitting your document, numbering each section separately, and then combining them. For example, you could use Roman numerals for the table of contents and Arabic numerals for the main content."
+      },
+      { 
+        question: "Will the page numbers be visible when printed?",
+        answer: "Yes, the page numbers become a permanent part of your PDF and will be visible both on screen and when printed. They're added as vector text, so they'll remain crisp and clear at any size."
+      },
+      { 
+        question: "Can I remove the page numbers after adding them?",
+        answer: "Once page numbers are added, they become part of the PDF content. We recommend keeping a copy of your original document before adding page numbers. If you need to remove them later, you would need a PDF editor that can edit text layers."
+      },
+      { 
+        question: "What's the maximum number of pages I can number?",
+        answer: "Our tool can handle PDFs with thousands of pages. The only limitation is your device's memory, as the processing happens in your browser. For extremely large documents, we recommend breaking them into smaller sections."
+      },
+      { 
+        question: "Can I add page numbers to a password-protected PDF?",
+        answer: "For security reasons, you'll need to remove the password protection before using our tool. We respect document security and don't process encrypted files to ensure your sensitive information remains protected."
+      },
+      { 
+        question: "Will the page numbers work with my PDF reader's built-in page numbers?",
+        answer: "Our tool adds visible page numbers to the content of your PDF, which are independent of any page numbers displayed by your PDF reader. This ensures the numbers are always visible, regardless of the reader or device being used."
+      },
+      { 
+        question: "Can I use custom text with the page numbers?",
+        answer: "Yes! You can include custom text before or after the page number, such as 'Page X of Y' or 'Section 1 - X'. This is perfect for creating professional-looking headers or footers."
+      },
+      { 
+        question: "Does it work with double-sided printing?",
+        answer: "Absolutely! You can choose to position page numbers on the outside corners for professional-looking double-sided documents. The numbers will automatically alternate sides on even and odd pages."
+      },
+      { 
+        question: "Is there a file size limit?",
+        answer: "Our tool can process PDFs up to 100MB in size. For larger files, we recommend using a desktop PDF editor. The actual limit may vary based on your device's available memory, as all processing happens in your browser."
+      }
     ],
-    relatedTools: [ToolType.NUMBERING]
+    relatedTools: [ToolType.WATERMARK, ToolType.ROTATE]
+  },
+  {
+    id: ToolType.WATERMARK,
+    title: 'Add Watermark to PDF - Text & Image Watermark Online | FreeProPDF',
+    shortTitle: 'Watermark PDF',
+    metaTitle: 'Add Watermark to PDF Online - Free & Secure | FreeProPDF',
+    metaDescription: 'Add text or image watermarks to your PDF files online. Protect your documents with custom watermarks in seconds. No registration required!',
+    description: 'Easily add text or image watermarks to your PDF documents. Protect your work and maintain ownership with professional watermarks.',
+    longDescription: `
+      <h1 class="text-4xl font-bold mt-8 mb-6">Add Watermark to PDF - Secure Your Documents</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">Protect your PDF documents by adding professional watermarks. Whether you need to add "DRAFT," "CONFIDENTIAL," or your company logo, our free online tool makes it easy to secure your files. Our watermarking process is fast, secure, and works entirely in your browser.</p>
+      
+      <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 mb-8">
+        <h3 class="text-xl font-semibold text-blue-800 dark:text-blue-300 mb-2">✨ Why Use Our PDF Watermark Tool?</h3>
+        <ul class="list-disc pl-6 space-y-1 text-blue-700 dark:text-blue-400">
+          <li><strong>100% Private:</strong> Your files never leave your computer</li>
+          <li><strong>Flexible Options:</strong> Add text or image watermarks</li>
+          <li><strong>Customizable:</strong> Adjust position, opacity, and rotation</li>
+          <li><strong>No Watermarks on Our Side:</strong> We don't add our own watermarks to your files</li>
+          <li><strong>Works on All Devices:</strong> Desktop, tablet, or mobile - no installation needed</li>
+        </ul>
+      </div>
+      
+      <h2 class="text-3xl font-bold mt-12 mb-4">How to Add a Watermark to PDF in 3 Simple Steps</h2>
+      <div class="grid md:grid-cols-3 gap-6 my-8">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold mb-4">1</div>
+          <h3 class="text-xl font-semibold mb-2">Upload Your PDF</h3>
+          <p class="text-gray-600 dark:text-gray-400">Select your PDF file or drag and drop it into the upload area. Our tool supports files up to 100MB in size.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold mb-4">2</div>
+          <h3 class="text-xl font-semibold mb-2">Customize Watermark</h3>
+          <p class="text-gray-600 dark:text-gray-400">Enter your watermark text or upload an image. Adjust the position, size, opacity, and rotation to your preference.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold mb-4">3</div>
+          <h3 class="text-xl font-semibold mb-2">Download</h3>
+          <p class="text-gray-600 dark:text-gray-400">Click "Add Watermark" and download your watermarked PDF. The processing happens instantly in your browser.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold mt-12 mb-4">Perfect for All Your Watermarking Needs</h2>
+      <p>Our PDF Watermark tool is designed to handle all your document security needs. Here are just a few examples of how people use our tool:</p>
+      
+      <div class="grid md:grid-cols-3 gap-6 my-8">
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/10 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+          <h3 class="text-xl font-semibold mb-2">👨‍💼 Business</h3>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-400">
+            <li>Add "CONFIDENTIAL" to sensitive documents</li>
+            <li>Brand documents with company logo</li>
+            <li>Mark drafts with "DRAFT" or "FOR REVIEW"</li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/10 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+          <h3 class="text-xl font-semibold mb-2">🎓 Education</h3>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-400">
+            <li>Add student IDs to assignments</li>
+            <li>Watermark research papers with copyright</li>
+            <li>Mark graded papers with "GRADED"</li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/10 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+          <h3 class="text-xl font-semibold mb-2">📷 Creative</h3>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-400">
+            <li>Add copyright to photography portfolios</li>
+            <li>Watermark digital artwork</li>
+            <li>Protect e-books and digital publications</li>
+          </ul>
+        </div>
+      </div>
+    `,
+    howToSteps: [
+      "<strong>Step 1:</strong> Click 'Select File' or drag and drop your PDF into the upload area. Our tool supports files up to 100MB in size.",
+      "<strong>Step 2:</strong> Choose between text or image watermark. For text, enter your desired text and customize the font, size, and color. For images, upload your watermark image.",
+      "<strong>Step 3:</strong> Adjust the position, size, opacity, and rotation of your watermark using the intuitive controls. Preview the changes in real-time.",
+      "<strong>Step 4:</strong> Click 'Add Watermark' to process your document. The watermark will be applied to every page of your PDF.",
+      "<strong>Step 5:</strong> Download your watermarked PDF. The file is processed entirely in your browser for maximum privacy."
+    ],
+    icon: 'Droplets',
+    color: 'text-blue-500',
+    path: '/watermark-pdf',
+    keywords: [
+      'add watermark to pdf', 'pdf watermark', 'watermark pdf online', 'add text watermark to pdf', 'image watermark pdf',
+      'how to add watermark to pdf', 'pdf watermark tool', 'add watermark to pdf free', 'watermark pdf with logo',
+      'add watermark to multiple pdfs', 'pdf watermark software', 'watermark pdf mac', 'watermark pdf windows',
+      'add transparent watermark to pdf', 'batch watermark pdf', 'watermark pdf online free', 'how to watermark a pdf document',
+      'add copyright watermark to pdf', 'watermark pdf with text', 'best pdf watermark software', 'watermark pdf free download',
+      'add diagonal watermark to pdf', 'watermark pdf linux', 'watermark pdf command line', 'add watermark to pdf python',
+      'watermark pdf php', 'add watermark to pdf javascript', 'watermark pdf java', 'add watermark to pdf c#',
+      'watermark pdf android', 'add watermark to pdf ios', 'watermark pdf react', 'watermark pdf angular',
+      'watermark pdf vue', 'add watermark to pdf nodejs', 'watermark pdf python pdfkit', 'watermark pdf php tcpdf',
+      'watermark pdf imagemagick', 'add watermark to pdf ghostscript', 'watermark pdf itext', 'watermark pdf c++',
+      'watermark pdf ruby', 'add watermark to pdf go', 'watermark pdf swift', 'watermark pdf kotlin',
+      'watermark pdf flutter', 'add watermark to pdf xamarin', 'watermark pdf electron', 'watermark pdf nextjs',
+      'watermark pdf nuxtjs', 'add watermark to pdf gatsby', 'watermark pdf svelte', 'watermark pdf solidjs'
+    ],
+    faqs: [
+      { 
+        question: "Is it possible to add a watermark to specific pages only?",
+        answer: "Currently, our tool applies the watermark to all pages of the PDF. If you need to watermark specific pages, you can split your PDF first, apply watermarks to the selected pages, and then merge them back together."
+      },
+      { 
+        question: "What types of images can I use as a watermark?",
+        answer: "Our tool supports common image formats including JPG, PNG, and WebP. For best results, use a transparent PNG with your logo or design."
+      },
+      { 
+        question: "Will the watermark be visible when printed?",
+        answer: "Yes, the watermark becomes part of the PDF content and will be visible both on screen and when printed. For professional documents, we recommend testing with a single page first."
+      },
+      { 
+        question: "Can I remove a watermark after adding it?",
+        answer: "Once a watermark is added to a PDF, it becomes part of the document content. To remove it, you would need the original unwatermarked file. We recommend keeping backups of your original files."
+      },
+      { 
+        question: "Is there a file size limit for the PDF or watermark image?",
+        answer: "The PDF file size limit is 100MB. For watermark images, we recommend using files under 5MB for optimal performance. The tool will automatically resize large watermark images while maintaining aspect ratio."
+      },
+      { 
+        question: "Can I adjust the opacity of the watermark?",
+        answer: "Yes, our tool includes an opacity slider that lets you adjust how transparent or opaque your watermark appears on the document."
+      },
+      { 
+        question: "Is my document secure when using this tool?",
+        answer: "Absolutely! The entire watermarking process happens in your browser. Your files are never uploaded to any server, ensuring complete privacy and security for your sensitive documents."
+      },
+      { 
+        question: "Can I use this tool on my mobile device?",
+        answer: "Yes, our tool is fully responsive and works on all devices including smartphones and tablets. The interface automatically adjusts to provide the best experience on any screen size."
+      },
+      { 
+        question: "What happens if I close the browser during processing?",
+        answer: "Since the processing happens in your browser, closing the window will stop the process. You'll need to start over, but no data is ever lost as the original file remains on your device until you download the watermarked version."
+      },
+      { 
+        question: "Do you store any of my files?",
+        answer: "No, we don't store any of your files. The entire process happens in your browser, and once you close the tab, all temporary data is cleared. Your documents never touch our servers."
+      }
+    ],
+    relatedTools: [ToolType.NUMBERING, ToolType.ROTATE]
   }
 ];
 
