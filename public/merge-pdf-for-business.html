@@ -1,210 +1,460 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
     <title>Merge PDFs for Business: A Complete Guide | FreeProPDF</title>
     <meta name="description" content="Discover how businesses can efficiently merge PDFs for reports, contracts, and presentations. Learn about secure, batch processing and team collaboration features for professional document management.">
+    <meta name="keywords" content="business pdf merger, merge pdf for work, professional pdf tools, document management, batch pdf processing">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://freepropdf.com/merge-pdf-for-business" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: #374151;
+        background-color: #1f2937;
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
 </head>
-<body>
-    <main class="container">
-        <h1>Merge PDFs for Business: A Complete Guide</h1>
-        
-        <p class="intro">In today's digital workplace, businesses of all sizes rely on efficient document management. Our comprehensive guide shows you how to leverage PDF merging to streamline your business processes, from client proposals to financial reports. Discover professional techniques that save time, enhance security, and improve your document workflow.</p>
-
-        <section class="business-benefits">
-            <h2>Why Businesses Need Professional PDF Merging</h2>
-            
-            <div class="benefit">
-                <h3>1. Streamlined Document Management</h3>
-                <p>Businesses handle numerous documents daily. Merging related files helps in:</p>
-                <ul>
-                    <li>Reducing file clutter and improving organization</li>
-                    <li>Creating comprehensive client portfolios</li>
-                    <li>Preparing complete project documentation</li>
-                    <li>Consolidating financial records and reports</li>
-                </ul>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
             </div>
-
-            <div class="benefit">
-                <h3>2. Enhanced Professionalism</h3>
-                <p>Presenting merged, well-organized documents demonstrates professionalism through:</p>
-                <ul>
-                    <li>Unified branding across all pages</li>
-                    <li>Consistent formatting and styling</li>
-                    <li>Professional document structure</li>
-                    <li>Easy navigation with bookmarks and table of contents</li>
-                </ul>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <section class="business-use-cases">
-            <h2>Business Use Cases for PDF Merging</h2>
-            
-            <div class="use-case">
-                <h3>1. Legal and Financial Documents</h3>
-                <p>Legal and financial professionals can:</p>
-                <ul>
-                    <li>Combine contracts with supporting documents</li>
-                    <li>Merge quarterly financial statements</li>
-                    <li>Create comprehensive audit trails</li>
-                    <li>Prepare complete case files</li>
-                </ul>
-                <p><strong>Tip:</strong> Use our <a href="/protect-pdf">PDF protection</a> to secure sensitive financial information before sharing.</p>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Merge PDFs for Business: A Complete Guide</h1>
+                
+                <p class="intro">In today's digital workplace, businesses of all sizes rely on efficient document management. Our comprehensive guide shows you how to leverage PDF merging to streamline your business processes, from client proposals to financial reports. Discover professional techniques that save time, enhance security, and improve your document workflow.</p>
+
+                <section class="business-benefits">
+                    <h2>Why Businesses Need Professional PDF Merging</h2>
+                    
+                    <div class="benefit">
+                        <h3>1. Streamlined Document Management</h3>
+                        <p>Businesses handle numerous documents daily. Merging related files helps in:</p>
+                        <ul>
+                            <li>Reducing file clutter and improving organization</li>
+                            <li>Creating comprehensive client portfolios</li>
+                            <li>Preparing complete project documentation</li>
+                            <li>Consolidating financial records and reports</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit">
+                        <h3>2. Enhanced Professionalism</h3>
+                        <p>Presenting merged, well-organized documents demonstrates professionalism through:</p>
+                        <ul>
+                            <li>Unified branding across all pages</li>
+                            <li>Consistent formatting and styling</li>
+                            <li>Professional document structure</li>
+                            <li>Easy navigation with bookmarks and table of contents</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="business-use-cases">
+                    <h2>Business Use Cases for PDF Merging</h2>
+                    
+                    <div class="use-case">
+                        <h3>1. Legal and Financial Documents</h3>
+                        <p>Legal and financial professionals can:</p>
+                        <ul>
+                            <li>Combine contracts with supporting documents</li>
+                            <li>Merge quarterly financial statements</li>
+                            <li>Create comprehensive audit trails</li>
+                            <li>Prepare complete case files</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Use our <a href="/protect-pdf">PDF protection</a> to secure sensitive financial information before sharing.</p>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>2. Human Resources</h3>
+                        <p>HR departments can streamline processes by:</p>
+                        <ul>
+                            <li>Combining employee onboarding materials</li>
+                            <li>Creating complete employee files</li>
+                            <li>Merging performance reviews and appraisals</li>
+                            <li>Compiling training materials</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Add <a href="/page-numbers">page numbers</a> for easy reference in employee documents.</p>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>3. Sales and Marketing</h3>
+                        <p>Sales teams can enhance client presentations by:</p>
+                        <ul>
+                            <li>Combining product sheets and pricing</li>
+                            <li>Creating comprehensive proposals</li>
+                            <li>Merging market research reports</li>
+                            <li>Compiling case studies and testimonials</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Add a <a href="/watermark">watermark</a> for draft proposals to maintain document control.</p>
+                    </div>
+                </section>
+
+                <section class="advanced-features">
+                    <h2>Advanced Business Features</h2>
+                    
+                    <div class="feature">
+                        <h3>1. Batch Processing</h3>
+                        <p>Save time with batch processing capabilities:</p>
+                        <ul>
+                            <li>Merge multiple sets of documents at once</li>
+                            <li>Process entire folders of PDFs</li>
+                            <li>Automate repetitive merging tasks</li>
+                            <li>Use naming conventions for easy organization</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>2. Security and Compliance</h3>
+                        <p>Maintain document security with:</p>
+                        <ul>
+                            <li>Password protection for sensitive documents</li>
+                            <li>Permission controls for viewing and editing</li>
+                            <li>Redaction of confidential information</li>
+                            <li>Audit trails for document access</li>
+                        </ul>
+                        <p><strong>Note:</strong> Our <a href="/protect-pdf">PDF protection</a> tool helps maintain compliance with data protection regulations.</p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>3. Team Collaboration</h3>
+                        <p>Enhance team productivity with:</p>
+                        <ul>
+                            <li>Cloud storage integration (Google Drive, Dropbox, OneDrive)</li>
+                            <li>Shared team folders for document access</li>
+                            <li>Version control for merged documents</li>
+                            <li>Comments and annotations for review</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Best Practices for Business PDF Merging</h2>
+                    
+                    <div class="practice">
+                        <h3>1. Standardize Document Formats</h3>
+                        <p>Create consistency across your business documents by:</p>
+                        <ul>
+                            <li>Using company-branded templates</li>
+                            <li>Standardizing fonts and formatting</li>
+                            <li>Including consistent headers and footers</li>
+                            <li>Using the same color scheme throughout</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>2. Implement Naming Conventions</h3>
+                        <p>Make document retrieval easier with consistent naming:</p>
+                        <ul>
+                            <li>Use clear, descriptive filenames</li>
+                            <li>Include dates in YYYY-MM-DD format</li>
+                            <li>Add version numbers when applicable</li>
+                            <li>Include project or client codes</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>3. Regular Backups</h3>
+                        <p>Protect your business documents by:</p>
+                        <ul>
+                            <li>Setting up automated backups</li>
+                            <li>Storing copies in multiple locations</li>
+                            <li>Using cloud storage for accessibility</li>
+                            <li>Regularly testing backup restoration</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions for Businesses</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Can I merge different page sizes into one document?</h3>
+                        <p>Yes, but for professional results, we recommend standardizing page sizes first. Use our <a href="/pdf-tools">PDF tools</a> to adjust page sizes before merging.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How can I ensure consistent branding across merged documents?</h3>
+                        <p>Create a master template with your company's branding elements and apply it to all documents before merging. Include your logo, color scheme, and standard fonts.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Is it possible to automate the merging of recurring reports?</h3>
+                        <p>Yes, many businesses use our API to automate the merging of weekly or monthly reports. Contact our support for enterprise solutions.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How can I track changes in merged documents?</h3>
+                        <p>For version control, we recommend using a document management system that tracks changes. You can also include version numbers in your filenames before merging.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What's the best way to share large merged documents with clients?</h3>
+                        <p>For large documents, we recommend using our <a href="/compress-pdf">compression tool</a> first, then sharing via secure links or encrypted email attachments.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Essential Business PDF Tools</h2>
+                    <ul>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Secure sensitive business documents</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Reduce file sizes for email and storage</li>
+                        <li><a href="/watermark">Watermark PDF</a> - Add company branding or confidentiality notices</li>
+                        <li><a href="/page-numbers">Page Numbers</a> - Add professional numbering to documents</li>
+                        <li><a href="/convert/jpg-to-pdf">JPG to PDF</a> - Convert receipts and scanned documents</li>
+                    </ul>
+                </section>
+
+                <section class="enterprise-solutions">
+                    <h2>Need More Advanced Features?</h2>
+                    <p>For businesses with advanced needs, we offer enterprise solutions including:</p>
+                    <ul>
+                        <li>Bulk processing of documents</li>
+                        <li>API integration with your existing systems</li>
+                        <li>Custom branding and white-label solutions</li>
+                        <li>Priority support and dedicated account management</li>
+                    </ul>
+                    <p><a href="/contact">Contact our sales team</a> to discuss custom solutions for your business.</p>
+                </section>
             </div>
-
-            <div class="use-case">
-                <h3>2. Human Resources</h3>
-                <p>HR departments can streamline processes by:</p>
-                <ul>
-                    <li>Combining employee onboarding materials</li>
-                    <li>Creating complete employee files</li>
-                    <li>Merging performance reviews and appraisals</li>
-                    <li>Compiling training materials</li>
-                </ul>
-                <p><strong>Tip:</strong> Add <a href="/page-numbers">page numbers</a> for easy reference in employee documents.</p>
-            </div>
-
-            <div class="use-case">
-                <h3>3. Sales and Marketing</h3>
-                <p>Sales teams can enhance client presentations by:</p>
-                <ul>
-                    <li>Combining product sheets and pricing</li>
-                    <li>Creating comprehensive proposals</li>
-                    <li>Merging market research reports</li>
-                    <li>Compiling case studies and testimonials</li>
-                </ul>
-                <p><strong>Tip:</strong> Add a <a href="/watermark">watermark</a> for draft proposals to maintain document control.</p>
-            </div>
-        </section>
-
-        <section class="advanced-features">
-            <h2>Advanced Business Features</h2>
-            
-            <div class="feature">
-                <h3>1. Batch Processing</h3>
-                <p>Save time with batch processing capabilities:</p>
-                <ul>
-                    <li>Merge multiple sets of documents at once</li>
-                    <li>Process entire folders of PDFs</li>
-                    <li>Automate repetitive merging tasks</li>
-                    <li>Use naming conventions for easy organization</li>
-                </ul>
-            </div>
-
-            <div class="feature">
-                <h3>2. Security and Compliance</h3>
-                <p>Maintain document security with:</p>
-                <ul>
-                    <li>Password protection for sensitive documents</li>
-                    <li>Permission controls for viewing and editing</li>
-                    <li>Redaction of confidential information</li>
-                    <li>Audit trails for document access</li>
-                </ul>
-                <p><strong>Note:</strong> Our <a href="/protect-pdf">PDF protection</a> tool helps maintain compliance with data protection regulations.</p>
-            </div>
-
-            <div class="feature">
-                <h3>3. Team Collaboration</h3>
-                <p>Enhance team productivity with:</p>
-                <ul>
-                    <li>Cloud storage integration (Google Drive, Dropbox, OneDrive)</li>
-                    <li>Shared team folders for document access</li>
-                    <li>Version control for merged documents</li>
-                    <li>Comments and annotations for review</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="best-practices">
-            <h2>Best Practices for Business PDF Merging</h2>
-            
-            <div class="practice">
-                <h3>1. Standardize Document Formats</h3>
-                <p>Create consistency across your business documents by:</p>
-                <ul>
-                    <li>Using company-branded templates</li>
-                    <li>Standardizing fonts and formatting</li>
-                    <li>Including consistent headers and footers</li>
-                    <li>Using the same color scheme throughout</li>
-                </ul>
-            </div>
-
-            <div class="practice">
-                <h3>2. Implement Naming Conventions</h3>
-                <p>Make document retrieval easier with consistent naming:</p>
-                <ul>
-                    <li>Use clear, descriptive filenames</li>
-                    <li>Include dates in YYYY-MM-DD format</li>
-                    <li>Add version numbers when applicable</li>
-                    <li>Include project or client codes</li>
-                </ul>
-            </div>
-
-            <div class="practice">
-                <h3>3. Regular Backups</h3>
-                <p>Protect your business documents by:</p>
-                <ul>
-                    <li>Setting up automated backups</li>
-                    <li>Storing copies in multiple locations</li>
-                    <li>Using cloud storage for accessibility</li>
-                    <li>Regularly testing backup restoration</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="faq">
-            <h2>Frequently Asked Questions for Businesses</h2>
-            
-            <div class="faq-item">
-                <h3>Can I merge different page sizes into one document?</h3>
-                <p>Yes, but for professional results, we recommend standardizing page sizes first. Use our <a href="/pdf-tools">PDF tools</a> to adjust page sizes before merging.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How can I ensure consistent branding across merged documents?</h3>
-                <p>Create a master template with your company's branding elements and apply it to all documents before merging. Include your logo, color scheme, and standard fonts.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Is it possible to automate the merging of recurring reports?</h3>
-                <p>Yes, many businesses use our API to automate the merging of weekly or monthly reports. Contact our support for enterprise solutions.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How can I track changes in merged documents?</h3>
-                <p>For version control, we recommend using a document management system that tracks changes. You can also include version numbers in your filenames before merging.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>What's the best way to share large merged documents with clients?</h3>
-                <p>For large documents, we recommend using our <a href="/compress-pdf">compression tool</a> first, then sharing via secure links or encrypted email attachments.</p>
-            </div>
-        </section>
-
-        <section class="related-tools">
-            <h2>Essential Business PDF Tools</h2>
-            <ul>
-                <li><a href="/protect-pdf">Protect PDF</a> - Secure sensitive business documents</li>
-                <li><a href="/compress-pdf">Compress PDF</a> - Reduce file sizes for email and storage</li>
-                <li><a href="/watermark">Watermark PDF</a> - Add company branding or confidentiality notices</li>
-                <li><a href="/page-numbers">Page Numbers</a> - Add professional numbering to documents</li>
-                <li><a href="/convert/jpg-to-pdf">JPG to PDF</a> - Convert receipts and scanned documents</li>
-            </ul>
-        </section>
-
-        <section class="enterprise-solutions">
-            <h2>Need More Advanced Features?</h2>
-            <p>For businesses with advanced needs, we offer enterprise solutions including:</p>
-            <ul>
-                <li>Bulk processing of documents</li>
-                <li>API integration with your existing systems</li>
-                <li>Custom branding and white-label solutions</li>
-                <li>Priority support and dedicated account management</li>
-            </ul>
-            <p><a href="/contact">Contact our sales team</a> to discuss custom solutions for your business.</p>
-        </section>
+        </article>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                        <li><a href="/pdf-to-jpg" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">PDF to JPG</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
