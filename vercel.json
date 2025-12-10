@@ -28,6 +28,11 @@
     { "source": "/how-to-merge-pdf-files", "destination": "/how-to-merge-pdf-files.html" },
     { "source": "/merge-pdf-for-business", "destination": "/merge-pdf-for-business.html" },
     { "source": "/merge-pdf-online-free", "destination": "/merge-pdf-online-free.html" },
+    { "source": "/compress-pdf-file-size", "destination": "/compress-pdf-file-size.html" },
+    { "source": "/reduce-pdf-size-for-email", "destination": "/reduce-pdf-size-for-email.html" },
+    { "source": "/compress-pdf-for-web", "destination": "/compress-pdf-for-web.html" },
+    { "source": "/compress-scanned-pdf-files", "destination": "/compress-scanned-pdf-files.html" },
+    { "source": "/compress-pdf-without-losing-quality", "destination": "/compress-pdf-without-losing-quality.html" },
     {
       "source": "/((?!static/.*|sitemap\\.xml|robots\\.txt|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|json|js|css|woff|woff2|ttf|eot|html)$).*)",
       "destination": "/index.html"
