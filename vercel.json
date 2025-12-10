@@ -38,6 +38,11 @@
     { "source": "/split-pdf-by-pages-or-chapters", "destination": "/split-pdf-by-pages-or-chapters.html" },
     { "source": "/split-pdf-for-email", "destination": "/split-pdf-for-email.html" },
     { "source": "/split-scanned-and-legal-pdf-documents", "destination": "/split-scanned-and-legal-pdf-documents.html" },
+    { "source": "/convert-pdf-to-jpg-online", "destination": "/convert-pdf-to-jpg-online.html" },
+    { "source": "/pdf-to-jpg-multiple-pages", "destination": "/pdf-to-jpg-multiple-pages.html" },
+    { "source": "/pdf-to-jpg-for-web-and-social", "destination": "/pdf-to-jpg-for-web-and-social.html" },
+    { "source": "/extract-images-from-pdf-to-jpg", "destination": "/extract-images-from-pdf-to-jpg.html" },
+    { "source": "/pdf-to-jpg-from-scanned-documents", "destination": "/pdf-to-jpg-from-scanned-documents.html" },
     {
       "source": "/((?!static/.*|sitemap\\.xml|robots\\.txt|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|json|js|css|woff|woff2|ttf|eot|html)$).*)",
       "destination": "/index.html"
