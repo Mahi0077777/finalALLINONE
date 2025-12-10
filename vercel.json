@@ -15,15 +15,21 @@
       ]
     },
     {
-      "source": "/(.*)\\.(xml|txt|ico|json|js|css|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot)$",
+      "source": "/(.*)\\.(xml|txt|ico|json|js|css|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|html)$",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Content-Type", "value": "text/html; charset=utf-8" }
       ]
     }
   ],
   "rewrites": [
+    { "source": "/merge-large-pdf-files", "destination": "/merge-large-pdf-files.html" },
+    { "source": "/combine-pdf-any-device", "destination": "/combine-pdf-any-device.html" },
+    { "source": "/how-to-merge-pdf-files", "destination": "/how-to-merge-pdf-files.html" },
+    { "source": "/merge-pdf-for-business", "destination": "/merge-pdf-for-business.html" },
+    { "source": "/merge-pdf-online-free", "destination": "/merge-pdf-online-free.html" },
     {
-      "source": "/((?!static/.*|sitemap\\.xml|robots\\.txt|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|json|js|css|woff|woff2|ttf|eot)$).*)",
+      "source": "/((?!static/.*|sitemap\\.xml|robots\\.txt|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|json|js|css|woff|woff2|ttf|eot|html)$).*)",
       "destination": "/index.html"
     }
   ]
