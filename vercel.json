@@ -33,6 +33,11 @@
     { "source": "/compress-pdf-for-web", "destination": "/compress-pdf-for-web.html" },
     { "source": "/compress-scanned-pdf-files", "destination": "/compress-scanned-pdf-files.html" },
     { "source": "/compress-pdf-without-losing-quality", "destination": "/compress-pdf-without-losing-quality.html" },
+    { "source": "/split-pdf-online-guide", "destination": "/split-pdf-online-guide.html" },
+    { "source": "/split-large-pdf-files", "destination": "/split-large-pdf-files.html" },
+    { "source": "/split-pdf-by-pages-or-chapters", "destination": "/split-pdf-by-pages-or-chapters.html" },
+    { "source": "/split-pdf-for-email", "destination": "/split-pdf-for-email.html" },
+    { "source": "/split-scanned-and-legal-pdf-documents", "destination": "/split-scanned-and-legal-pdf-documents.html" },
     {
       "source": "/((?!static/.*|sitemap\\.xml|robots\\.txt|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|json|js|css|woff|woff2|ttf|eot|html)$).*)",
       "destination": "/index.html"
