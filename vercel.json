@@ -43,6 +43,11 @@
     { "source": "/pdf-to-jpg-for-web-and-social", "destination": "/pdf-to-jpg-for-web-and-social.html" },
     { "source": "/extract-images-from-pdf-to-jpg", "destination": "/extract-images-from-pdf-to-jpg.html" },
     { "source": "/pdf-to-jpg-from-scanned-documents", "destination": "/pdf-to-jpg-from-scanned-documents.html" },
+    { "source": "/convert-jpg-to-pdf-online", "destination": "/convert-jpg-to-pdf-online.html" },
+    { "source": "/jpg-to-pdf-multiple-images", "destination": "/jpg-to-pdf-multiple-images.html" },
+    { "source": "/jpg-to-pdf-scanned-documents", "destination": "/jpg-to-pdf-scanned-documents.html" },
+    { "source": "/jpg-to-pdf-for-email-and-sharing", "destination": "/jpg-to-pdf-for-email-and-sharing.html" },
+    { "source": "/organize-photos-and-notes-with-jpg-to-pdf", "destination": "/organize-photos-and-notes-with-jpg-to-pdf.html" },
     {
       "source": "/((?!static/.*|sitemap\\.xml|robots\\.txt|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|json|js|css|woff|woff2|ttf|eot|html)$).*)",
       "destination": "/index.html"
