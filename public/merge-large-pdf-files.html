@@ -77,6 +77,19 @@
       
       .prose {
         max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
       }
       
       .prose img {
@@ -315,13 +328,14 @@
                 </section>
 
                 <section class="related-tools">
-                    <h2>Other Tools for Large PDFs</h2>
+                    <h2 class="dark:text-gray-300">Other Tools for Large PDFs</h2>
                     <ul>
                         <li><a href="/merge-pdf">Merge PDF</a> - Combine multiple files into one document</li>
                         <li><a href="/split-pdf">Split PDF</a> - Divide large files into smaller, more manageable parts</li>
                         <li><a href="/compress-pdf">Compress PDF</a> - Reduce file size without significant quality loss</li>
                         <li><a href="/organize-pdf">Organize PDF</a> - Reorder, rotate, or delete pages</li>
                         <li><a href="/pdf-to-word">PDF to Word</a> - Convert for easier editing of large documents</li>
+                        <li><a href="/watermark-pdf">Watermark</a> - Add custom watermarks</li>
                     </ul>
                 </section>
             </div>
