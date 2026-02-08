@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Draft Watermark PDF - Mark Documents as Draft | FreeProPDF</title>
+    <meta name="description" content="Add draft watermarks to PDF documents. Mark documents as "Draft", "Review Copy", or "Work in Progress". Free document status watermarking tool.">
+    <meta name="keywords" content="draft watermark pdf, review copy watermark, work in progress, document status, draft document protection">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/draft-watermark-pdf" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Draft Watermark PDF - Mark Documents as Draft</h1>
+                
+                <p class="intro">Add draft watermarks to PDF documents using our <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">online watermark tool</a> to clearly indicate work-in-progress status. Use "Draft", "Review Copy", "Work in Progress" and other status markers to prevent premature distribution. <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Mark your drafts now</a>.</p>
+
+                <section class="draft-importance">
+                    <h2>Why Draft Watermarks Are Essential</h2>
+                    
+                    <div class="importance">
+                        <h3>Document Status Communication</h3>
+                        <p>Clear status indication benefits:</p>
+                        <ul>
+                            <li><strong>Visual Status:</strong> Immediate recognition of document state</li>
+                            <li><strong>Prevent Misuse:</strong> Avoid premature distribution</li>
+                            <li><strong>Review Process:</strong> Clear indication of review stage</li>
+                            <li><strong>Version Control:</strong> Distinguish from final versions</li>
+                            <li><strong>Professional Standards:</strong> Proper document workflow</li>
+                        </ul>
+                    </div>
+
+                    <div class="importance">
+                        <h3>Quality Assurance</h3>
+                        <p>Process and quality benefits:</p>
+                        <ul>
+                            <li><strong>Review Tracking:</strong> Monitor document progress</li>
+                            <li><strong>Feedback Collection:</strong> Encourage review comments</li>
+                            <li><strong>Approval Process:</strong> Clear approval workflow</li>
+                            <li><strong>Change Management:</strong> Track document evolution</li>
+                            <li><strong>Accountability:</strong> Clear responsibility for final version</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="draft-types">
+                    <h2>Types of Draft Watermarks</h2>
+                    
+                    <div class="type">
+                        <h3>Standard Draft Markings</h3>
+                        <p>Common draft status labels:</p>
+                        <ul>
+                            <li><strong>Draft:</strong> General work-in-progress status</li>
+                            <li><strong>Review Copy:</strong> Document ready for review</li>
+                            <li><strong>Work in Progress:</strong> Active development status</li>
+                            <li><strong>Pre-release:</strong> Near-final version</li>
+                            <li><strong>Preliminary:</strong> Initial findings or data</li>
+                        </ul>
+                    </div>
+
+                    <div class="type">
+                        <h3>Process-Specific Markings</h3>
+                        <p>Workflow stage indicators:</p>
+                        <ul>
+                            <li><strong>For Review:</strong> Awaiting feedback</li>
+                            <li><strong>Under Review:</strong> Currently being evaluated</li>
+                            <li><strong>Pending Approval:</strong> Awaiting final sign-off</li>
+                            <li><strong>Revision Required:</strong> Changes needed</li>
+                            <li><strong>Final Draft:</strong> Last version before final</li>
+                        </ul>
+                    </div>
+
+                    <div class="type">
+                        <h3>Department-Specific Markings</h3>
+                        <p>Organizational draft labels:</p>
+                        <ul>
+                            <li><strong>Legal Draft:</strong> Legal department preliminary</li>
+                            <li><strong>Finance Draft:</strong> Financial department review</li>
+                            <li><strong>Marketing Draft:</strong> Marketing team review</li>
+                            <li><strong>Technical Draft:</strong> Technical review needed</li>
+                            <li><strong>Executive Draft:</strong> Management review copy</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="design-options">
+                    <h2>Draft Watermark Design Options</h2>
+                    
+                    <div class="option">
+                        <h3>Visual Appearance</h3>
+                        <p>Design considerations for draft marks:</p>
+                        <ul>
+                            <li><strong>Color Choice:</strong> Blue, gray, or light colors</li>
+                            <li><strong>Font Style:</strong> Clear, readable fonts</li>
+                            <li><strong>Size Appropriateness:</strong> Visible but not overwhelming</li>
+                            <li><strong>Opacity Level:</strong> Subtle but noticeable</li>
+                            <li><strong>Placement Strategy:</strong> Center or diagonal positioning</li>
+                        </ul>
+                    </div>
+
+                    <div class="option">
+                        <h3>Professional Styling</h3>
+                        <p>Corporate-appropriate appearance:</p>
+                        <ul>
+                            <li><strong>Brand Consistency:</strong> Match company colors</li>
+                            <li><strong>Professional Fonts:</strong> Use approved typography</li>
+                            <li><strong>Subtle Design:</strong> Professional, not distracting</li>
+                            <li><strong>Consistent Positioning:</strong> Standard placement</li>
+                            <li><strong>Layer Control:</strong> Behind content but visible</li>
+                        </ul>
+                    </div>
+
+                    <div class="option">
+                        <h3>Advanced Features</h3>
+                        <p>Enhanced draft watermarking:</p>
+                        <ul>
+                            <li><strong>Date Stamping:</strong> Include creation or review date</li>
+                            <li><strong>Author Information:</strong> Add document creator</li>
+                            <li><strong>Version Numbers:</strong> Include draft version</li>
+                            <li><strong>Department Codes:</strong> Add department identifiers</li>
+                            <li><strong>Review Instructions:</strong> Include feedback requests</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="application-process">
+                    <h2>How to Add Draft Watermark to PDF</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Choose Draft Status</h3>
+                            <p>Select appropriate marking:</p>
+                            <ul>
+                                <li>Determine document review stage</li>
+                                <li>Select appropriate draft label</li>
+                                <li>Consider audience and purpose</li>
+                                <li>Check organizational standards</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Design Watermark Text</h3>
+                            <p>Create your draft message:</p>
+                            <ul>
+                                <li>Choose standard or custom text</li>
+                                <li>Add date or version information</li>
+                                <li>Include author or department</li>
+                                <li>Consider review instructions</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Appearance</h3>
+                            <p>Set visual properties:</p>
+                            <ul>
+                                <li>Select appropriate font and size</li>
+                                <li>Choose professional color (blue, gray)</li>
+                                <li>Set opacity for visibility</li>
+                                <li>Configure rotation and position</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Apply to Document</h3>
+                            <p>Add draft watermark:</p>
+                            <ul>
+                                <li>Upload your PDF document</li>
+                                <li>Apply watermark to all pages</li>
+                                <li>Preview draft appearance</li>
+                                <li>Adjust placement if needed</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Download Draft PDF</h3>
+                            <p>Save your draft document:</p>
+                            <ul>
+                                <li>Process document with draft watermark</li>
+                                <li>Verify draft marking is clear</li>
+                                <li>Review overall document appearance</li>
+                                <li>Download your draft PDF</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="document-workflows">
+                    <h2>Document Workflows Using Draft Watermarks</h2>
+                    
+                    <div class="workflow">
+                        <h3>Content Creation Process</h3>
+                        <p>Writing and development workflow:</p>
+                        <ul>
+                            <li><strong>Initial Draft:</strong> First version creation</li>
+                            <li><strong>Peer Review:</strong> Colleague feedback stage</li>
+                            <li><strong>Editorial Review:</strong> Professional editing</li>
+                            <li><strong>Final Draft:</strong> Last revision before approval</li>
+                            <li><strong>Approved Version:</strong> Final, unwatermarked copy</li>
+                        </ul>
+                    </div>
+
+                    <div class="workflow">
+                        <h3>Business Document Process</h3>
+                        <p>Corporate document workflow:</p>
+                        <ul>
+                            <li><strong>Department Draft:</strong> Initial department version</li>
+                            <li><strong>Management Review:</strong> Leadership evaluation</li>
+                            <li><strong>Legal Review:</strong> Legal department approval</li>
+                            <li><strong>Executive Approval:</strong> Final management sign-off</li>
+                            <li><strong>Official Release:</strong> Final document distribution</li>
+                        </ul>
+                    </div>
+
+                    <div class="workflow">
+                        <h3>Academic Process</h3>
+                        <p>Research and academic workflow:</p>
+                        <ul>
+                            <li><strong>Research Draft:</strong> Initial findings</li>
+                            <li><strong>Peer Review Draft:</strong> Academic review</li>
+                            <li><strong>Committee Review:</strong> Thesis committee evaluation</li>
+                            <li><strong>Final Draft:</strong> Last revision</li>
+                            <li><strong>Submitted Version:</strong> Final academic submission</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Draft Watermark Best Practices</h2>
+                    
+                    <div class="practice">
+                        <h3>Document Management</h3>
+                        <p>Effective draft handling:</p>
+                        <ul>
+                            <li><strong>Version Control:</strong> Maintain clear version tracking</li>
+                            <li><strong>File Naming:</strong> Include status in file names</li>
+                            <li><strong>Access Control:</strong> Limit distribution of drafts</li>
+                            <li><strong>Regular Updates:</strong> Keep drafts current</li>
+                            <li><strong>Archive Management:</strong> Store drafts properly</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Communication Standards</h3>
+                        <p>Clear status communication:</p>
+                        <ul>
+                            <li><strong>Consistent Labeling:</strong> Use standard draft terms</li>
+                            <li><strong>Clear Instructions:</strong> Include review guidance</li>
+                            <li><strong>Deadline Communication:</strong> Specify review timelines</li>
+                            <li><strong>Feedback Process:</strong> Clear review procedures</li>
+                            <li><strong>Approval Chain:</strong> Document approval workflow</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Quality Assurance</h3>
+                        <p>Ensuring draft quality:</p>
+                        <ul>
+                            <li><strong>Review Checklists:</strong> Standard review criteria</li>
+                            <li><strong>Multiple Reviewers:</strong> Diverse perspective input</li>
+                            <li><strong>Documentation:</strong> Track changes and feedback</li>
+                            <li><strong>Final Verification:</strong> Thorough final review</li>
+                            <li><strong>Removal Process:</strong> Clean final version creation</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="industry-applications">
+                    <h2>Industry-Specific Draft Applications</h2>
+                    
+                    <div class="industry">
+                        <h3>Legal Industry</h3>
+                        <p>Legal document workflows:</p>
+                        <ul>
+                            <li><strong>Contract Drafts:</strong> Initial agreement versions</li>
+                            <li><strong>Legal Opinions:</strong> Preliminary legal analysis</li>
+                            <li><strong>Court Filings:</strong> Pre-filing review copies</li>
+                            <li><strong>Case Documents:</strong> Work-in-progress case files</li>
+                            <li><strong>Regulatory Submissions:</strong> Draft compliance documents</li>
+                        </ul>
+                    </div>
+
+                    <div class="industry">
+                        <h3>Publishing Industry</h3>
+                        <p>Content creation workflow:</p>
+                        <ul>
+                            <li><strong>Manuscript Drafts:</strong> Initial author submissions</li>
+                            <li><strong>Editorial Reviews:</strong> Publisher evaluation copies</li>
+                            <li><strong>Proof Copies:</strong> Pre-publication review</li>
+                            <li><strong>Design Drafts:</strong> Layout and design versions</li>
+                            <li><strong>Marketing Materials:</strong> Promotional content drafts</li>
+                        </ul>
+                    </div>
+
+                    <div class="industry">
+                        <h3>Engineering Industry</h3>
+                        <p>Technical document workflows:</p>
+                        <ul>
+                            <li><strong>Design Documents:</strong> Initial engineering plans</li>
+                            <li><strong>Technical Specifications:</strong> Draft technical docs</li>
+                            <li><strong>Test Reports:</strong> Preliminary test results</li>
+                            <li><strong>Project Plans:</strong> Work-in-progress project docs</li>
+                            <li><strong>Compliance Documents:</strong> Draft regulatory filings</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>When should I use draft watermarks?</h3>
+                        <p>Use draft watermarks whenever a document is not yet final and is being shared for review, feedback, or approval purposes.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What color should draft watermarks be?</h3>
+                        <p>Blue or gray are commonly used for draft watermarks as they're professional and clearly indicate work-in-progress status without being alarming.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Should draft watermarks be removed before final distribution?</h3>
+                        <p>Yes, draft watermarks should be removed from the final version before official distribution to avoid confusion about document status.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I add dates to draft watermarks?</h3>
+                        <p>Yes, adding dates or version numbers to draft watermarks helps track document progress and identify the most current version.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How visible should draft watermarks be?</h3>
+                        <p>Draft watermarks should be clearly visible to prevent accidental distribution as final, but subtle enough not to interfere with document readability.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Document Status Tools</h2>
+                    <ul>
+                        <li><a href="/add-watermark-to-pdf">Add Watermark to PDF</a> - General watermarking</li>
+                        <li><a href="/confidential-watermark-pdf">Confidential Watermark PDF</a> - Sensitive document protection</li>
+                        <li><a href="/copyright-watermark-pdf">Copyright Watermark PDF</a> - IP protection</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Password protection</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize for sharing</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/watermark-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Watermark PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

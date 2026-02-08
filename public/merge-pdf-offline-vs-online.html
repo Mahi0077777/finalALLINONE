@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Merge PDF Offline vs Online - Which is Better? | FreeProPDF</title>
+    <meta name="description" content="Compare offline and online PDF merging methods. Learn pros, cons, security, and convenience factors.">
+    <meta name="keywords" content="offline pdf merge, online pdf combine, pdf merger comparison, security pdf tools">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/merge-pdf-offline-vs-online" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Offline vs Online PDF Merging: Complete Comparison</h1>
+                
+                <p class="intro">Should you merge PDFs offline or online? This comprehensive guide helps you choose the best method for your needs based on security, convenience, cost, and performance factors.</p>
+
+                <section class="methods-overview">
+                    <h2>Understanding the Two Approaches</h2>
+                    
+                    <div class="method">
+                        <h3>Offline PDF Merging</h3>
+                        <p>Software-based solutions that work without internet:</p>
+                        <ul>
+                            <li><strong>Desktop Software:</strong> Adobe Acrobat, Foxit, Nitro</li>
+                            <li><strong>Free Tools:</strong> PDFsam, PDF Shuffler, Sejda Desktop</li>
+                            <li><strong>Built-in Tools:</strong> macOS Preview, Windows tools</li>
+                            <li><strong>Command Line:</strong> PDFtk, Ghostscript</li>
+                        </ul>
+                    </div>
+
+                    <div class="method">
+                        <h3>Online PDF Merging</h3>
+                        <p>Web-based solutions that work through browsers:</p>
+                        <ul>
+                            <li><strong>Free Online Tools:</strong> Like our <a href="/merge-pdf">PDF merger</a></li>
+                            <li><strong>Cloud Services:</strong> Google Drive, Dropbox integrations</li>
+                            <li><strong>Subscription Platforms:</strong> Soda PDF, iLovePDF</li>
+                            <li><strong>Browser Extensions:</strong> Chrome/Firefox add-ons</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="security-comparison">
+                    <h2>Security Comparison</h2>
+                    
+                    <div class="security-analysis">
+                        <h3>Offline Security Advantages</h3>
+                        <p><strong>Maximum Privacy:</strong></p>
+                        <ul>
+                            <li>Files never leave your device</li>
+                            <li>No internet transmission required</li>
+                            <li>Complete control over data</li>
+                            <li>No third-party server access</li>
+                            <li>Works with sensitive documents</li>
+                        </ul>
+                        <p><strong>Best for:</strong> Legal documents, medical records, financial statements, confidential business files.</p>
+                    </div>
+
+                    <div class="security-analysis">
+                        <h3>Online Security Considerations</h3>
+                        <p><strong>Privacy Factors:</strong></p>
+                        <ul>
+                            <li>Files uploaded to external servers</li>
+                            <li>Temporary storage during processing</li>
+                            <li>Dependent on provider security practices</li>
+                            <li>Potential data logging</li>
+                            <li>Internet transmission risks</li>
+                        </ul>
+                        <p><strong>Our Approach:</strong> Files processed locally when possible, deleted after 1 hour, no account required.</p>
+                    </div>
+                </section>
+
+                <section class="performance-analysis">
+                    <h2>Speed and Performance</h2>
+                    
+                    <div class="performance-factor">
+                        <h3>Processing Speed</h3>
+                        <p><strong>Offline:</strong></p>
+                        <ul>
+                            <li>Depends on your computer's processing power</li>
+                            <li>No upload/download delays</li>
+                            <li>Instant processing for local files</li>
+                            <li>Limited by RAM and CPU</li>
+                            <li>No network latency</li>
+                        </ul>
+                        <p><strong>Online:</strong></p>
+                        <ul>
+                            <li>Depends on internet connection speed</li>
+                            <li>Upload time can be significant</li>
+                            <li>Server-side processing often faster</li>
+                            <li>Download time for result</li>
+                            <li>Network latency affects experience</li>
+                        </ul>
+                    </div>
+
+                    <div class="performance-factor">
+                        <h3>File Size Handling</h3>
+                        <p><strong>Offline Advantages:</strong></p>
+                        <ul>
+                            <li>Limited only by your computer resources</li>
+                            <li>No file size restrictions</li>
+                            <li>Handles very large files efficiently</li>
+                            <li>Batch processing unlimited</li>
+                            <li>No upload timeouts</li>
+                        </ul>
+                        <p><strong>Online Limitations:</strong></p>
+                        <ul>
+                            <li>Typically 50-100MB file size limits</li>
+                            <li>Upload timeouts for large files</li>
+                            <li>Browser memory constraints</li>
+                            <li>Server processing limits</li>
+                            <li>May require compression first</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="convenience-factors">
+                    <h2>Convenience and Accessibility</h2>
+                    
+                    <div class="convenience-comparison">
+                        <h3>Accessibility</h3>
+                        <p><strong>Offline:</strong></p>
+                        <ul>
+                            <li>Requires software installation</li>
+                            <li>Device-specific (Windows/Mac/Linux)</li>
+                            <li>Not accessible from public computers</li>
+                            <li>Updates and maintenance required</li>
+                            <li>Limited to installed devices</li>
+                        </ul>
+                        <p><strong>Online:</strong></p>
+                        <ul>
+                            <li>Works from any device with browser</li>
+                            <li>No installation required</li>
+                            <li>Accessible from anywhere</li>
+                            <li>Always up-to-date</li>
+                            <li>Works on public/shared computers</li>
+                        </ul>
+                    </div>
+
+                    <div class="convenience-comparison">
+                        <h3>Setup and Maintenance</h3>
+                        <p><strong>Offline Requirements:</strong></p>
+                        <ul>
+                            <li>Download and install software</li>
+                            <li>System compatibility checks</li>
+                            <li>Regular updates needed</li>
+                            <li>License management</li>
+                            <li>Technical troubleshooting</li>
+                        </ul>
+                        <p><strong>Online Simplicity:</strong></p>
+                        <ul>
+                            <li>No installation needed</li>
+                            <li>Works immediately in browser</li>
+                            <li>Automatic updates</li>
+                            <li>No license management</li>
+                            <li>Minimal technical issues</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="cost-analysis">
+                    <h2>Cost Analysis</h2>
+                    
+                    <div class="cost-breakdown">
+                        <h3>Offline Costs</h3>
+                        <p><strong>Free Options:</strong></p>
+                        <ul>
+                            <li>PDFsam (free version)</li>
+                            <li>PDF Shuffler (open source)</li>
+                            <li>macOS Preview (built-in)</li>
+                            <li>Windows tools (limited)</li>
+                            <li>Command line tools (technical)</li>
+                        </ul>
+                        <p><strong>Paid Software:</strong></p>
+                        <ul>
+                            <li>Adobe Acrobat Pro: $20/month</li>
+                            <li>Foxit PhantomPDF: $129/year</li>
+                            <li>Nitro Pro: $179/year</li>
+                            <li>One-time purchase options available</li>
+                            <li>Enterprise licensing for businesses</li>
+                        </ul>
+                    </div>
+
+                    <div class="cost-breakdown">
+                        <h3>Online Costs</h3>
+                        <p><strong>Free Services:</strong></p>
+                        <ul>
+                            <li>Our <a href="/merge-pdf">PDF merger</a> - completely free</li>
+                            <li>Most basic merging tools</li>
+                            <li>Limited features and file sizes</li>
+                            <li>Advertisements supported</li>
+                            <li>Account registration sometimes required</li>
+                        </ul>
+                        <p><strong>Premium Online:</strong></p>
+                        <ul>
+                            <li>iLovePDF: $48/year</li>
+                            <li>Soda PDF: $72/year</li>
+                            <li>Smallpdf: $108/year</li>
+                            <li>Monthly subscriptions available</li>
+                            <li>Business plans with more features</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="feature-comparison">
+                    <h2>Feature Comparison</h2>
+                    
+                    <div class="feature-table">
+                        <h3>Advanced Features Availability</h3>
+                        <p><strong>Offline Software:</strong></p>
+                        <ul>
+                            <li>✓ Advanced page manipulation</li>
+                            <li>✓ Batch processing</li>
+                            <li>✓ OCR capabilities</li>
+                            <li>✓ Form field editing</li>
+                            <li>✓ Digital signatures</li>
+                            <li>✓ Advanced security options</li>
+                        </ul>
+                        <p><strong>Online Tools:</strong></p>
+                        <ul>
+                            <li>✓ Basic page reordering</li>
+                            <li>✓ Limited batch processing</li>
+                            <li>✗ OCR (usually premium)</li>
+                            <li>✗ Form editing (rare)</li>
+                            <li>✗ Digital signatures (limited)</li>
+                            <li>✓ Cloud integration</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="use-cases">
+                    <h2>Best Use Cases for Each Method</h2>
+                    
+                    <div class="use-case">
+                        <h3>Choose Offline When:</h3>
+                        <ul>
+                            <li>Working with sensitive/confidential documents</li>
+                            <li>Need to process very large files</li>
+                            <li>Require advanced features and control</li>
+                            <li>Working without internet connection</li>
+                            <li>Need batch processing capabilities</li>
+                            <li>Professional/enterprise requirements</li>
+                            <li>One-time software investment preferred</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Choose Online When:</h3>
+                        <ul>
+                            <li>Occasional PDF merging needs</li>
+                            <li>Working from multiple devices</li>
+                            <li>Need quick, simple solution</li>
+                            <li>Files are not highly sensitive</li>
+                            <li>Prefer free, no-commitment option</li>
+                            <li>Need cloud storage integration</li>
+                            <li>Collaborative workflows</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="hybrid-approach">
+                    <h2>Hybrid Approach: Best of Both Worlds</h2>
+                    
+                    <div class="hybrid-strategy">
+                        <h3>Combining Methods</h3>
+                        <p>Smart workflow recommendations:</p>
+                        <ul>
+                            <li><strong>Quick tasks:</strong> Use online tools for simple merges</li>
+                            <li><strong>Sensitive work:</strong> Use offline for confidential documents</li>
+                            <li><strong>Large files:</strong> Start offline, finish online if needed</li>
+                            <li><strong>Mobile access:</strong> Online tools on the go, offline at desk</li>
+                            <li><strong>Collaboration:</strong> Online for sharing, offline for preparation</li>
+                        </ul>
+                    </div>
+
+                    <div class="hybrid-strategy">
+                        <h3>Security-First Hybrid</h3>
+                        <p>Maintain privacy while enjoying convenience:</p>
+                        <ul>
+                            <li>Remove sensitive data before online processing</li>
+                            <li>Use offline for final document assembly</li>
+                            <li>Online for non-sensitive prep work</li>
+                            <li>Local processing when possible</li>
+                            <li>Choose providers with strong privacy policies</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Is online PDF merging secure?</h3>
+                        <p>It depends on the provider. Reputable services use HTTPS encryption and delete files after processing. However, files are still uploaded to external servers, so consider sensitivity.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What's the fastest way to merge PDFs?</h3>
+                        <p>For small files and good internet, online tools are often faster due to server processing. For large files or slow internet, offline is typically faster.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Do I need internet for offline merging?</h3>
+                        <p>No, offline software works completely without internet once installed. This is ideal for secure environments or areas with poor connectivity.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Which method preserves quality better?</h3>
+                        <p>Both methods can preserve quality perfectly if implemented correctly. The key is using tools that don't re-compress images or alter content unnecessarily.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I switch between methods?</h3>
+                        <p>Yes, you can use both methods as needed. Many users have offline software for sensitive work and use online tools for quick tasks.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Related PDF Tools and Resources</h2>
+                    <ul>
+                        <li><a href="/merge-pdf">Online PDF Merger</a> - Our free online tool</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Reduce file size for online use</li>
+                        <li><a href="/split-pdf">Split PDF</a> - Divide large documents</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Secure sensitive documents</li>
+                        <li><a href="/pdf-to-jpg">PDF to JPG</a> - Convert formats as needed</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                        <li><a href="/pdf-to-jpg" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">PDF to JPG</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

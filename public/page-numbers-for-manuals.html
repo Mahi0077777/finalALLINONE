@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Page Numbers for Manuals - Technical Manual Formatting | FreeProPDF</title>
+    <meta name="description" content="Add page numbers to technical manuals, user guides, and instruction documents. Professional manual formatting with sections. Free tool.">
+    <meta name="keywords" content="manual page numbers, technical manual formatting, user guide numbering, instruction manual pages">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/page-numbers-for-manuals" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Page Numbers for Manuals - Technical Manual Formatting</h1>
+                
+                <p class="intro">Add professional page numbers to technical manuals, user guides, and instruction documents using our <a href="/page-numbers" class="text-brand-600 hover:text-brand-700 font-semibold">page numbering tool</a>. Format complex manuals with sections, chapters, and appendices. Perfect for technical writers and documentation specialists. <a href="/page-numbers" class="text-brand-600 hover:text-brand-700 font-semibold">Number your manuals now</a>.</p>
+
+                <section class="manual-types">
+                    <h2>Types of Manuals Requiring Page Numbers</h2>
+                    
+                    <div class="manual-type">
+                        <h3>Technical Manuals</h3>
+                        <p>Engineering and technical documentation:</p>
+                        <ul>
+                            <li><strong>Equipment Manuals:</strong> Machinery and device documentation</li>
+                            <li><strong>Software Manuals:</strong> Application and system guides</li>
+                            <li><strong>Maintenance Manuals:</strong> Service and repair documentation</li>
+                            <li><strong>Installation Guides:</strong> Setup and configuration instructions</li>
+                            <li><strong>API Documentation:</strong> Developer technical references</li>
+                        </ul>
+                    </div>
+
+                    <div class="manual-type">
+                        <h3>User Guides</h3>
+                        <p>End-user documentation:</p>
+                        <ul>
+                            <li><strong>Product Manuals:</strong> Consumer product instructions</li>
+                            <li><strong>Training Guides:</strong> Educational and learning materials</li>
+                            <li><strong>Quick Start Guides:</strong> Basic setup instructions</li>
+                            <li><strong>FAQ Documents:</strong> Frequently asked questions</li>
+                            <li><strong>Troubleshooting Guides:</strong> Problem-solving documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="manual-type">
+                        <h3>Procedure Manuals</h3>
+                        <p>Process and workflow documentation:</p>
+                        <ul>
+                            <li><strong>SOP Manuals:</strong> Standard operating procedures</li>
+                            <li><strong>Safety Manuals:</strong> Workplace safety guidelines</li>
+                            <li><strong>Quality Manuals:</strong> Quality assurance procedures</li>
+                            <li><strong>Training Manuals:</strong> Employee training materials</li>
+                            <li><strong>Compliance Manuals:</strong> Regulatory compliance guides</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="manual-structure">
+                    <h2>Manual Structure and Numbering</h2>
+                    
+                    <div class="structure">
+                        <h3>Front Matter (Roman Numerals)</h3>
+                        <p>Preliminary sections formatting:</p>
+                        <ul>
+                            <li><strong>Title Page:</strong> No page number</li>
+                            <li><strong>Copyright Page:</strong> No page number</li>
+                            <li><strong>Table of Contents:</strong> Roman numeral "iii"</li>
+                            <li><strong>List of Figures:</strong> Continue Roman numerals</li>
+                            <li><strong>List of Tables:</strong> Continue Roman numerals</li>
+                            <li><strong>Preface:</strong> Continue Roman numerals</li>
+                            <li><strong>Introduction:</strong> Roman numerals or start Arabic</li>
+                        </ul>
+                    </div>
+
+                    <div class="structure">
+                        <h3>Main Body (Arabic Numerals)</h3>
+                        <p>Primary content sections:</p>
+                        <ul>
+                            <li><strong>Chapter 1:</strong> Starts with Arabic "1"</li>
+                            <li><strong>Section Numbering:</strong> Continue sequentially</li>
+                            <li><strong>Position:</strong> Bottom center or top right</li>
+                            <li><strong>Headers:</strong> Often include chapter titles</li>
+                            <li><strong>Consistency:</strong> Same position throughout body</li>
+                        </ul>
+                    </div>
+
+                    <div class="structure">
+                        <h3>Back Matter (Arabic Numerals)</h3>
+                        <p>Supporting documentation:</p>
+                        <ul>
+                            <li><strong>Glossary:</strong> Continue Arabic numbering</li>
+                            <li><strong>Appendices:</strong> Continue Arabic numbering</li>
+                            <li><strong>Index:</strong> Continue Arabic numbering</li>
+                            <li><strong>References:</strong> Continue Arabic numbering</li>
+                            <li><strong>About the Manual:</strong> Continue Arabic numbering</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="formatting-standards">
+                    <h2>Technical Manual Formatting Standards</h2>
+                    
+                    <div class="standard">
+                        <h3>Industry Standards</h3>
+                        <p>Professional documentation requirements:</p>
+                        <ul>
+                            <li><strong>MIL-STD:</strong> Military documentation standards</li>
+                            <li><strong>ISO Standards:</strong> International documentation norms</li>
+                            <li><strong>ANSI Standards:</strong> American National Standards</li>
+                            <li><strong>Company Style Guides:</strong> Corporate documentation standards</li>
+                            <li><strong>Technical Writing Best Practices:</strong> Industry conventions</li>
+                        </ul>
+                    </div>
+
+                    <div class="standard">
+                        <h3>Position and Layout</h3>
+                        <p>Manual-specific positioning:</p>
+                        <ul>
+                            <li><strong>Bottom Center:</strong> Traditional manual format</li>
+                            <li><strong>Top Right:</strong> With chapter headers</li>
+                            <li><strong>Bottom Right:</strong> Alternative professional option</li>
+                            <li><strong>Header Integration:</strong> With section information</li>
+                            <li><strong>Consistent Placement:</strong> Uniform throughout manual</li>
+                        </ul>
+                    </div>
+
+                    <div class="standard">
+                        <h3>Typography and Design</h3>
+                        <p>Visual formatting considerations:</p>
+                        <ul>
+                            <li><strong>Technical Fonts:</strong> Arial, Helvetica, Times New Roman</li>
+                            <li><strong>Font Size:</strong> 8-10 point for page numbers</li>
+                            <li><strong>Color:</strong> Black or dark gray for clarity</li>
+                            <li><strong>Weight:</strong> Regular or semi-bold</li>
+                            <li><strong>Readability:</strong> Clear and professional appearance</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="advanced-features">
+                    <h2>Advanced Manual Numbering Features</h2>
+                    
+                    <div class="feature">
+                        <h3>Chapter-Based Numbering</h3>
+                        <p>Chapter-specific numbering systems:</p>
+                        <ul>
+                            <li><strong>Chapter-Page:</strong> "1-1", "1-2", "2-1", "2-2"</li>
+                            <li><strong>Section-Page:</strong> "1.1", "1.2", "2.1", "2.2"</li>
+                            <li><strong>Module-Page:</strong> "M1-P1", "M1-P2", "M2-P1"</li>
+                            <li><strong>Volume-Page:</strong> "V1-P1", "V1-P2", "V2-P1"</li>
+                            <li><strong>Custom Hierarchies:</strong> Define your own structure</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Reference Integration</h3>
+                        <p>Cross-referencing capabilities:</p>
+                        <ul>
+                            <li><strong>Figure References:</strong> Link to figure numbers</li>
+                            <li><strong>Table References:</strong> Connect to table numbers</li>
+                            <li><strong>Section Cross-refs:</strong> Internal document links</li>
+                            <li><strong>Index Integration:</strong> Page number indexing</li>
+                            <li><strong>TOC Updates:</strong> Automatic table of contents</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Version Control</h3>
+                        <p>Document management features:</p>
+                        <ul>
+                            <li><strong>Version Numbers:</strong> Include manual version</li>
+                            <li><strong>Date Stamps:</strong> Add revision dates</li>
+                            <li><strong>Revision History:</strong> Track document changes</li>
+                            <li><strong>Approval Stamps:</strong> Include approval information</li>
+                            <li><strong>Classification Marks:</strong> Security level indicators</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="application-process">
+                    <h2>How to Format Manual Page Numbers</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Organize Manual Structure</h3>
+                            <p>Prepare your documentation:</p>
+                            <ul>
+                                <li>Separate front matter, main body, back matter</li>
+                                <li>Identify all chapter and section boundaries</li>
+                                <li>Check for special pages (title, copyright)</li>
+                                <li>Organize appendices and reference sections</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Choose Manual Format</h3>
+                            <p>Select appropriate formatting:</p>
+                            <ul>
+                                <li>Choose numbering style (Roman/Arabic)</li>
+                                <li>Select position and layout</li>
+                                <li>Set font and typography</li>
+                                <li>Configure chapter-based numbering if needed</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Section Numbering</h3>
+                            <p>Set up different sections:</p>
+                            <ul>
+                                <li>Front matter: Roman numerals (i, ii, iii...)</li>
+                                <li>Main body: Arabic numerals starting from 1</li>
+                                <li>Back matter: Continue Arabic numerals</li>
+                                <li>Set chapter-based numbering if required</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Add Technical Elements</h3>
+                            <p>Enhance with professional features:</p>
+                            <ul>
+                                <li>Include chapter titles in headers</li>
+                                <li>Add version control information</li>
+                                <li>Include confidentiality markings</li>
+                                <li>Add document reference codes</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Apply and Review</h3>
+                            <p>Finalize your manual:</p>
+                            <ul>
+                                <li>Process document with all settings</li>
+                                <li>Review front matter numbering</li>
+                                <li>Verify main body starts with "1"</li>
+                                <li>Check technical accuracy and consistency</li>
+                                <li>Download professionally formatted manual</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="industry-applications">
+                    <h2>Industry-Specific Applications</h2>
+                    
+                    <div class="industry">
+                        <h3>Manufacturing</h3>
+                        <p>Production and equipment manuals:</p>
+                        <ul>
+                            <li><strong>Machine Manuals:</strong> Equipment operation guides</li>
+                            <li><strong>Assembly Instructions:</strong> Production documentation</li>
+                            <li><strong>Quality Control:</strong> Inspection procedures</li>
+                            <li><strong>Safety Procedures:</strong> Workplace safety guides</li>
+                            <li><strong>Maintenance Schedules:</strong> Service documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="industry">
+                        <h3>Software Development</h3>
+                        <p>Technical documentation for software:</p>
+                        <ul>
+                            <li><strong>User Manuals:</strong> End-user guides</li>
+                            <li><strong>API Documentation:</strong> Developer references</li>
+                            <li><strong>Installation Guides:</strong> Setup instructions</li>
+                            <li><strong>Troubleshooting:</strong> Technical support guides</li>
+                            <li><strong>Release Notes:</strong> Version documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="industry">
+                        <h3>Healthcare</h3>
+                        <p>Medical and healthcare documentation:</p>
+                        <ul>
+                            <li><strong>Equipment Manuals:</strong> Medical device guides</li>
+                            <li><strong>Procedure Manuals:</strong> Clinical procedures</li>
+                            <li><strong>Safety Manuals:</strong> Healthcare safety protocols</li>
+                            <li><strong>Training Materials:</strong> Staff education guides</li>
+                            <li><strong>Compliance Guides:</strong> Regulatory documentation</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Technical Writing Best Practices</h2>
+                    
+                    <div class="practice">
+                        <h3>Before Formatting</h3>
+                        <p>Preparation steps:</p>
+                        <ul>
+                            <li><strong>Content Review:</strong> Verify technical accuracy</li>
+                            <li><strong>Structure Check:</strong> Ensure logical organization</li>
+                            <li><strong>Style Guide Compliance:</strong> Follow documentation standards</li>
+                            <li><strong>Audience Analysis:</strong> Consider end-user needs</li>
+                            <li><strong>Quality Assurance:</strong> Technical review process</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>During Formatting</h3>
+                        <p>Process considerations:</p>
+                        <ul>
+                            <li><strong>Consistency:</strong> Maintain uniform formatting</li>
+                            <li><strong>Clarity:</strong> Ensure numbers are easily readable</li>
+                            <li><strong>Professionalism:</strong> Follow technical writing standards</li>
+                            <li><strong>Accuracy:</strong> Verify correct page sequencing</li>
+                            <li><strong>Accessibility:</strong> Consider user accessibility needs</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>After Formatting</h3>
+                        <p>Quality assurance:</p>
+                        <ul>
+                            <li><strong>Complete Review:</strong> Check entire manual</li>
+                            <li><strong>Technical Validation:</strong> Expert review</li>
+                            <li><strong>User Testing:</strong> Test with end users</li>
+                            <li><strong>Print Verification:</strong> Check print quality</li>
+                            <li><strong>Digital Testing:</strong> Verify electronic format</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Should technical manuals use Roman or Arabic numerals?</h3>
+                        <p>Technical manuals typically use Roman numerals for front matter (table of contents, preface) and Arabic numerals for the main body, starting from page 1.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use chapter-based numbering in technical manuals?</h3>
+                        <p>Yes, chapter-based numbering (like "1-1", "1-2") is common in technical manuals to help users navigate specific chapters.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What's the best position for page numbers in user manuals?</h3>
+                        <p>Bottom center is traditional for manuals, but top right with chapter headers is also common, especially for technical documentation.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Should I include version information with page numbers?</h3>
+                        <p>Yes, including version numbers or revision dates with page numbers is recommended for technical manuals to track document updates.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I handle numbering for multi-volume manuals?</h3>
+                        <p>For multi-volume manuals, include volume identifiers with page numbers (e.g., "Volume 1 - Page 1" or "V1-P1").</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Documentation Tools</h2>
+                    <ul>
+                        <li><a href="/merge-pdf">Merge PDF</a> - Combine manual sections</li>
+                        <li><a href="/split-pdf">Split PDF</a> - Separate manual chapters</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize for distribution</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Secure proprietary information</li>
+                        <li><a href="/custom-page-numbering-pdf">Custom Page Numbering</a> - Advanced formatting</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/page-numbers" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Page Numbers</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Logo Watermark PDF - Add Brand Watermarks | FreeProPDF</title>
+    <meta name="description" content="Add logo watermarks to PDF documents. Protect your brand with custom company logos and brand watermarks. Professional branding tool for PDFs.">
+    <meta name="keywords" content="logo watermark pdf, brand watermark pdf, company logo watermark, pdf branding, corporate identity">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/logo-watermark-pdf" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Logo Watermark PDF - Add Brand Watermarks to Documents</h1>
+                
+                <p class="intro">Add logo watermarks to PDF documents using our <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">professional PDF watermark tool</a> to enhance brand identity and protect your content. Upload your company logo or brand image to create professional, branded PDFs with custom watermarks. <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Add your logo watermark now</a>.</p>
+
+                <section class="branding-importance">
+                    <h2>Why Logo Watermarks Matter for Branding</h2>
+                    
+                    <div class="importance">
+                        <h3>Brand Recognition</h3>
+                        <p>Visual identity benefits:</p>
+                        <ul>
+                            <li><strong>Brand Consistency:</strong> Maintain visual identity across documents</li>
+                            <li><strong>Professional Appearance:</strong> Corporate-quality presentation</li>
+                            <li><strong>Brand Recall:</strong> Reinforce brand recognition</li>
+                            <li><strong>Marketing Impact:</strong> Subtle brand promotion</li>
+                            <li><strong>Competitive Edge:</strong> Professional differentiation</li>
+                        </ul>
+                    </div>
+
+                    <div class="importance">
+                        <h3>Content Protection</h3>
+                        <p>Security and ownership benefits:</p>
+                        <ul>
+                            <li><strong>Ownership Claim:</strong> Visual proof of creation</li>
+                            <li><strong>Unauthorized Use Prevention:</strong> Deter content theft</li>
+                            <li><strong>Brand Association:</strong> Link content to your brand</li>
+                            <li><strong>Professional Standard:</strong> Industry best practice</li>
+                            <li><strong>Legal Evidence:</strong> Support copyright claims</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="logo-types">
+                    <h2>Types of Logo Watermarks</h2>
+                    
+                    <div class="type">
+                        <h3>Company Logos</h3>
+                        <p>Corporate brand identity:</p>
+                        <ul>
+                            <li><strong>Primary Logo:</strong> Main company brand mark</li>
+                            <li><strong>Secondary Logos:</strong> Alternative brand versions</li>
+                            <li><strong>Brand Marks:</strong> Symbol-only versions</li>
+                            <li><strong>Wordmarks:</strong> Text-only logo versions</li>
+                            <li><strong>Combination Marks:</strong> Text and symbol together</li>
+                        </ul>
+                    </div>
+
+                    <div class="type">
+                        <h3>Product Logos</h3>
+                        <p>Product-specific branding:</p>
+                        <ul>
+                            <li><strong>Product Brands:</strong> Specific product logos</li>
+                            <li><strong>Service Marks:</strong> Service brand identifiers</li>
+                            <li><strong>Line Extensions:</strong> Product family logos</li>
+                            <li><strong>Campaign Logos:</strong> Marketing campaign branding</li>
+                            <li><strong>Event Logos:</strong> Event-specific branding</li>
+                        </ul>
+                    </div>
+
+                    <div class="type">
+                        <h3>Personal Branding</h3>
+                        <p>Individual and professional identity:</p>
+                        <ul>
+                            <li><strong>Personal Logos:</strong> Individual brand marks</li>
+                            <li><strong>Professional Signatures:</strong> Digital signature logos</li>
+                            <li><strong>Freelancer Brands:</strong> Independent professional branding</li>
+                            <li><strong>Consultant Marks:</strong> Professional service branding</li>
+                            <li><strong>Creative Portfolios:</strong> Artist and designer branding</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="design-options">
+                    <h2>Logo Watermark Design Options</h2>
+                    
+                    <div class="option">
+                        <h3>Visual Customization</h3>
+                        <p>Logo appearance control:</p>
+                        <ul>
+                            <li><strong>Size Adjustment:</strong> Scale logo appropriately</li>
+                            <li><strong>Opacity Control:</strong> Adjust transparency levels</li>
+                            <li><strong>Color Options:</strong> Maintain original or apply filters</li>
+                            <li><strong>Rotation:</strong> Angle logo for diagonal placement</li>
+                            <li><strong>Positioning:</strong> Strategic placement options</li>
+                        </ul>
+                    </div>
+
+                    <div class="option">
+                        <h3>Placement Strategies</h3>
+                        <p>Professional positioning:</p>
+                        <ul>
+                            <li><strong>Corner Placement:</strong> Subtle corner positioning</li>
+                            <li><strong>Center Placement:</strong> Prominent center positioning</li>
+                            <li><strong>Diagonal Placement:</strong> Across document content</li>
+                            <li><strong>Header/Footer:</strong> Consistent with document layout</li>
+                            <li><strong>Multiple Placement:</strong> Repeat on each page</li>
+                        </ul>
+                    </div>
+
+                    <div class="option">
+                        <h3>Advanced Effects</h3>
+                        <p>Enhanced visual options:</p>
+                        <ul>
+                            <li><strong>Shadow Effects:</strong> Add depth and emphasis</li>
+                            <li><strong>Outline Options:</strong> Border effects for visibility</li>
+                            <li><strong>Blending Modes:</strong> Different visual effects</li>
+                            <li><strong>Background Removal:</strong> Clean logo integration</li>
+                            <li><strong>Layer Control:</strong> Behind or in front of content</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="application-process">
+                    <h2>How to Add Logo Watermark to PDF</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Prepare Your Logo</h3>
+                            <p>Get your brand ready:</p>
+                            <ul>
+                                <li>Select high-quality logo file</li>
+                                <li>Ensure transparent background (PNG)</li>
+                                <li>Check logo resolution and clarity</li>
+                                <li>Consider logo size and complexity</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Upload Documents</h3>
+                            <p>Add your files:</p>
+                            <ul>
+                                <li>Upload your PDF document</li>
+                                <li>Upload your logo image</li>
+                                <li>Wait for file processing</li>
+                                <li>Preview both files</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Logo Settings</h3>
+                            <p>Customize appearance:</p>
+                            <ul>
+                                <li>Adjust logo size and scale</li>
+                                <li>Set opacity for subtlety</li>
+                                <li>Choose placement position</li>
+                                <li>Configure rotation angle</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Apply to Document</h3>
+                            <p>Add your brand watermark:</p>
+                            <ul>
+                                <li>Apply logo to all pages</li>
+                                <li>Preview watermark appearance</li>
+                                <li>Adjust positioning if needed</li>
+                                <li>Test different opacity levels</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Download Branded PDF</h3>
+                            <p>Save your document:</p>
+                            <ul>
+                                <li>Process document with logo watermark</li>
+                                <li>Review final branded appearance</li>
+                                <li>Verify logo quality and placement</li>
+                                <li>Download your branded PDF</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="use-cases">
+                    <h2>Logo Watermark Use Cases</h2>
+                    
+                    <div class="use-case">
+                        <h3>Business Documents</h3>
+                        <p>Corporate branding applications:</p>
+                        <ul>
+                            <li><strong>Proposals:</strong> Branded client proposals</li>
+                            <li><strong>Reports:</strong> Company annual reports</li>
+                            <li><strong>Presentations:</strong> Branded slide decks</li>
+                            <li><strong>Contracts:</strong> Company agreement documents</li>
+                            <li><strong>Invoices:</strong> Branded billing documents</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Marketing Materials</h3>
+                        <p>Promotional content branding:</p>
+                        <ul>
+                            <li><strong>Brochures:</strong> Digital brochure branding</li>
+                            <li><strong>Catalogs:</strong> Product catalog branding</li>
+                            <li><strong>Spec Sheets:</strong> Technical specification sheets</li>
+                            <li><strong>Case Studies:</strong> Customer success stories</li>
+                            <li><strong>White Papers:</strong> Industry research documents</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Creative Portfolios</h3>
+                        <p>Professional creative branding:</p>
+                        <ul>
+                            <li><strong>Design Portfolios:</strong> Designer work samples</li>
+                            <li><strong>Photography:</strong> Photo portfolio branding</li>
+                            <li><strong>Art Portfolios:</strong> Artist work collections</li>
+                            <li><strong>Writing Samples:</strong> Author portfolio pieces</li>
+                            <li><strong>Architecture:</strong> Building design portfolios</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Educational Content</h3>
+                        <p>Learning material branding:</p>
+                        <ul>
+                            <li><strong>Course Materials:</strong> Educational content branding</li>
+                            <li><strong>Training Guides:</strong> Corporate training documents</li>
+                            <li><strong>Certificates:</strong> Achievement certificates</li>
+                            <li><strong>E-books:</strong> Digital book branding</li>
+                            <li><strong>Workbooks:</strong> Learning exercise materials</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Logo Watermark Best Practices</h2>
+                    
+                    <div class="practice">
+                        <h3>Logo Preparation</h3>
+                        <p>Getting your logo ready:</p>
+                        <ul>
+                            <li><strong>High Resolution:</strong> Use high-quality logo files</li>
+                            <li><strong>Transparent Background:</strong> PNG format with transparency</li>
+                            <li><strong>Appropriate Size:</strong> Not too large or too small</li>
+                            <li><strong>Simple Design:</strong> Avoid overly complex logos</li>
+                            <li><strong>Brand Guidelines:</strong> Follow company brand standards</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Placement Strategy</h3>
+                        <p>Effective positioning:</p>
+                        <ul>
+                            <li><strong>Consistent Placement:</strong> Use same position across documents</li>
+                            <li><strong>Non-Intrusive:</strong> Don't interfere with content</li>
+                            <li><strong>Visible Recognition:</strong> Ensure logo is recognizable</li>
+                            <li><strong>Professional Balance:</strong> Balance visibility and subtlety</li>
+                            <li><strong>Page Coverage:</strong> Consider multi-page documents</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Visual Quality</h3>
+                        <p>Maintaining professional appearance:</p>
+                        <ul>
+                            <li><strong>Appropriate Opacity:</strong> 15-30% typically works well</li>
+                            <li><strong>Color Considerations:</strong> Maintain brand colors or use grayscale</li>
+                            <li><strong>Size Consistency:</strong> Keep logo proportional to content</li>
+                            <li><strong>Quality Testing:</strong> Test on different devices</li>
+                            <li><strong>Print Compatibility:</strong> Ensure good print quality</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="technical-considerations">
+                    <h2>Technical Considerations</h2>
+                    
+                    <div class="consideration">
+                        <h3>File Formats</h3>
+                        <p>Logo file requirements:</p>
+                        <ul>
+                            <li><strong>PNG Format:</strong> Best for transparency</li>
+                            <li><strong>SVG Format:</strong> Scalable vector graphics</li>
+                            <li><strong>High Resolution:</strong> 300 DPI for print quality</li>
+                            <li><strong>File Size:</strong> Optimize for web use</li>
+                            <li><strong>Color Mode:</strong> RGB for digital, CMYK for print</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>Performance Impact</h3>
+                        <p>File size and speed:</p>
+                        <ul>
+                            <li><strong>File Size Increase:</strong> Logo adds to PDF size</li>
+                            <li><strong>Processing Time:</strong> Complex logos take longer</li>
+                            <li><strong>Memory Usage:</strong> Large logos use more memory</li>
+                            <li><strong>Rendering Speed:</strong> Affects document opening speed</li>
+                            <li><strong>Print Performance:</strong> May affect printing speed</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>Compatibility</h3>
+                        <p>Cross-platform considerations:</p>
+                        <ul>
+                            <li><strong>PDF Standards:</strong> Ensure PDF compliance</li>
+                            <li><strong>Viewer Compatibility:</strong> Test in different PDF viewers</li>
+                            <li><strong>Mobile Devices:</strong> Check mobile display</li>
+                            <li><strong>Print Quality:</strong> Verify print output</li>
+                            <li><strong>Web Display:</strong> Test browser viewing</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>What logo format should I use for watermarks?</h3>
+                        <p>PNG format with transparent background works best for logo watermarks as it maintains quality while allowing clean integration with document content.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How transparent should my logo watermark be?</h3>
+                        <p>Typically 15-30% opacity works well - visible enough for brand recognition but subtle enough not to interfere with document readability.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use different logos on different pages?</h3>
+                        <p>Yes, you can apply different logos to specific pages or sections within the same document, useful for multi-brand documents.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Will logo watermarks affect PDF file size significantly?</h3>
+                        <p>Logo watermarks do increase file size, but using optimized logo files and appropriate compression can minimize the impact.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I remove a logo watermark once applied?</h3>
+                        <p>Removing watermarks from PDFs is difficult. Always keep an unwatermarked original copy for future use and modifications.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Branding and Protection Tools</h2>
+                    <ul>
+                        <li><a href="/add-watermark-to-pdf">Add Watermark to PDF</a> - Text watermarks</li>
+                        <li><a href="/copyright-watermark-pdf">Copyright Watermark PDF</a> - IP protection</li>
+                        <li><a href="/confidential-watermark-pdf">Confidential Watermark PDF</a> - Security marking</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Password protection</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize for sharing</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/watermark-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Watermark PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

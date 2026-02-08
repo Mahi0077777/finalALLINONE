@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Rotate PDF for Technical Drawings - Blueprints & Schematics | FreeProPDF</title>
+    <meta name="description" content="Fix orientation of technical drawings, blueprints, and engineering schematics. Rotate CAD exports and architectural plans properly.">
+    <meta name="keywords" content="rotate technical drawings, blueprint rotation, engineering schematics, CAD pdf orientation">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/rotate-pdf-for-technical-drawings" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Rotate Technical Drawings - Fix Blueprint and Schematic Orientation</h1>
+                
+                <p class="intro">Technical drawings, blueprints, and engineering schematics often require precise orientation. Use our <a href="/rotate-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">PDF rotation tool</a> to fix CAD exports, architectural plans, and technical diagrams that appear sideways or need specific rotation for proper viewing and printing. <a href="/rotate-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Rotate technical drawings now</a>.</p>
+
+                <section class="technical-drawing-types">
+                    <h2>Types of Technical Drawings Needing Rotation</h2>
+                    
+                    <div class="drawing-type">
+                        <h3>Architectural Drawings</h3>
+                        <p>Building and construction documents:</p>
+                        <ul>
+                            <li><strong>Floor Plans:</strong> Building layouts and room arrangements</li>
+                            <li><strong>Elevation Drawings:</strong> Exterior building views</li>
+                            <li><strong>Site Plans:</strong> Property layouts and landscaping</li>
+                            <li><strong>Construction Details:</strong> Specific building component drawings</li>
+                            <li><strong>MEP Plans:</strong> Mechanical, electrical, plumbing systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="drawing-type">
+                        <h3>Engineering Schematics</h3>
+                        <p>Technical and engineering diagrams:</p>
+                        <ul>
+                            <li><strong>Circuit Diagrams:</strong> Electronic and electrical schematics</li>
+                            <li><strong>Mechanical Drawings:</strong> Machine parts and assemblies</li>
+                            <li><strong>P&ID Diagrams:</strong> Process and instrumentation diagrams</li>
+                            <li><strong>Hydraulic Schematics:</strong> Fluid power systems</li>
+                            <li><strong>Control Systems:</strong> Automation and control diagrams</li>
+                        </ul>
+                    </div>
+
+                    <div class="drawing-type">
+                        <h3>CAD and Design Files</h3>
+                        <p>Computer-aided design exports:</p>
+                        <ul>
+                            <li><strong>2D CAD Drawings:</strong> Technical illustrations and plans</li>
+                            <li><strong>3D Model Views:</strong> Different perspectives of 3D models</li>
+                            <li><strong>Assembly Drawings:</strong> Component assembly instructions</li>
+                            <li><strong>Manufacturing Drawings:</strong> Production specifications</li>
+                            <li><strong>Technical Illustrations:</strong> Product documentation</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="orientation-challenges">
+                    <h2>Common Orientation Challenges in Technical Drawings</h2>
+                    
+                    <div class="challenge">
+                        <h3>CAD Export Issues</h3>
+                        <p>Problems from CAD software exports:</p>
+                        <ul>
+                            <li><strong>Viewport Rotation:</strong> CAD viewports exported with wrong orientation</li>
+                            <li><strong>Page Setup Errors:</strong> Incorrect paper size and orientation settings</li>
+                            <li><strong>Coordinate System:</strong> Different coordinate systems causing rotation</li>
+                            <li><strong>Scale Issues:</strong> Drawing scale affecting perceived orientation</li>
+                            <li><strong>Layer Visibility:</strong> Hidden layers affecting orientation detection</li>
+                        </ul>
+                    </div>
+
+                    <div class="challenge">
+                        <h3>Scanning and Digitization</h3>
+                        <p>Issues from physical drawing scanning:</p>
+                        <ul>
+                            <li><strong>Large Format Scanning:</strong> Blueprint scanner orientation problems</li>
+                            <li><strong>Mixed Media:</strong> Different drawing sizes on same page</li>
+                            <li><strong>Archive Scanning:</strong> Old drawings with varying orientations</li>
+                            <li><strong>Batch Processing:</strong> Multiple drawings with different orientations</li>
+                            <li><strong>Quality Degradation:</strong> Poor扫描 quality affecting orientation</li>
+                        </ul>
+                    </div>
+
+                    <div class="challenge">
+                        <h3>Collaboration Issues</h3>
+                        <p>Problems from multi-user workflows:</p>
+                        <ul>
+                            <li><strong>Different Software:</strong> Various CAD programs with different standards</li>
+                            <li><strong>International Standards:</strong> Different regional orientation conventions</li>
+                            <li><strong>Version Control:</strong> Different versions with orientation changes</li>
+                            <li><strong>File Conversion:</strong> Format conversions affecting orientation</li>
+                            <li><strong>Client Requirements:</strong> Different client specifications</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="rotation-process">
+                    <h2>Technical Drawing Rotation Process</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Upload Technical Drawing</h3>
+                            <p>Start with your drawing file:</p>
+                            <ul>
+                                <li>Select the PDF technical drawing</li>
+                                <li>Drag and drop large format files</li>
+                                <li>Import from CAD software or cloud storage</li>
+                                <li>Wait for file processing (may take longer for complex drawings)</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Analyze Drawing Orientation</h3>
+                            <p>Identify orientation requirements:</p>
+                            <ul>
+                                <li>Review drawing title blocks and orientation indicators</li>
+                                <li>Check for north arrows and orientation symbols</li>
+                                <li>Identify scale bars and measurement indicators</li>
+                                <li>Look for text readability and annotation orientation</li>
+                                <li>Mark pages needing rotation correction</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Select Rotation Method</h3>
+                            <p>Choose appropriate rotation:</p>
+                            <ul>
+                                <li><strong>90° Rotations:</strong> Standard orientation corrections</li>
+                                <li><strong>180° Flip:</strong> Upside-down drawings</li>
+                                <li><strong>Custom Angles:</strong> Fine-tuning for specific requirements</li>
+                                <li><strong>Batch Rotation:</strong> Multiple drawings with same orientation</li>
+                                <li><strong>Individual Elements:</strong> Rotate specific drawing elements</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Apply Technical Rotation</h3>
+                            <p>Execute precise rotation:</p>
+                            <ul>
+                                <li>Rotate while maintaining drawing scale and proportions</li>
+                                <li>Preserve technical precision and measurements</li>
+                                <li>Keep text annotations readable and properly oriented</li>
+                                <li>Maintain drawing layers and object properties</li>
+                                <li>Ensure dimension lines and leaders remain correct</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Verify Technical Accuracy</h3>
+                            <p>Validate drawing integrity:</p>
+                            <ul>
+                                <li>Check measurements and scale accuracy</li>
+                                <li>Verify text and annotation readability</li>
+                                <li>Test print compatibility for large format printing</li>
+                                <li>Ensure drawing meets industry standards</li>
+                                <li>Download corrected technical drawing</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="precision-requirements">
+                    <h2>Technical Precision Requirements</h2>
+                    
+                    <div class="precision-aspect">
+                        <h3>Scale and Measurement Accuracy</h3>
+                        <p>Maintain technical drawing standards:</p>
+                        <ul>
+                            <li><strong>Scale Preservation:</strong> Drawing scale must remain accurate</li>
+                            <li><strong>Dimension Integrity:</strong> Measurements must stay precise</li>
+                            <li><strong>Grid Alignment:</strong> Technical grids must remain aligned</li>
+                            <li><strong>Reference Points:</strong> Coordinate systems must be maintained</li>
+                            <li><strong>Tolerance Standards:</strong> Engineering tolerances preserved</li>
+                        </ul>
+                    </div>
+
+                    <div class="precision-aspect">
+                        <h3>Text and Annotation Standards</h3>
+                        <p>Ensure technical readability:</p>
+                        <ul>
+                            <li><strong>Text Orientation:</strong> All text must be readable</li>
+                            <li><strong>Font Preservation:</strong> Technical fonts maintained</li>
+                            <li><strong>Annotation Clarity:</strong> Notes and callouts remain clear</li>
+                            <li><strong>Symbol Integrity:</strong> Technical symbols preserved</li>
+                            <li><strong>Leader Lines:</strong> Connection lines remain accurate</li>
+                        </ul>
+                    </div>
+
+                    <div class="precision-aspect">
+                        <h3>Industry Compliance</h3>
+                        <p>Meet professional standards:</p>
+                        <ul>
+                            <li><strong>ISO Standards:</strong> International drawing standards compliance</li>
+                            <li><strong>ANSI Requirements:</strong> American National Standards Institute</li>
+                            <li><strong>Architectural Standards:</strong> AIA and building code requirements</li>
+                            <li><strong>Engineering Specifications:</strong> Industry-specific standards</li>
+                            <li><strong>Print Readiness:</strong> Large format printing compatibility</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="industry-applications">
+                    <h2>Industry-Specific Applications</h2>
+                    
+                    <div class="industry">
+                        <h3>Architecture and Construction</h3>
+                        <p>Building industry requirements:</p>
+                        <ul>
+                            <li><strong>Plan Sets:</strong> Complete construction document packages</li>
+                            <li><strong>Permit Drawings:</strong> Government submission requirements</li>
+                            <li><strong>Client Presentations:</strong> Professional document delivery</li>
+                            <li><strong>Contractor Documents:</strong> Field-ready construction drawings</li>
+                            <li><strong>As-Built Drawings:</strong> Final project documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="industry">
+                        <h3>Manufacturing and Engineering</h3>
+                        <p>Industrial applications:</p>
+                            <li><strong>Production Drawings:</strong> Manufacturing specifications</li>
+                            <li><strong>Quality Control:</strong> Inspection and testing documents</li>
+                            <li><strong>Assembly Instructions:</strong> Production assembly guides</li>
+                            <li><strong>Maintenance Manuals:</strong> Service and repair documentation</li>
+                            <li><strong>Patent Drawings:</strong> Intellectual property documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="industry">
+                        <h3>Surveying and Mapping</h3>
+                        <p>Geospatial documentation:</p>
+                        <ul>
+                            <li><strong>Survey Plats:</strong> Property boundary documentation</li>
+                            <li><strong>Topographic Maps:</strong> Elevation and terrain drawings</li>
+                            <li><strong>GIS Integration:</strong> Geographic information system compatibility</li>
+                            <li><strong>Subdivision Plans:</strong> Land development documentation</li>
+                            <li><strong>Right-of-Way Drawings:</strong> Infrastructure planning documents</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="quality-assurance">
+                    <h2>Quality Assurance for Technical Drawings</h2>
+                    
+                    <div class="qa-check">
+                        <h3>Pre-Rotation Validation</h3>
+                        <p>Checks before rotating:</p>
+                        <ul>
+                            <li>Verify original drawing accuracy and completeness</li>
+                            <li>Check for any existing orientation issues</li>
+                            <li>Identify critical elements that must remain precise</li>
+                            <li>Document current drawing specifications</li>
+                            <li>Create backup of original file</li>
+                        </ul>
+                    </div>
+
+                    <div class="qa-check">
+                        <h3>Post-Rotation Verification</h3>
+                        <p>Validation after rotation:</p>
+                        <ul>
+                            <li>Verify all measurements remain accurate</li>
+                            <li>Check text readability and orientation</li>
+                            <li>Test printing compatibility</li>
+                            <li>Validate against industry standards</li>
+                            <li>Review with technical team if needed</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Will rotating affect drawing scale and measurements?</h3>
+                        <p>No, our rotation process preserves drawing scale and maintains measurement accuracy. All technical specifications remain intact.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I rotate large format architectural drawings?</h3>
+                        <p>Yes, our tool supports large format drawings commonly used in architecture and engineering, including A1, A0, and custom sizes.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I maintain technical precision during rotation?</h3>
+                        <p>Our tool maintains vector precision and preserves all technical elements including dimensions, text, and symbols during rotation.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I rotate individual elements within a technical drawing?</h3>
+                        <p>Currently, we rotate entire pages. For individual element rotation, you'll need CAD software, but we can fix overall page orientation.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Are rotated drawings suitable for professional submission?</h3>
+                        <p>Absolutely. Rotated drawings maintain professional quality and meet industry standards for client submissions and regulatory filings.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Technical Drawing Tools</h2>
+                    <ul>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize drawing file sizes</li>
+                        <li><a href="/merge-pdf">Merge PDF</a> - Combine drawing sets</li>
+                        <li><a href="/split-pdf">Split PDF</a> - Separate drawing sheets</li>
+                        <li><a href="/pdf-to-jpg">PDF to JPG</a> - Convert drawings to images</li>
+                        <li><a href="/rotate-pdf-online-free">Rotate PDF Online</a> - General rotation tool</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/rotate-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Rotate PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

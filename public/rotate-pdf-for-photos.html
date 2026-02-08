@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Rotate PDF for Photos - Fix Image Orientation | FreeProPDF</title>
+    <meta name="description" content="Rotate photos and images in PDF documents. Fix sideways pictures, correct image orientation, and make photo PDFs readable.">
+    <meta name="keywords" content="rotate pdf photos, fix image orientation, rotate pictures in pdf, photo pdf correction">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/rotate-pdf-for-photos" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Rotate Photos in PDF - Fix Image Orientation Issues</h1>
+                
+                <p class="intro">Photos in PDFs often appear sideways or upside down. Use our <a href="/rotate-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">PDF photo rotation tool</a> to fix images within PDF documents, correcting orientation issues and making your photo collections, albums, and image-based documents properly displayed. <a href="/rotate-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Rotate photo PDFs now</a>.</p>
+
+                <section class="photo-orientation-issues">
+                    <h2>Common Photo Orientation Problems</h2>
+                    
+                    <div class="issue">
+                        <h3>Camera and Device Issues</h3>
+                        <p>Why photos end up rotated in PDFs:</p>
+                        <ul>
+                            <li><strong>Phone Orientation:</strong> Device held differently when taking photos</li>
+                            <li><strong>Auto-Rotate Failures:</strong> Camera apps not detecting correct orientation</li>
+                            <li><strong>EXIF Data Loss:</strong> Orientation metadata stripped during PDF creation</li>
+                            <li><strong>Device Rotation:</strong> Phone rotation affects photo capture</li>
+                            <li><strong>Front vs Back Camera:</strong> Different orientation behaviors</li>
+                        </ul>
+                    </div>
+
+                    <div class="issue">
+                        <h3>Software and Export Issues</h3>
+                        <p>Program-related orientation problems:</p>
+                        <ul>
+                            <li><strong>PDF Export Settings:</strong> Wrong orientation in export options</li>
+                            <li><strong>Template Issues:</strong> Templates with incorrect default orientation</li>
+                            <li><strong>Image Import Errors:</strong> Photos imported with wrong rotation</li>
+                            <li><strong>Software Bugs:</strong> Application errors in handling orientation</li>
+                            <li><strong>Batch Processing:</strong> Inconsistent orientation in batch operations</li>
+                        </ul>
+                    </div>
+
+                    <div class="issue">
+                        <h3>Scanning and Digitization</h3>
+                        <p>Physical photo scanning problems:</p>
+                        <ul>
+                            <li><strong>Scanner Placement:</strong> Photos placed incorrectly on scanner</li>
+                            <li><strong>Auto-Detection Failures:</strong> Scanner not detecting photo orientation</li>
+                            <li><strong>Bulk Scanning:</strong> Multiple photos with mixed orientations</li>
+                            <li><strong>Software Settings:</strong> Wrong scanning software configuration</li>
+                            <li><strong>Physical Album Scans:</strong> Album pages scanned at wrong angle</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="photo-types">
+                    <h2>Types of Photo Documents Needing Rotation</h2>
+                    
+                    <div class="photo-type">
+                        <h3>Personal Photo Collections</h3>
+                        <p>Individual and family photo PDFs:</p>
+                        <ul>
+                            <li><strong>Photo Albums:</strong> Digital albums with mixed orientations</li>
+                            <li><strong>Family Photos:</strong> Group pictures and portraits</li>
+                            <li><strong>Vacation Pictures:</strong> Travel photos in PDF format</li>
+                            <li><strong>Event Photos:</strong> Wedding, birthday, celebration photos</li>
+                            <li><strong>Historical Photos:</strong> Old family photos and archives</li>
+                        </ul>
+                    </div>
+
+                    <div class="photo-type">
+                        <h3>Professional Photography</h3>
+                        <p>Commercial and professional photo work:</p>
+                        <ul>
+                            <li><strong>Portfolio PDFs:</strong> Photographer portfolios needing correction</li>
+                            <li><strong>Product Photos:</strong> E-commerce product images</li>
+                            <li><strong>Real Estate Photos:</strong> Property images in PDF brochures</li>
+                            <li><strong>Fashion Photography:</strong> Model portfolios and lookbooks</li>
+                            <li><strong>Art Photography:</strong> Gallery and exhibition catalogs</li>
+                        </ul>
+                    </div>
+
+                    <div class="photo-type">
+                        <h3>Documentary Photos</h3>
+                        <p>Photos used as documentation:</p>
+                        <ul>
+                            <li><strong>Insurance Photos:</strong> Damage documentation and claims</li>
+                            <li><strong>Real Estate Photos:</strong> Property inspection photos</li>
+                            <li><strong>Medical Photos:</strong> Patient documentation and records</li>
+                            <li><strong>Construction Photos:</strong> Progress documentation</li>
+                            <li><strong>Legal Photos:</strong> Evidence and documentation photos</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="rotation-process">
+                    <h2>How to Rotate Photos in PDF Documents</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Upload Photo PDF</h3>
+                            <p>Start with your photo document:</p>
+                            <ul>
+                                <li>Select the PDF containing photos</li>
+                                <li>Drag and drop for quick upload</li>
+                                <li>Import from photo library or cloud storage</li>
+                                <li>Wait for file processing to complete</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Identify Photo Orientation Issues</h3>
+                            <p>Locate photos needing correction:</p>
+                            <ul>
+                                <li>Review thumbnail previews of all pages</li>
+                                <li>Look for photos appearing sideways</li>
+                                <li>Check for upside-down images</li>
+                                <li>Identify mixed orientation pages</li>
+                                <li>Mark pages with photo orientation problems</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Select Rotation Options</h3>
+                            <p>Choose the correct rotation:</p>
+                            <ul>
+                                <li><strong>90° Clockwise:</strong> For photos rotated left</li>
+                                <li><strong>90° Counter-Clockwise:</strong> For photos rotated right</li>
+                                <li><strong>180° Flip:</strong> For completely upside-down photos</li>
+                                <li><strong>Custom Angle:</strong> For photos needing fine adjustment</li>
+                                <li><strong>Batch Rotate:</strong> For multiple photos with same issue</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Apply Photo Rotations</h3>
+                            <p>Execute the rotation process:</p>
+                            <ul>
+                                <li>Click rotation buttons for individual photo pages</li>
+                                <li>Use batch processing for similar orientation issues</li>
+                                <li>Preview changes before finalizing</li>
+                                <li>Ensure all photos are properly oriented</li>
+                                <li>Check that photo quality is preserved</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Download Corrected Photo PDF</h3>
+                            <p>Save your fixed photo document:</p>
+                            <ul>
+                                <li>Download the corrected photo PDF</li>
+                                <li>Verify photo orientation in PDF viewer</li>
+                                <li>Test on different devices and viewers</li>
+                                <li>Share properly oriented photo collection</li>
+                                <li>Archive corrected photo document</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="quality-preservation">
+                    <h2>Preserving Photo Quality During Rotation</h2>
+                    
+                    <div class="quality-aspect">
+                        <h3>Image Resolution</h3>
+                        <p>Maintain photo clarity and detail:</p>
+                        <ul>
+                            <li><strong>No Quality Loss:</strong> Rotation preserves original resolution</li>
+                            <li><strong>Pixel Integrity:</strong> All pixels remain intact</li>
+                            <li><strong>Color Accuracy:</strong> Original colors preserved exactly</li>
+                            <li><strong>Sharpness:</strong> No blurring or softening during rotation</li>
+                            <li><strong>Compression:</strong> Original compression settings maintained</li>
+                        </ul>
+                    </div>
+
+                    <div class="quality-aspect">
+                        <h3>Metadata Preservation</h3>
+                        <p>Keep important photo information:</p>
+                        <ul>
+                            <li><strong>EXIF Data:</strong> Camera settings and date information</li>
+                            <li><strong>Color Profiles:</strong> ICC color profiles maintained</li>
+                            <li><strong>Color Space:</strong> RGB/CMYK information preserved</li>
+                            <li><strong>Embedded Profiles:</strong> Professional color profiles kept</li>
+                            <li><strong>File Properties:</strong> Document metadata maintained</li>
+                        </ul>
+                    </div>
+
+                    <div class="quality-aspect">
+                        <h3>File Structure</h3>
+                        <p>Maintain document organization:</p>
+                        <ul>
+                            <li><strong>Page Order:</strong> Photo sequence preserved</li>
+                            <li><strong>Bookmarks:</strong> Navigation links maintained</li>
+                            <li><strong>Annotations:</strong> Notes and comments kept</li>
+                            <li><strong>Links:</strong> Internal and external links preserved</li>
+                            <li><strong>Forms:</strong> Interactive elements maintained</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="prevention">
+                    <h2>Preventing Photo Orientation Issues</h2>
+                    
+                    <div class="prevention-tip">
+                        <h3>Camera and Device Settings</h3>
+                        <p>Configure devices for proper photo capture:</p>
+                        <ul>
+                            <li><strong>Lock Orientation:</strong> Disable auto-rotate when needed</li>
+                            <li><strong>Check Preview:</strong> Verify orientation before capturing</li>
+                            <li><strong>Use Grid Lines:</strong> Enable camera grid for alignment</li>
+                            <li><strong>Consistent Position:</strong> Hold device consistently for photos</li>
+                            <li><strong>Test Settings:</strong> Capture test photos to verify orientation</li>
+                        </ul>
+                    </div>
+
+                    <div class="prevention-tip">
+                        <h3>Software Configuration</h3>
+                        <p>Set up applications correctly:</p>
+                        <ul>
+                            <li><strong>Import Settings:</strong> Check photo import orientation options</li>
+                            <li><strong>Export Settings:</strong> Verify PDF export orientation settings</li>
+                            <li><strong>Template Setup:</strong> Use templates with correct orientation</li>
+                            <li><strong>Batch Processing:</strong> Configure batch operations properly</li>
+                            <li><strong>Quality Settings:</strong> Maintain high-quality export options</li>
+                        </ul>
+                    </div>
+
+                    <div class="prevention-tip">
+                        <h3>Workflow Best Practices</h3>
+                        <p>Establish good photo management habits:</p>
+                        <ul>
+                            <li><strong>Preview Before Export:</strong> Check orientation in preview mode</li>
+                            <li><strong>Test Export:</strong> Export small sample before full batch</li>
+                            <li><strong>Consistent Naming:</strong> Use clear file naming conventions</li>
+                            <li><strong>Regular Backups:</strong> Keep original photos as backup</li>
+                            <li><strong>Quality Checks:</strong> Review final PDFs before distribution</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Can I rotate individual photos without affecting others?</h3>
+                        <p>Yes, you can rotate individual pages containing specific photos while leaving other pages unchanged, perfect for documents with mixed orientations.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Will rotating photos reduce image quality?</h3>
+                        <p>No, our rotation process preserves original photo quality. Images maintain their resolution, color accuracy, and sharpness after rotation.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I rotate photos in password-protected PDFs?</h3>
+                        <p>You'll need to remove password protection first using our PDF protection tool, then you can rotate photos as needed.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I prevent photos from rotating in future PDFs?</h3>
+                        <p>Check camera orientation settings, use consistent device positioning, and verify export settings in your PDF creation software.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I rotate photos in bulk for large photo collections?</h3>
+                        <p>Yes, you can select and rotate multiple pages simultaneously, making it efficient to fix large photo collections with similar orientation issues.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Photo PDF Tools</h2>
+                    <ul>
+                        <li><a href="/pdf-to-jpg">PDF to JPG</a> - Extract photos from PDFs</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize photo file sizes</li>
+                        <li><a href="/merge-pdf">Merge PDF</a> - Combine photo collections</li>
+                        <li><a href="/split-pdf">Split PDF</a> - Separate photo pages</li>
+                        <li><a href="/rotate-pdf-online-free">Rotate PDF Online</a> - General rotation tool</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/rotate-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Rotate PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

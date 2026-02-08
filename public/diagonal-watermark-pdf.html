@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Diagonal Watermark PDF - Angled Watermark Placement | FreeProPDF</title>
+    <meta name="description" content="Add diagonal watermarks to PDF documents. Create angled text or image watermarks across pages for maximum visibility and protection. Free diagonal watermarking tool.">
+    <meta name="keywords" content="diagonal watermark pdf, angled watermark, slanted watermark, cross-page watermark, diagonal text watermark">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/diagonal-watermark-pdf" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Diagonal Watermark PDF - Angled Watermark Placement</h1>
+                
+                <p class="intro">Add diagonal watermarks to PDF documents using our <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">diagonal watermark tool</a> for maximum visibility and protection. Create angled text or image watermarks that span across pages, making them difficult to remove or ignore. <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Create diagonal watermarks now</a>.</p>
+
+                <section class="diagonal-benefits">
+                    <h2>Why Use Diagonal Watermarks</h2>
+                    
+                    <div class="benefit">
+                        <h3>Maximum Visibility</h3>
+                        <p>Advantages of diagonal placement:</p>
+                        <ul>
+                            <li><strong>Hard to Miss:</strong> Visible across entire document</li>
+                            <li><strong>Difficult to Remove:</strong> Spans multiple content areas</li>
+                            <li><strong>Professional Security:</strong> Corporate security standard</li>
+                            <li><strong>Universal Recognition:</strong> Standard security marking</li>
+                            <li><strong>Content Coverage:</strong> Covers large document area</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit">
+                        <h3>Enhanced Protection</h3>
+                        <p>Security benefits:</p>
+                        <ul>
+                            <li><strong>Deterrent Effect:</strong> Strong visual deterrent</li>
+                            <li><strong>Legal Evidence:</strong> Clear ownership claim</li>
+                            <li><strong>Brand Presence:</strong> Prominent brand display</li>
+                            <li><strong>Unauthorized Use Prevention:</strong> Discourages content theft</li>
+                            <li><strong>Professional Standards:</strong> Industry best practice</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="angle-options">
+                    <h2>Diagonal Watermark Angle Options</h2>
+                    
+                    <div class="angle">
+                        <h3>Standard Diagonal Angles</h3>
+                        <p>Common angle configurations:</p>
+                        <ul>
+                            <li><strong>45 Degrees:</strong> Classic diagonal placement</li>
+                            <li><strong>-45 Degrees:</strong> Opposite diagonal direction</li>
+                            <li><strong>30 Degrees:</strong> Gentle diagonal slope</li>
+                            <li><strong>-30 Degrees:</strong> Reverse gentle slope</li>
+                            <li><strong>60 Degrees:</strong> Steep diagonal angle</li>
+                        </ul>
+                    </div>
+
+                    <div class="angle">
+                        <h3>Custom Angle Settings</h3>
+                        <p>Flexible angle control:</p>
+                        <ul>
+                            <li><strong>Precise Control:</strong> Any angle from 0-360 degrees</li>
+                            <li><strong>Document-Specific:</strong> Adjust for document layout</li>
+                            <li><strong>Content Consideration:</strong> Avoid important content</li>
+                            <li><strong>Visual Balance:</strong> Complement document design</li>
+                            <li><strong>Multiple Angles:</strong> Different angles per page</li>
+                        </ul>
+                    </div>
+
+                    <div class="angle">
+                        <h3>Direction Variations</h3>
+                        <p>Directional options:</p>
+                        <ul>
+                            <li><strong>Top-Left to Bottom-Right:</strong> Standard diagonal</li>
+                            <li><strong>Top-Right to Bottom-Left:</strong> Reverse diagonal</li>
+                            <li><strong>Bottom-Left to Top-Right:</strong> Upward diagonal</li>
+                            <li><strong>Bottom-Right to Top-Left:</strong> Upward reverse</li>
+                            <li><strong>Mixed Directions:</strong> Vary across pages</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="design-techniques">
+                    <h2>Diagonal Watermark Design Techniques</h2>
+                    
+                    <div class="technique">
+                        <h3>Text Watermark Design</h3>
+                        <p>Optimal text configuration:</p>
+                        <ul>
+                            <li><strong>Font Selection:</strong> Bold, readable fonts</li>
+                            <li><strong>Font Size:</strong> Large enough for visibility</li>
+                            <li><strong>Text Spacing:</strong> Adjusted for diagonal layout</li>
+                            <li><strong>Multi-Line Text:</strong> Stacked text arrangements</li>
+                            <li><strong>Character Spacing:</strong> Expanded for better coverage</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique">
+                        <h3>Image Watermark Design</h3>
+                        <p>Image watermark optimization:</p>
+                        <ul>
+                            <li><strong>Logo Scaling:</strong> Appropriate size for diagonal</li>
+                            <li><strong>Image Rotation:</strong> Match diagonal angle</li>
+                            <li><strong>Transparency:</strong> Balanced opacity</li>
+                            <li><strong>Repetition:</strong> Multiple image instances</li>
+                            <li><strong>Aspect Ratio:</strong> Maintain image proportions</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique">
+                        <h3>Visual Effects</h3>
+                        <p>Enhancement options:</p>
+                        <ul>
+                            <li><strong>Opacity Control:</strong> 20-50% typically</li>
+                            <li><strong>Color Selection:</strong> Contrasting but subtle</li>
+                            <li><strong>Shadow Effects:</strong> Add depth and visibility</li>
+                            <li><strong>Outline Options:</strong> Border for clarity</li>
+                            <li><strong>Blending Modes:</strong> Different visual effects</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="application-process">
+                    <h2>How to Add Diagonal Watermark to PDF</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Upload PDF Document</h3>
+                            <p>Start with your file:</p>
+                            <ul>
+                                <li>Select the PDF to watermark</li>
+                                <li>Drag and drop for quick upload</li>
+                                <li>Import from cloud storage</li>
+                                <li>Wait for file processing</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Create Watermark Content</h3>
+                            <p>Design your watermark:</p>
+                            <ul>
+                                <li>Choose text or image watermark</li>
+                                <li>Enter custom text or upload logo</li>
+                                <li>Select appropriate font and size</li>
+                                <li>Choose color scheme</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Diagonal Settings</h3>
+                            <p>Set angle and position:</p>
+                            <ul>
+                                <li>Select diagonal angle (45° recommended)</li>
+                                <li>Choose direction (top-left to bottom-right)</li>
+                                <li>Set opacity level</li>
+                                <li>Configure size and scaling</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Preview and Adjust</h3>
+                            <p>Test your watermark:</p>
+                            <ul>
+                                <li>Preview diagonal placement</li>
+                                <li>Test different angles</li>
+                                <li>Adjust size and opacity</li>
+                                <li>Verify content visibility</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Apply and Download</h3>
+                            <p>Complete your document:</p>
+                            <ul>
+                                <li>Process document with diagonal watermark</li>
+                                <li>Review final appearance</li>
+                                <li>Verify diagonal placement consistency</li>
+                                <li>Download your watermarked PDF</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="use-cases">
+                    <h2>Diagonal Watermark Use Cases</h2>
+                    
+                    <div class="use-case">
+                        <h3>Legal and Financial Documents</h3>
+                        <p>High-security applications:</p>
+                        <ul>
+                            <li><strong>Legal Contracts:</strong> Agreement protection</li>
+                            <li><strong>Financial Reports:</strong> Sensitive financial data</li>
+                            <li><strong>Court Filings:</strong> Legal document protection</li>
+                            <li><strong>Tax Documents:</strong> Tax return protection</li>
+                            <li><strong>Insurance Policies:</strong> Policy document security</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Corporate Documents</h3>
+                        <p>Business security needs:</p>
+                        <ul>
+                            <li><strong>Confidential Reports:</strong> Internal company documents</li>
+                            <li><strong>Strategic Plans:</strong> Business strategy protection</li>
+                            <li><strong>Product Designs:</strong> Intellectual property protection</li>
+                            <li><strong>Marketing Plans:</strong> Campaign strategy security</li>
+                            <li><strong>Employee Handbooks:</strong> Internal policy protection</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Creative and Academic Content</h3>
+                        <p>Intellectual property protection:</p>
+                        <ul>
+                            <li><strong>Research Papers:</strong> Academic work protection</li>
+                            <li><strong>Design Portfolios:</strong> Creative work security</li>
+                            <li><strong>Photography Collections:</strong> Image protection</li>
+                            <li><strong>Writing Samples:</strong> Author work protection</li>
+                            <li><strong>Music Scores:</strong> Composition protection</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Draft and Review Documents</h3>
+                        <p>Workflow protection:</p>
+                        <ul>
+                            <li><strong>Draft Proposals:</strong> Work-in-progress marking</li>
+                            <li><strong>Review Copies:</strong> Review document identification</li>
+                            <li><strong>Pre-release Content:</strong> Pre-launch protection</li>
+                            <li><strong>Sample Documents:</strong> Sample content marking</li>
+                            <li><strong>Template Files:</strong> Template protection</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="technical-considerations">
+                    <h2>Technical Considerations for Diagonal Watermarks</h2>
+                    
+                    <div class="consideration">
+                        <h3>Content Interaction</h3>
+                        <p>Managing content overlap:</p>
+                        <ul>
+                            <li><strong>Text Readability:</strong> Ensure main text remains readable</li>
+                            <li><strong>Image Clarity:</strong> Don't obscure important images</li>
+                            <li><strong>Table Integrity:</strong> Maintain table readability</li>
+                            <li><strong>Chart Visibility:</strong> Preserve chart data visibility</li>
+                            <li><strong>Diagram Clarity:</strong> Keep diagrams understandable</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>Print Considerations</h3>
+                        <p>Optimizing for print:</p>
+                        <ul>
+                            <li><strong>Print Quality:</strong> Ensure good print output</li>
+                            <li><strong>Ink Usage:</strong> Consider ink consumption</li>
+                            <li><strong>Paper Type:</strong> Test on different paper</li>
+                            <li><strong>Color Printing:</strong> Color vs. black and white</li>
+                            <li><strong>Scaling Issues:</strong> Maintain proportion when printing</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>Digital Display</h3>
+                        <p>Screen optimization:</p>
+                        <ul>
+                            <li><strong>Device Compatibility:</strong> Test on various devices</li>
+                            <li><strong>Screen Resolution:</strong> Maintain clarity</li>
+                            <li><strong>Zoom Functionality:</strong> Watermark behavior when zooming</li>
+                            <li><strong>Mobile Display:</strong> Mobile device optimization</li>
+                            <li><strong>Web Viewing:</strong> Browser compatibility</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Diagonal Watermark Best Practices</h2>
+                    
+                    <div class="practice">
+                        <h3>Design Principles</h3>
+                        <p>Creating effective diagonal watermarks:</p>
+                        <ul>
+                            <li><strong>Balance Visibility:</strong> Visible but not overwhelming</li>
+                            <li><strong>Maintain Readability:</strong> Don't interfere with content</li>
+                            <li><strong>Consistent Angle:</strong> Use same angle throughout</li>
+                            <li><strong>Appropriate Size:</strong> Large enough for impact</li>
+                            <li><strong>Professional Appearance:</strong> Maintain document professionalism</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Angle Selection</h3>
+                        <p>Choosing the right angle:</p>
+                        <ul>
+                            <li><strong>45 Degrees Standard:</strong> Most common and effective</li>
+                            <li><strong>Document Layout:</strong> Consider page orientation</li>
+                            <li><strong>Content Density:</strong> Adjust for text density</li>
+                            <li><strong>Visual Balance:</strong> Complement document design</li>
+                            <li><strong>Industry Standards:</strong> Follow sector conventions</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Quality Assurance</h3>
+                        <p>Ensuring professional results:</p>
+                        <ul>
+                            <li><strong>Test Thoroughly:</strong> Check on different devices</li>
+                            <li><strong>Print Testing:</strong> Verify print quality</li>
+                            <li><strong>Content Review:</strong> Ensure content remains accessible</li>
+                            <li><strong>Consistency Check:</strong> Verify uniform appearance</li>
+                            <li><strong>Backup Creation:</strong> Keep original documents</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>What's the best angle for diagonal watermarks?</h3>
+                        <p>45 degrees is the standard and most effective angle for diagonal watermarks, providing good visibility while maintaining document readability.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Will diagonal watermarks interfere with document content?</h3>
+                        <p>When properly configured with appropriate transparency (20-40%), diagonal watermarks provide protection without significantly interfering with content readability.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use different diagonal angles on different pages?</h3>
+                        <p>Yes, you can apply different diagonal angles to specific pages or page ranges within the same document for varied security levels.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do diagonal watermarks affect PDF printing?</h3>
+                        <p>Diagonal watermarks print well when configured with appropriate opacity and color. Always test print samples to ensure good results.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Are diagonal watermarks more secure than other placements?</h3>
+                        <p>Diagonal watermarks are generally more secure because they span across content areas, making them harder to remove without affecting document content.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Watermark and Security Tools</h2>
+                    <ul>
+                        <li><a href="/add-watermark-to-pdf">Add Watermark to PDF</a> - General watermarking</li>
+                        <li><a href="/transparent-watermark-pdf">Transparent Watermark PDF</a> - Subtle watermarking</li>
+                        <li><a href="/confidential-watermark-pdf">Confidential Watermark PDF</a> - Security marking</li>
+                        <li><a href="/copyright-watermark-pdf">Copyright Watermark PDF</a> - Legal protection</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Password protection</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/watermark-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Watermark PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

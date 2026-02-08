@@ -1,292 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:schemaLocation=" http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Core Pages -->
   <url>
     <loc>https://freepropdf.com/</loc>
-    <lastmod>2024-11-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://freepropdf.com/blog</loc>
-    <lastmod>2024-11-30</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://freepropdf.com/about</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/contact</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
 
   <!-- Tools -->
   <url>
     <loc>https://freepropdf.com/merge-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/how-to-merge-pdf-files</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/merge-pdf-online-free</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/combine-pdf-any-device</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/merge-large-pdf-files</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/merge-pdf-for-business</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/split-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/split-pdf-online-guide</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/split-large-pdf-files</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/split-pdf-by-pages-or-chapters</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/split-pdf-for-email</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/split-scanned-and-legal-pdf-documents</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/compress-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/compress-pdf-file-size</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/reduce-pdf-size-for-email</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/compress-pdf-for-web</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/compress-scanned-pdf-files</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/compress-pdf-without-losing-quality</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/pdf-to-jpg</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/convert-pdf-to-jpg-online</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/pdf-to-jpg-multiple-pages</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/pdf-to-jpg-for-web-and-social</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/extract-images-from-pdf-to-jpg</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/pdf-to-jpg-from-scanned-documents</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/jpg-to-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/convert-jpg-to-pdf-online</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/jpg-to-pdf-multiple-images</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/jpg-to-pdf-scanned-documents</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/jpg-to-pdf-for-email-and-sharing</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/organize-photos-and-notes-with-jpg-to-pdf</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/rotate-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/protect-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/unlock-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/page-numbers</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/watermark-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Rotate PDF SEO Pages -->
+  <url>
+    <loc>https://freepropdf.com/rotate-pdf-online-free</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/rotate-pdf-for-exams-and-forms</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/rotate-pdf-for-presentations</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/rotate-pdf-for-photos</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/rotate-pdf-for-printing</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/rotate-pdf-on-mobile</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/rotate-scanned-pdf-documents</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/rotate-pdf-for-technical-drawings</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/rotate-pdf-offline-vs-online</loc>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Page Numbers SEO Pages -->
+  <url>
+    <loc>https://freepropdf.com/add-page-numbers-to-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/page-numbers-for-academic-papers</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/page-numbers-for-books</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/page-numbers-for-manuals</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/page-numbers-for-invoices</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/page-numbers-for-reports</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/page-numbers-for-legal-documents</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/custom-page-numbering-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/remove-page-numbers-from-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Watermark PDF SEO Pages -->
+  <url>
+    <loc>https://freepropdf.com/add-watermark-to-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/copyright-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/confidential-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/draft-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/logo-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/remove-watermark-from-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/text-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/batch-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/transparent-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/diagonal-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/custom-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://freepropdf.com/sample-watermark-pdf</loc>
+    <changefreq>daily</changefreq>
   </url>
 
   <!-- Pillar Blog Posts -->
   <url>
     <loc>https://freepropdf.com/blog/how-to-merge-pdf-files-online-free</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/blog/how-to-compress-pdf-without-losing-quality</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/blog/top-10-pdf-tools-for-students</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/blog/how-to-convert-images-into-single-pdf</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/blog/securely-protect-pdf-with-password</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
   </url>
-  
+
   <!-- Generated Blog Posts (Sample - In production, generate all 50+) -->
   <url>
     <loc>https://freepropdf.com/blog/how-students-can-merge-pdf-contracts-free</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/blog/how-lawyers-can-split-pdf-research-papers-free</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://freepropdf.com/blog/how-accountants-can-protect-pdf-financial-records-free</loc>
-    <lastmod>2024-11-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>daily</changefreq>
   </url>
 </urlset>

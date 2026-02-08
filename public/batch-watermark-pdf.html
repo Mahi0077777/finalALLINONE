@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Batch Watermark PDF - Multiple Files at Once | FreeProPDF</title>
+    <meta name="description" content="Add watermarks to multiple PDF files at once. Batch process PDFs with text or image watermarks. Save time with bulk watermarking. Free batch tool.">
+    <meta name="keywords" content="batch watermark pdf, multiple pdf watermark, bulk watermarking, batch process pdf, watermark multiple files">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/batch-watermark-pdf" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Batch Watermark PDF - Process Multiple Files at Once</h1>
+                
+                <p class="intro">Add watermarks to multiple PDF files simultaneously with our <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">batch watermarking tool</a>. Save time by applying the same watermark to dozens or hundreds of PDF documents in one operation. <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Process multiple PDFs now</a>.</p>
+
+                <section class="batch-benefits">
+                    <h2>Why Use Batch Watermarking</h2>
+                    
+                    <div class="benefit">
+                        <h3>Time Efficiency</h3>
+                        <p>Productivity benefits:</p>
+                        <ul>
+                            <li><strong>Process Multiple Files:</strong> Handle dozens of PDFs at once</li>
+                            <li><strong>Consistent Application:</strong> Uniform watermarking across all files</li>
+                            <li><strong>Automated Workflow:</strong> Reduce manual processing time</li>
+                            <li><strong>Scalable Solution:</strong> Handle any volume of documents</li>
+                            <li><strong>Streamlined Operations:</strong> Efficient document management</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit">
+                        <h3>Consistency and Standards</h3>
+                        <p>Quality assurance benefits:</p>
+                        <ul>
+                            <li><strong>Uniform Branding:</strong> Consistent company branding</li>
+                            <li><strong>Standard Compliance:</strong> Meet organizational standards</li>
+                            <li><strong>Quality Control:</strong> Ensure consistent watermark quality</li>
+                            <li><strong>Professional Appearance:</strong> Maintain document standards</li>
+                            <li><strong>Brand Integrity:</strong> Protect brand consistency</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="batch-types">
+                    <h2>Batch Watermarking Scenarios</h2>
+                    
+                    <div class="scenario">
+                        <h3>Corporate Document Sets</h3>
+                        <p>Business applications:</p>
+                        <ul>
+                            <li><strong>Annual Reports:</strong> Multi-section report watermarking</li>
+                            <li><strong>Financial Statements:</strong> Quarterly and annual documents</li>
+                            <li><strong>Legal Document Sets:</strong> Case files and contracts</li>
+                            <li><strong>Training Materials:</strong> Employee training documents</li>
+                            <li><strong>Policy Documents:</strong> Company policy collections</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario">
+                        <h3>Creative Portfolios</h3>
+                        <p>Creative professional applications:</p>
+                        <ul>
+                            <li><strong>Design Portfolios:</strong> Multiple project files</li>
+                            <li><strong>Photography Collections:</strong> Photo portfolio sets</li>
+                            <li><strong>Writing Samples:</strong> Multiple writing pieces</li>
+                            <li><strong>Art Portfolios:</strong> Artist work collections</li>
+                            <li><strong>Music Scores:</strong> Multiple composition files</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario">
+                        <h3>Educational Materials</h3>
+                        <p>Academic and training applications:</p>
+                        <ul>
+                            <li><strong>Course Materials:</strong> Multiple lesson documents</li>
+                            <li><strong>Study Guides:</strong> Complete course sets</li>
+                            <li><strong>Research Papers:</strong> Multiple academic papers</li>
+                            <li><strong>Textbook Chapters:</strong> Book section collections</li>
+                            <li><strong>Assessment Materials:</strong> Test and quiz collections</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario">
+                        <h3>Publishing and Media</h3>
+                        <p>Content distribution applications:</p>
+                        <ul>
+                            <li><strong>Magazine Issues:</strong> Multiple magazine editions</li>
+                            <li><strong>Newsletter Sets:</strong> Monthly newsletter collections</li>
+                            <li><strong>Catalog Collections:</strong> Product catalog sets</li>
+                            <li><strong>Brochure Series:</strong> Marketing material sets</li>
+                            <li><strong>White Paper Series:</strong> Research document collections</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="batch-features">
+                    <h2>Batch Watermarking Features</h2>
+                    
+                    <div class="feature">
+                        <h3>File Management</h3>
+                        <p>Comprehensive file handling:</p>
+                        <ul>
+                            <li><strong>Multiple Upload:</strong> Select multiple files at once</li>
+                            <li><strong>Drag and Drop:</strong> Easy file selection interface</li>
+                            <li><strong>Folder Support:</strong> Process entire folders</li>
+                            <li><strong>File Type Support:</strong> Various PDF formats</li>
+                            <li><strong>Progress Tracking:</strong> Monitor processing progress</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Watermark Customization</h3>
+                        <p>Advanced customization options:</p>
+                        <ul>
+                            <li><strong>Text Watermarks:</strong> Custom text for all files</li>
+                            <li><strong>Image Watermarks:</strong> Logo or image application</li>
+                            <li><strong>Consistent Positioning:</strong> Same placement across all files</li>
+                            <li><strong>Uniform Styling:</strong> Consistent fonts, colors, and opacity</li>
+                            <li><strong>Page Range Control:</strong> Apply to specific pages in all files</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Processing Options</h3>
+                        <p>Flexible processing controls:</p>
+                        <ul>
+                            <li><strong>Sequential Processing:</strong> Process files one by one</li>
+                            <li><strong>Parallel Processing:</strong> Multiple files simultaneously</li>
+                            <li><strong>Error Handling:</strong> Skip problematic files</li>
+                            <li><strong>Quality Settings:</strong> Balance speed vs. quality</li>
+                            <li><strong>Output Organization:</strong> Structured file organization</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="application-process">
+                    <h2>How to Batch Watermark PDF Files</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Select Multiple PDFs</h3>
+                            <p>Choose your files:</p>
+                            <ul>
+                                <li>Select multiple PDF files for processing</li>
+                                <li>Drag and drop files for quick selection</li>
+                                <li>Upload entire folders if needed</li>
+                                <li>Review file list and remove unwanted files</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Design Watermark</h3>
+                            <p>Create your watermark:</p>
+                            <ul>
+                                <li>Choose text or image watermark type</li>
+                                <li>Enter custom text or upload logo</li>
+                                <li>Configure font, size, and color</li>
+                                <li>Set opacity and rotation</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Batch Settings</h3>
+                            <p>Set processing options:</p>
+                            <ul>
+                                <li>Choose positioning for all files</li>
+                                <li>Set page range for application</li>
+                                <li>Configure output naming convention</li>
+                                <li>Select processing quality settings</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Preview and Test</h3>
+                            <p>Verify settings:</p>
+                            <ul>
+                                <li>Preview watermark on sample file</li>
+                                <li>Test settings on one document</li>
+                                <li>Adjust settings if needed</li>
+                                <li>Confirm batch processing parameters</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Process and Download</h3>
+                            <p>Complete batch operation:</p>
+                            <ul>
+                                <li>Start batch watermarking process</li>
+                                <li>Monitor progress for each file</li>
+                                <li>Review processed files</li>
+                                <li>Download all watermarked files as ZIP</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="technical-considerations">
+                    <h2>Technical Considerations for Batch Processing</h2>
+                    
+                    <div class="consideration">
+                        <h3>Performance Factors</h3>
+                        <p>Processing efficiency:</p>
+                        <ul>
+                            <li><strong>File Size Impact:</strong> Larger files take longer</li>
+                            <li><strong>Number of Files:</strong> More files increase processing time</li>
+                            <li><strong>Watermark Complexity:</strong> Complex watermarks slow processing</li>
+                            <li><strong>System Resources:</strong> CPU and memory usage</li>
+                            <li><strong>Network Speed:</strong> Upload/download bandwidth</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>Quality Assurance</h3>
+                        <p>Maintaining quality across files:</p>
+                        <ul>
+                            <li><strong>Consistent Quality:</strong> Uniform output quality</li>
+                            <li><strong>Error Detection:</strong> Identify problematic files</li>
+                            <li><strong>File Validation:</strong> Check file integrity</li>
+                            <li><strong>Output Verification:</strong> Review processed files</li>
+                            <li><strong>Backup Creation:</strong> Keep original files safe</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>Storage and Organization</h3>
+                        <p>Managing processed files:</p>
+                        <ul>
+                            <li><strong>File Naming:</strong> Consistent naming conventions</li>
+                            <li><strong>Folder Structure:</strong> Organized output structure</li>
+                            <li><strong>Compression Options:</strong> Optimize file sizes</li>
+                            <li><strong>Metadata Preservation:</strong> Keep document properties</li>
+                            <li><strong>Archive Management:</strong> Long-term storage planning</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Batch Watermarking Best Practices</h2>
+                    
+                    <div class="practice">
+                        <h3>Preparation Phase</h3>
+                        <p>Before batch processing:</p>
+                        <ul>
+                            <li><strong>File Organization:</strong> Group similar files together</li>
+                            <li><strong>Quality Check:</strong> Verify all files are processable</li>
+                            <li><strong>Backup Creation:</strong> Keep original files safe</li>
+                            <li><strong>Settings Testing:</strong> Test on sample files first</li>
+                            <li><strong>Resource Planning:</strong> Ensure adequate system resources</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Processing Phase</h3>
+                        <p>During batch operation:</p>
+                        <ul>
+                            <li><strong>Monitor Progress:</strong> Watch processing status</li>
+                            <li><strong>Error Handling:</strong> Address issues promptly</li>
+                            <li><strong>Quality Control:</strong> Spot-check processed files</li>
+                            <li><strong>Resource Management:</strong> Monitor system performance</li>
+                            <li><strong>Interruption Handling:</strong> Resume capability if needed</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Post-Processing</h3>
+                        <p>After completion:</p>
+                        <ul>
+                            <li><strong>Quality Review:</strong> Check all processed files</li>
+                            <li><strong>File Organization:</strong> Organize output properly</li>
+                            <li><strong>Documentation:</strong> Record processing details</li>
+                            <li><strong>Archive Creation:</strong> Store processed files securely</li>
+                            <li><strong>Cleanup:</strong> Remove temporary files</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>How many PDF files can I process at once?</h3>
+                        <p>You can process multiple files simultaneously, though the exact number may depend on file sizes and system resources. Most users can process 10-50 files efficiently.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use different watermarks for different files in a batch?</h3>
+                        <p>Batch processing typically applies the same watermark to all files. For different watermarks, you'd need to process files in separate batches.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How long does batch watermarking take?</h3>
+                        <p>Processing time varies based on file count, size, and complexity. Small files might process in seconds, while large documents may take several minutes each.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What happens if one file fails during batch processing?</h3>
+                        <p>Most batch systems will continue processing other files and report errors for failed files, allowing you to address problematic files separately.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I save batch watermarking settings for future use?</h3>
+                        <p>Yes, you can typically save your watermark settings and apply them to future batch operations for consistency.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Batch and Watermark Tools</h2>
+                    <ul>
+                        <li><a href="/add-watermark-to-pdf">Add Watermark to PDF</a> - Single file watermarking</li>
+                        <li><a href="/text-watermark-pdf">Text Watermark PDF</a> - Text-specific watermarking</li>
+                        <li><a href="/logo-watermark-pdf">Logo Watermark PDF</a> - Image watermarking</li>
+                        <li><a href="/merge-pdf">Merge PDF</a> - Combine multiple files</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize file sizes</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/watermark-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Watermark PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

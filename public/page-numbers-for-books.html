@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Page Numbers for Books - Professional Book Formatting | FreeProPDF</title>
+    <meta name="description" content="Add professional page numbers to books and manuscripts. Front matter, main content, and back matter formatting. Free book publishing tool.">
+    <meta name="keywords" content="book page numbers, manuscript formatting, book publishing, front matter numbering">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/page-numbers-for-books" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Page Numbers for Books - Professional Book Formatting</h1>
+                
+                <p class="intro">Add professional page numbers to books and manuscripts using our <a href="/page-numbers" class="text-brand-600 hover:text-brand-700 font-semibold">page numbering tool</a>. Format front matter with Roman numerals, main content with Arabic numbers, and back matter appropriately. Perfect for authors, publishers, and self-publishing. <a href="/page-numbers" class="text-brand-600 hover:text-brand-700 font-semibold">Number your books now</a>.</p>
+
+                <section class="book-structure">
+                    <h2>Traditional Book Structure and Numbering</h2>
+                    
+                    <div class="section">
+                        <h3>Front Matter (Roman Numerals)</h3>
+                        <p>Preliminary pages use lowercase Roman numerals:</p>
+                        <ul>
+                            <li><strong>Title Page:</strong> No number (or "i" in some designs)</li>
+                            <li><strong>Copyright Page:</strong> No number (or "ii")</li>
+                            <li><strong>Dedication:</strong> Roman numeral continues</li>
+                            <li><strong>Epigraph:</strong> Roman numeral continues</li>
+                            <li><strong>Table of Contents:</strong> Roman numeral continues</li>
+                            <li><strong>List of Figures:</strong> Roman numeral continues</li>
+                            <li><strong>List of Tables:</strong> Roman numeral continues</li>
+                            <li><strong>Foreword:</strong> Roman numeral continues</li>
+                            <li><strong>Preface:</strong> Roman numeral continues</li>
+                            <li><strong>Acknowledgments:</strong> Roman numeral continues</li>
+                            <li><strong>Introduction:</strong> Roman numeral continues</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>Main Body (Arabic Numerals)</h3>
+                        <p>Primary content starts with Arabic "1":</p>
+                        <ul>
+                            <li><strong>Chapter 1:</strong> Starts with page "1"</li>
+                            <li><strong>Subsequent Chapters:</strong> Continue sequentially</li>
+                            <li><strong>Position:</strong> Bottom center or bottom right</li>
+                            <li><strong>Font:</strong> Same as text or slightly smaller</li>
+                            <li><strong>Consistency:</strong> Same position throughout body</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h3>Back Matter (Arabic Numerals)</h3>
+                        <p>Final sections continue Arabic numbering:</p>
+                        <ul>
+                            <li><strong>Afterword:</strong> Continue numbering</li>
+                            <li><strong>Appendices:</strong> Continue numbering</li>
+                            <li><strong>Notes:</strong> Continue numbering</li>
+                            <li><strong>Glossary:</strong> Continue numbering</li>
+                            <li><strong>Bibliography:</strong> Continue numbering</li>
+                            <li><strong>Index:</strong> Continue numbering</li>
+                            <li><strong>About the Author:</strong> Continue numbering</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="numbering-styles">
+                    <h2>Book Numbering Styles and Positions</h2>
+                    
+                    <div class="style">
+                        <h3>Traditional Positioning</h3>
+                        <p>Classic book numbering placement:</p>
+                        <ul>
+                            <li><strong>Bottom Center:</strong> Most common for fiction</li>
+                            <li><strong>Bottom Right:</strong> Common for non-fiction</li>
+                            <li><strong>Top Right:</strong> Alternative traditional style</li>
+                            <li><strong>Top Center:</strong> Used in some academic books</li>
+                            <li><strong>Alternating:</strong> Left/right page positioning</li>
+                        </ul>
+                    </div>
+
+                    <div class="style">
+                        <h3>Modern Variations</h3>
+                        <p>Contemporary book design options:</p>
+                        <ul>
+                            <li><strong>Decorative Elements:</strong> Lines or dots with numbers</li>
+                            <li><strong>Chapter Headers:</strong> Numbers in chapter headings</li>
+                            <li><strong>Running Headers:</strong> Page numbers in headers</li>
+                            <li><strong>Minimalist:</strong> Small, subtle numbering</li>
+                            <li><strong>Artistic:</strong> Creative number designs</li>
+                        </ul>
+                    </div>
+
+                    <div class="style">
+                        <h3>Genre-Specific Styles</h3>
+                        <p>Different genres use different approaches:</p>
+                        <ul>
+                            <li><strong>Fiction:</strong> Usually bottom center</li>
+                            <li><strong>Non-Fiction:</strong> Often bottom right</li>
+                            <li><strong>Textbooks:</strong> Top or bottom with headers</li>
+                            <li><strong>Coffee Table Books:</strong> Creative positioning</li>
+                            <li><strong>Children's Books:</strong> Often no page numbers</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="book-types">
+                    <h2>Types of Books and Their Numbering Needs</h2>
+                    
+                    <div class="book-type">
+                        <h3>Fiction Novels</h3>
+                        <p>Traditional fiction formatting:</p>
+                        <ul>
+                            <li><strong>Simple Structure:</strong> Title page, chapters, back matter</li>
+                            <li><strong>Bottom Center:</strong> Most common positioning</li>
+                            <li><strong>Clean Design:</strong> Minimal, elegant numbering</li>
+                            <li><strong>Chapter Starts:</strong> Often no number on chapter opening pages</li>
+                            <li><strong>Consistent Style:</strong> Uniform throughout</li>
+                        </ul>
+                    </div>
+
+                    <div class="book-type">
+                        <h3>Non-Fiction Books</h3>
+                        <p>Informational book formatting:</p>
+                        <ul>
+                            <li><strong>Complex Structure:</strong> Multiple sections, appendices</li>
+                            <li><strong>Bottom Right:</strong> Common positioning</li>
+                            <li><strong>Headers:</strong> Often include chapter titles</li>
+                            <li><strong>Extensive Front Matter:</strong> Multiple preliminary pages</li>
+                            <li><strong>Reference Sections:</strong> Index, bibliography, notes</li>
+                        </ul>
+                    </div>
+
+                    <div class="book-type">
+                        <h3>Academic Books</h3>
+                        <p>Scholarly publication formatting:</p>
+                        <ul>
+                            <li><strong>Formal Structure:</strong> Strict academic conventions</li>
+                            <li><strong>Top or Bottom:</strong> Varies by publisher</li>
+                            <li><strong>Running Headers:</strong> Chapter titles and page numbers</li>
+                            <li><strong>Citation Integration:</strong> Links to footnotes/endnotes</li>
+                            <li><strong>Complex Back Matter:</strong> Extensive references</li>
+                        </ul>
+                    </div>
+
+                    <div class="book-type">
+                        <h3>Textbooks</h3>
+                        <p>Educational book formatting:</p>
+                        <ul>
+                            <li><strong>Structured Layout:</strong> Clear organization</li>
+                            <li><strong>Headers:</strong> Chapter and section information</li>
+                            <li><strong>Bottom Position:</strong> Usually bottom center</li>
+                            <li><strong>Supplementary Materials:</strong> Appendices, glossaries</li>
+                            <li><strong>Index Integration:</strong> Cross-referencing</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="formatting-process">
+                    <h2>How to Format Book Page Numbers</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Organize Book Structure</h3>
+                            <p>Prepare your manuscript:</p>
+                            <ul>
+                                <li>Separate front matter, main body, back matter</li>
+                                <li>Identify all section boundaries</li>
+                                <li>Check for special pages (title, copyright)</li>
+                                <li>Organize chapters and sections</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Front Matter</h3>
+                            <p>Set up Roman numeral numbering:</p>
+                            <ul>
+                                <li>Define front matter page range</li>
+                                <li>Set Roman numeral format (i, ii, iii...)</li>
+                                <li>Choose position and style</li>
+                                <li>Configure title/copyright page handling</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Set Main Body Numbering</h3>
+                            <p>Configure Arabic numeral section:</p>
+                            <ul>
+                                <li>Start numbering with "1" on first chapter</li>
+                                <li>Choose position (bottom center/right)</li>
+                                <li>Set font and size</li>
+                                <li>Configure chapter start page handling</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Back Matter</h3>
+                            <p>Set up final sections:</p>
+                            <ul>
+                                <li>Continue Arabic numbering from main body</li>
+                                <li>Maintain consistent positioning</li>
+                                <li>Handle special sections (index, bibliography)</li>
+                                <li>Ensure proper section transitions</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Apply and Review</h3>
+                            <p>Finalize your book formatting:</p>
+                            <ul>
+                                <li>Process document with all settings</li>
+                                <li>Review front matter numbering</li>
+                                <li>Verify main body starts with "1"</li>
+                                <li>Check back matter continuity</li>
+                                <li>Download professionally formatted book</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="publishing-standards">
+                    <h2>Publishing Industry Standards</h2>
+                    
+                    <div class="standard">
+                        <h3>Traditional Publishing</h3>
+                        <p>Industry conventional standards:</p>
+                        <ul>
+                            <li><strong>Chicago Manual:</strong> Style guide reference</li>
+                            <li><strong>Publisher Guidelines:</strong> House style requirements</li>
+                            <li><strong>Print Considerations:</strong> Printer specifications</li>
+                            <li><strong>Distribution Requirements:</strong> Retailer formatting</li>
+                            <li><strong>ISBN Standards:</strong> Publication requirements</li>
+                        </ul>
+                    </div>
+
+                    <div class="standard">
+                        <h3>Self-Publishing</h3>
+                        <p>Independent author considerations:</p>
+                        <ul>
+                            <li><strong>Platform Requirements:</strong> Amazon KDP, IngramSpark</li>
+                            <li><strong>E-book Formatting:</strong> Digital publication needs</li>
+                            <li><strong>Print-on-Demand:</strong> POD specifications</li>
+                            <li><strong>Cover Integration:</strong> Spine and back cover</li>
+                            <li><strong>Professional Appearance:</strong> Market competitiveness</li>
+                        </ul>
+                    </div>
+
+                    <div class="standard">
+                        <h3>International Standards</h3>
+                        <p>Global publishing conventions:</p>
+                        <ul>
+                            <li><strong>UK Publishing:</strong> British standards</li>
+                            <li><strong>European Books:</strong> Continental conventions</li>
+                            <li><strong>Asian Markets:</strong> Regional preferences</li>
+                            <li><strong>Translation Considerations:</strong> Multi-language books</li>
+                            <li><strong>Cultural Adaptations:</strong> Local formatting</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="design-considerations">
+                    <h2>Design and Typography Considerations</h2>
+                    
+                    <div class="consideration">
+                        <h3>Font Selection</h3>
+                        <p>Typography choices for page numbers:</p>
+                        <ul>
+                            <li><strong>Readability:</strong> Clear, legible fonts</li>
+                            <li><strong>Consistency:</strong> Match text font or complement</li>
+                            <li><strong>Size Appropriateness:</strong> Not too large or small</li>
+                            <li><strong>Style Harmony:</strong> Fit overall book design</li>
+                            <li><strong>Print Quality:</strong> Good reproduction</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>Visual Hierarchy</h3>
+                        <p>Integration with book design:</p>
+                        <ul>
+                            <li><strong>Subtle Presence:</strong> Don't overpower content</li>
+                            <li><strong>Consistent Positioning:</strong> Predictable location</li>
+                            <li><strong>Adequate Spacing:</strong> Room from text/edges</li>
+                            <li><strong>Color Choices:</strong> Usually black or dark gray</li>
+                            <li><strong>Decorative Elements:</strong> Optional embellishments</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Should my title page have a page number?</h3>
+                        <p>Traditionally, title pages do not have page numbers. The first numbered page is usually the copyright page (ii) or the first page of the main content (1).</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Do I need different numbering for different chapters?</h3>
+                        <p>No, books typically use continuous numbering throughout. Each chapter continues the sequence from where the previous chapter ended.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Where should I place page numbers in a novel?</h3>
+                        <p>Most novels use bottom center positioning, though bottom right is also common. Choose one position and maintain consistency throughout.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I handle page numbers for a book with multiple parts?</h3>
+                        <p>Continue numbering sequentially through all parts. You can use part titles in headers to distinguish sections while maintaining continuous page numbers.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Should I include page numbers on chapter opening pages?</h3>
+                        <p>Traditional publishing often omits page numbers on chapter opening pages (recto pages), but this varies by publisher and design preference.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Book Publishing Tools</h2>
+                    <ul>
+                        <li><a href="/merge-pdf">Merge PDF</a> - Combine book sections</li>
+                        <li><a href="/split-pdf">Split PDF</a> - Separate book chapters</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize for distribution</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Secure copyrighted content</li>
+                        <li><a href="/custom-page-numbering-pdf">Custom Page Numbering</a> - Advanced formatting</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/page-numbers" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Page Numbers</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

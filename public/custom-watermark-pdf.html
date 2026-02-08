@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Custom Watermark PDF - Personalized Watermarks | FreeProPDF</title>
+    <meta name="description" content="Create custom watermarks for PDF documents with full personalization options. Design unique text and image watermarks with custom fonts, colors, and positioning. Free custom tool.">
+    <meta name="keywords" content="custom watermark pdf, personalized watermark, custom design watermark, unique watermark pdf, bespoke watermark">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/custom-watermark-pdf" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Custom Watermark PDF - Personalized Watermarks</h1>
+                
+                <p class="intro">Create completely custom watermarks for PDF documents using our <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">advanced watermark tool</a> with unlimited personalization options. Design unique text and image watermarks with custom fonts, colors, effects, and positioning to match your exact needs. <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Create custom watermarks now</a>.</p>
+
+                <section class="customization-benefits">
+                    <h2>Why Choose Custom Watermarks</h2>
+                    
+                    <div class="benefit">
+                        <h3>Complete Personalization</h3>
+                        <p>Customization advantages:</p>
+                        <ul>
+                            <li><strong>Unique Design:</strong> One-of-a-kind watermark appearance</li>
+                            <li><strong>Brand Alignment:</strong> Match your exact brand guidelines</li>
+                            <li><strong>Creative Freedom:</strong> Unlimited design possibilities</li>
+                            <li><strong>Professional Standards:</strong> Meet specific industry requirements</li>
+                            <li><strong>Competitive Differentiation:</strong> Stand out from standard watermarks</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit">
+                        <h3>Advanced Functionality</h3>
+                        <p>Enhanced features:</p>
+                        <ul>
+                            <li><strong>Precise Control:</strong> Fine-tune every aspect</li>
+                            <li><strong>Complex Designs:</strong> Multi-element watermarks</li>
+                            <li><strong>Dynamic Content:</strong> Variable information inclusion</li>
+                            <li><strong>Professional Effects:</strong> Advanced visual effects</li>
+                            <li><strong>Template Creation:</strong> Save custom designs</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="customization-options">
+                    <h2>Custom Watermark Customization Options</h2>
+                    
+                    <div class="option">
+                        <h3>Text Customization</h3>
+                        <p>Advanced text controls:</p>
+                        <ul>
+                            <li><strong>Custom Fonts:</strong> Upload custom font files</li>
+                            <li><strong>Font Styling:</strong> Bold, italic, underline, strikethrough</li>
+                            <li><strong>Text Effects:</strong> Shadow, glow, outline effects</li>
+                            <li><strong>Multi-line Text:</strong> Complex text layouts</li>
+                            <li><strong>Dynamic Variables:</strong> Date, time, page numbers</li>
+                        </ul>
+                    </div>
+
+                    <div class="option">
+                        <h3>Color and Visual Effects</h3>
+                        <p>Advanced visual controls:</p>
+                        <ul>
+                            <li><strong>Custom Colors:</strong> Exact color matching (HEX, RGB)</li>
+                            <li><strong>Gradient Effects:</strong> Multi-color gradients</li>
+                            <li><strong>Opacity Gradients:</strong> Variable transparency</li>
+                            <li><strong>Blend Modes:</strong> Different blending options</li>
+                            <li><strong>Texture Overlays:</strong> Pattern and texture effects</li>
+                        </ul>
+                    </div>
+
+                    <div class="option">
+                        <h3>Positioning and Layout</h3>
+                        <p>Precise placement control:</p>
+                        <ul>
+                            <li><strong>Exact Positioning:</strong> Pixel-perfect X/Y coordinates</li>
+                            <li><strong>Rotation Control:</strong> Any angle from 0-360°</li>
+                            <li><strong>Scaling Options:</strong> Precise size control</li>
+                            <li><strong>Layer Management:</strong> Multiple watermark layers</li>
+                            <li><strong>Page-Specific Placement:</strong> Different positions per page</li>
+                        </ul>
+                    </div>
+
+                    <div class="option">
+                        <h3>Image Customization</h3>
+                        <p>Advanced image controls:</p>
+                        <ul>
+                            <li><strong>Image Upload:</strong> Multiple image formats</li>
+                            <li><strong>Image Editing:</strong> Crop, resize, rotate</li>
+                            <li><strong>Color Adjustment:</strong> Brightness, contrast, saturation</li>
+                            <li><strong>Filter Effects:</strong> Blur, sharpen, artistic filters</li>
+                            <li><strong>Background Removal:</strong> Automatic background removal</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="design-elements">
+                    <h2>Custom Design Elements</h2>
+                    
+                    <div class="element">
+                        <h3>Shapes and Graphics</h3>
+                        <p>Geometric and design elements:</p>
+                        <ul>
+                            <li><strong>Custom Shapes:</strong> Circles, rectangles, polygons</li>
+                            <li><strong>Lines and Borders:</strong> Custom line styles</li>
+                            <li><strong>Arrows and Indicators:</strong> Directional elements</li>
+                            <li><strong>Icons and Symbols:</strong> Custom icon integration</li>
+                            <li><strong>Patterns and Textures:</strong> Repeating design elements</li>
+                        </ul>
+                    </div>
+
+                    <div class="element">
+                        <h3>Combined Elements</h3>
+                        <p>Multi-component designs:</p>
+                        <ul>
+                            <li><strong>Text + Images:</strong> Combined text and graphics</li>
+                            <li><strong>Layered Designs:</strong> Multiple overlapping elements</li>
+                            <li><strong>Composite Watermarks:</strong> Complex multi-element designs</li>
+                            <li><strong>Animated Elements:</strong> Subtle animation effects</li>
+                            <li><strong>Interactive Elements:</strong> Clickable watermark areas</li>
+                        </ul>
+                    </div>
+
+                    <div class="element">
+                        <h3>Professional Templates</h3>
+                        <p>Industry-specific designs:</p>
+                        <ul>
+                            <li><strong>Legal Templates:</strong> Legal document watermarks</li>
+                            <li><strong>Financial Templates:</strong> Banking and finance designs</li>
+                            <li><strong>Creative Templates:</strong> Artistic and creative designs</li>
+                            <li><strong>Corporate Templates:</strong> Business professional designs</li>
+                            <li><strong>Educational Templates:</strong> Academic and learning designs</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="application-process">
+                    <h2>How to Create Custom Watermark for PDF</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Upload PDF Document</h3>
+                            <p>Start with your file:</p>
+                            <ul>
+                                <li>Select the PDF to watermark</li>
+                                <li>Drag and drop for quick upload</li>
+                                <li>Import from cloud storage</li>
+                                <li>Wait for file processing</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Choose Customization Level</h3>
+                            <p>Select your approach:</p>
+                            <ul>
+                                <li><strong>Basic Custom:</strong> Simple text and color changes</li>
+                                <li><strong>Advanced Custom:</strong> Full design control</li>
+                                <li><strong>Template-Based:</strong> Modify existing templates</li>
+                                <li><strong>From Scratch:</strong> Create completely new design</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Design Your Watermark</h3>
+                            <p>Create custom elements:</p>
+                            <ul>
+                                <li>Add text with custom fonts and styling</li>
+                                <li>Upload and customize images</li>
+                                <li>Add shapes and design elements</li>
+                                <li>Configure colors and effects</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Advanced Settings</h3>
+                            <p>Fine-tune your design:</p>
+                            <ul>
+                                <li>Set precise positioning and rotation</li>
+                                <li>Configure opacity and transparency</li>
+                                <li>Add visual effects and filters</li>
+                                <li>Set page-specific rules</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Preview and Apply</h3>
+                            <p>Complete your document:</p>
+                            <ul>
+                                <li>Preview custom watermark on sample pages</li>
+                                <li>Test different settings and variations</li>
+                                <li>Save custom template for future use</li>
+                                <li>Process and download your custom watermarked PDF</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="use-cases">
+                    <h2>Custom Watermark Use Cases</h2>
+                    
+                    <div class="use-case">
+                        <h3>Brand Identity</h3>
+                        <p>Corporate branding applications:</p>
+                        <ul>
+                            <li><strong>Brand Guidelines:</strong> Exact brand color and font matching</li>
+                            <li><strong>Marketing Materials:</strong> Custom promotional watermarks</li>
+                            <li><strong>Client Deliverables:</strong> Personalized client branding</li>
+                            <li><strong>Partnership Documents:</strong> Co-branded materials</li>
+                            <li><strong>Event Materials:</strong> Custom event branding</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Creative Professionals</h3>
+                        <p>Artistic and creative applications:</p>
+                        <ul>
+                            <li><strong>Artist Signatures:</strong> Custom artistic signature watermarks</li>
+                            <li><strong>Photographer Brands:</strong> Unique photographer branding</li>
+                            <li><strong>Designer Portfolios:</strong> Custom design studio branding</li>
+                            <li><strong>Writer Bylines:</strong> Personalized author watermarks</li>
+                            <li><strong>Music Composer Marks:</strong> Custom composer branding</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Specialized Industries</h3>
+                        <p>Industry-specific applications:</p>
+                        <ul>
+                            <li><strong>Legal Firms:</strong> Custom legal document branding</li>
+                            <li><strong>Financial Institutions:</strong> Bank-specific security designs</li>
+                            <li><strong>Healthcare:</strong> Medical practice custom watermarks</li>
+                            <li><strong>Education:</strong> Institution-specific academic watermarks</li>
+                            <li><strong>Government:</strong> Agency-specific official watermarks</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Personal Use</h3>
+                        <p>Individual applications:</p>
+                        <ul>
+                            <li><strong>Personal Branding:</strong> Individual personal brand watermarks</li>
+                            <li><strong>Family Documents:</strong> Custom family document marking</li>
+                            <li><strong>Hobby Projects:</strong> Personal project watermarks</li>
+                            <li><strong>Social Media:</strong> Custom content for social sharing</li>
+                            <li><strong>Gift Materials:</strong> Personalized gift document watermarks</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="advanced-features">
+                    <h2>Advanced Custom Features</h2>
+                    
+                    <div class="feature">
+                        <h3>Dynamic Content</h3>
+                        <p>Variable information inclusion:</p>
+                        <ul>
+                            <li><strong>Date Stamps:</strong> Automatic date insertion</li>
+                            <li><strong>Page Numbers:</strong> Dynamic page numbering</li>
+                            <li><strong>User Information:</strong> Recipient-specific data</li>
+                            <li><strong>Document Properties:</strong> Auto-insert document metadata</li>
+                            <li><strong>Custom Variables:</strong> User-defined variable fields</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Template System</h3>
+                        <p>Save and reuse designs:</p>
+                        <ul>
+                            <li><strong>Template Creation:</strong> Save custom designs as templates</li>
+                            <li><strong>Template Library:</strong> Organize saved templates</li>
+                            <li><strong>Template Sharing:</strong> Share templates with team</li>
+                            <li><strong>Template Modification:</strong> Edit existing templates</li>
+                            <li><strong>Template Categories:</strong> Organize by type or project</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Batch Customization</h3>
+                        <p>Apply custom designs to multiple files:</p>
+                        <ul>
+                            <li><strong>Batch Processing:</strong> Apply custom watermark to multiple PDFs</li>
+                            <li><strong>Variable Application:</strong> Different custom watermarks per file</li>
+                            <li><strong>Batch Templates:</strong> Use templates for batch operations</li>
+                            <li><strong>Automated Workflows:</strong> Set up automated watermarking</li>
+                            <li><strong>Quality Control:</strong> Batch preview and approval</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Custom Watermark Best Practices</h2>
+                    
+                    <div class="practice">
+                        <h3>Design Principles</h3>
+                        <p>Creating effective custom designs:</p>
+                        <ul>
+                            <li><strong>Balance Creativity:</strong> Creative but professional</li>
+                            <li><strong>Maintain Readability:</strong> Don't interfere with content</li>
+                            <li><strong>Brand Consistency:</strong> Align with brand guidelines</li>
+                            <li><strong>Visual Hierarchy:</strong> Important elements prominent</li>
+                            <li><strong>Scalability:</strong> Works at different sizes</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Technical Considerations</h3>
+                        <p>Technical best practices:</p>
+                        <ul>
+                            <li><strong>File Size Optimization:</strong> Keep file sizes reasonable</li>
+                            <li><strong>Color Management:</strong> Use appropriate color spaces</li>
+                            <li><strong>Font Licensing:</strong> Ensure font usage rights</li>
+                            <li><strong>Image Resolution:</strong> Use appropriate resolution</li>
+                            <li><strong>Compatibility Testing:</strong> Test on various devices</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Workflow Optimization</h3>
+                        <p>Efficient design process:</p>
+                        <ul>
+                            <li><strong>Template Creation:</strong> Save reusable designs</li>
+                            <li><strong>Version Control:</strong> Track design iterations</li>
+                            <li><strong>Team Collaboration:</strong> Share designs with team</li>
+                            <li><strong>Quality Assurance:</strong> Review and test thoroughly</li>
+                            <li><strong>Documentation:</strong> Document design decisions</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Can I upload my own fonts for custom watermarks?</h3>
+                        <p>Yes, you can upload custom font files (TTF, OTF) to create truly unique text watermarks that match your brand or personal style.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How complex can custom watermarks be?</h3>
+                        <p>Custom watermarks can be very complex, including multiple text elements, images, shapes, and effects combined in layered designs.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I save my custom watermark designs for future use?</h3>
+                        <p>Yes, you can save your custom designs as templates and reuse them across multiple documents or share them with your team.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Are there any limitations on custom watermark colors?</h3>
+                        <p>No, you have full color control with support for HEX, RGB, and CMYK color values, allowing exact color matching to your brand.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can custom watermarks include interactive elements?</h3>
+                        <p>While basic interactive elements are supported, most custom watermarks are static. Advanced interactive features may require specialized PDF software.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Customization and Watermark Tools</h2>
+                    <ul>
+                        <li><a href="/add-watermark-to-pdf">Add Watermark to PDF</a> - Basic watermarking</li>
+                        <li><a href="/text-watermark-pdf">Text Watermark PDF</a> - Text-specific customization</li>
+                        <li><a href="/logo-watermark-pdf">Logo Watermark PDF</a> - Image watermarking</li>
+                        <li><a href="/batch-watermark-pdf">Batch Watermark PDF</a> - Multiple file processing</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Document security</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/watermark-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Watermark PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

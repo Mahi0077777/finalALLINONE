@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Merge PDF for Educational Materials - Lessons & Notes | FreeProPDF</title>
+    <meta name="description" content="Combine educational materials, lesson plans, and student resources. Create comprehensive teaching documents.">
+    <meta name="keywords" content="merge educational pdf, lesson plans, teaching materials, student resources">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/merge-pdf-for-educational-materials" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Organize Educational Content by Merging PDFs</h1>
+                
+                <p class="intro">Enhance teaching materials by combining lesson plans, worksheets, and resources into organized PDF packets. Perfect for teachers, students, and educational institutions looking to streamline document management and improve learning materials.</p>
+
+                <section class="educational-types">
+                    <h2>Types of Educational Materials to Merge</h2>
+                    
+                    <div class="material-category">
+                        <h3>Teacher Resources</h3>
+                        <p>Documents educators frequently combine:</p>
+                        <ul>
+                            <li><strong>Lesson Plans:</strong> Daily and weekly planning documents</li>
+                            <li><strong>Worksheets:</strong> Student activities and exercises</li>
+                            <li><strong>Assessment Materials:</strong> Tests, quizzes, and evaluations</li>
+                            <li><strong>Reference Guides:</strong> Quick reference sheets and cheat sheets</li>
+                            <li><strong>Curriculum Maps:</strong> Year-long planning documents</li>
+                        </ul>
+                    </div>
+
+                    <div class="material-category">
+                        <h3>Student Materials</h3>
+                        <p>Resources for student learning:</p>
+                        <ul>
+                            <li><strong>Study Guides:</strong> Comprehensive review materials</li>
+                            <li><strong>Reading Packets:</strong> Articles and text collections</li>
+                            <li><strong>Workbooks:</strong> Practice exercises and activities</li>
+                            <li><strong>Project Instructions:</strong> Assignment guidelines and rubrics</li>
+                            <li><strong>Notes and Handouts:</strong> Class materials and summaries</li>
+                        </ul>
+                    </div>
+
+                    <div class="material-category">
+                        <h3>Administrative Documents</h3>
+                        <p>School and institutional paperwork:</p>
+                        <ul>
+                            <li><strong>Course Syllabi:</strong> Semester outlines and policies</li>
+                            <li><strong>Progress Reports:</strong> Student performance tracking</li>
+                            <li><strong>IEP Documents:</strong> Individualized education plans</li>
+                            <li><strong>Parent Communications:</strong> Newsletters and updates</li>
+                            <li><strong>Meeting Minutes:</strong> Staff and department meetings</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="organization-strategies">
+                    <h2>Educational Content Organization</h2>
+                    
+                    <div class="strategy">
+                        <h3>Subject-Based Organization</h3>
+                        <p>Group materials by academic subject:</p>
+                        <ul>
+                            <li><strong>Mathematics:</strong> Worksheets, formulas, practice problems</li>
+                            <li><strong>Language Arts:</strong> Reading passages, writing prompts, grammar</li>
+                            <li><strong>Science:</strong> Lab reports, experiment guides, diagrams</li>
+                            <li><strong>Social Studies:</strong> Maps, timelines, primary sources</li>
+                            <li><strong>Arts:</strong> Project instructions, technique guides</li>
+                        </ul>
+                        <p><strong>Benefits:</strong> Easy subject-specific retrieval and curriculum alignment.</p>
+                    </div>
+
+                    <div class="strategy">
+                        <h3>Grade-Level Organization</h3>
+                        <p>Structure content by educational level:</p>
+                        <ul>
+                            <li><strong>Elementary (K-5):</strong> Basic skills, visual materials</li>
+                            <li><strong>Middle School (6-8):</strong> Intermediate concepts, projects</li>
+                            <li><strong>High School (9-12):</strong> Advanced topics, assessments</li>
+                            <li><strong>College/University:</strong> Specialized content, research</li>
+                            <li><strong>Special Education:</strong> Adapted materials, IEP resources</li>
+                        </ul>
+                        <p><strong>Benefits:</strong> Age-appropriate content and developmental alignment.</p>
+                    </div>
+
+                    <div class="strategy">
+                        <h3>Chronological Organization</h3>
+                        <p>Arrange materials by time sequence:</p>
+                        <ul>
+                            <li><strong>Daily Lessons:</strong> Day-by-day instructional materials</li>
+                            <li><strong>Weekly Units:</strong> Thematic content collections</li>
+                            <li><strong>Monthly Themes:</strong> Seasonal and holiday materials</li>
+                            <li><strong>Semester Plans:</strong> Comprehensive course materials</li>
+                            <li><strong>Yearly Archives:</strong> Complete academic year resources</li>
+                        </ul>
+                        <p><strong>Benefits:</strong> Easy progress tracking and curriculum planning.</p>
+                    </div>
+                </section>
+
+                <section class="student-packets">
+                    <h2>Creating Student Work Packets</h2>
+                    
+                    <div class="packet-type">
+                        <h3>Homework Packets</h3>
+                        <p>Organized assignments for home completion:</p>
+                        <ul>
+                            <li><strong>Cover Sheet:</strong> Instructions and due dates</li>
+                            <li><strong>Practice Worksheets:</strong> Reinforcement activities</li>
+                            <li><strong>Reading Materials:</strong> Articles and passages</li>
+                            <li><strong>Answer Keys:</strong> Separate or included</li>
+                            <li><strong>Parent Notes:</strong> Communication and progress updates</li>
+                        </ul>
+                    </div>
+
+                    <div class="packet-type">
+                        <h3>Study Packets</h3>
+                        <p>Comprehensive exam preparation:</p>
+                        <ul>
+                            <li><strong>Review Guides:</strong> Key concepts and summaries</li>
+                            <li><strong>Practice Tests:</strong> Sample questions and answers</li>
+                            <li><strong>Flash Cards:</strong> Quick reference materials</li>
+                            <li><strong>Formula Sheets:</strong> Essential information</li>
+                            <li><strong>Study Tips:</strong> Strategies and techniques</li>
+                        </ul>
+                    </div>
+
+                    <div class="packet-type">
+                        <h3>Project Packets</h3>
+                        <p>Complete project instructions:</p>
+                        <ul>
+                            <li><strong>Project Overview:</strong> Goals and objectives</li>
+                            <li><strong>Step-by-Step Instructions:</strong> Detailed guidance</li>
+                            <li><strong>Required Materials:</strong> Supply lists and resources</li>
+                            <li><strong>Assessment Rubrics:</strong> Grading criteria</li>
+                            <li><strong>Examples:</strong> Sample completed projects</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="teacher-resources">
+                    <h2>Teacher Resource Compilation</h2>
+                    
+                    <div class="resource-compilation">
+                        <h3>Lesson Plan Collections</h3>
+                        <p>Organize teaching materials effectively:</p>
+                        <ul>
+                            <li><strong>Unit Overviews:</strong> Big picture planning</li>
+                            <li><strong>Daily Plans:</strong> Detailed instructional guides</li>
+                            <li><strong>Materials Lists:</strong> Supplies and resources needed</li>
+                            <li><strong>Assessment Tools:</strong> Evaluation methods and rubrics</li>
+                            <li><strong>Differentiation Strategies:</strong> Adaptations for diverse learners</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-compilation">
+                        <h3>Professional Development</h3>
+                        <p>Teacher training and growth materials:</p>
+                        <ul>
+                            <li><strong>Workshop Materials:</strong> Training session content</li>
+                            <li><strong>Research Articles:</strong> Educational best practices</li>
+                            <li><strong>Policy Documents:</strong> School and district guidelines</li>
+                            <li><strong>Assessment Data:</strong> Student performance analysis</li>
+                            <li><strong>Reflection Templates:</strong> Self-evaluation tools</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="accessibility">
+                    <h2>Accessibility Considerations</h2>
+                    
+                    <div class="accessibility-feature">
+                        <h3>Creating Accessible Materials</h3>
+                        <p>Ensure educational content works for all learners:</p>
+                        <ul>
+                            <li><strong>Text Formatting:</strong> Clear fonts, adequate size, good contrast</li>
+                            <li><strong>Image Descriptions:</strong> Alt text for visual content</li>
+                            <li><strong>Structured Content:</strong> Headings, lists, and logical flow</li>
+                            <li><strong>Interactive Elements:</strong> Fillable forms and worksheets</li>
+                            <li><strong>Multiple Formats:</strong> Consider both print and digital versions</li>
+                        </ul>
+                    </div>
+
+                    <div class="accessibility-feature">
+                        <h3>Differentiation Support</h3>
+                        <p>Adapt materials for diverse learning needs:</p>
+                        <ul>
+                            <li><strong>Visual Supports:</strong> Graphics, charts, and diagrams</li>
+                            <li><strong>Simplified Versions:</strong> Reduced complexity options</li>
+                            <li><strong>Extended Instructions:</strong> Detailed explanations</li>
+                            <li><strong>Multilingual Support:</strong> Translations when needed</li>
+                            <li><strong>Assistive Technology:</strong> Screen reader compatibility</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="distribution">
+                    <h2>Distribution and Sharing Methods</h2>
+                    
+                    <div class="distribution-method">
+                        <h3>Digital Distribution</h3>
+                        <p>Share educational materials electronically:</p>
+                        <ul>
+                            <li><strong>Email Attachments:</strong> Direct to students and parents</li>
+                            <li><strong>Learning Management Systems:</strong> Canvas, Google Classroom, Schoology</li>
+                            <li><strong>Cloud Storage:</strong> Google Drive, Dropbox, OneDrive</li>
+                            <li><strong>School Websites:</strong> Public or password-protected portals</li>
+                            <li><strong>QR Codes:</strong> Easy mobile access to materials</li>
+                        </ul>
+                    </div>
+
+                    <div class="distribution-method">
+                        <h3>Print Distribution</h3>
+                        <p>Physical copies for classroom use:</p>
+                        <ul>
+                            <li><strong>Class Sets:</strong> Bulk printing for student use</li>
+                            <li><strong>Master Copies:</strong> Teacher reference materials</li>
+                            <li><strong>Parent Packets:</strong> Take-home materials</li>
+                            <li><strong>Library Resources:</strong> Reference materials for checkout</li>
+                            <li><strong>Display Materials:</strong> Posters and bulletin boards</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="copyright">
+                    <h2>Copyright and Fair Use</h2>
+                    
+                    <div class="copyright-guideline">
+                        <h3>Educational Fair Use</h3>
+                        <p>Understanding copyright in education:</p>
+                        <ul>
+                            <li><strong>Classroom Use:</strong> Generally permitted for face-to-face teaching</li>
+                            <li><strong>Limited Portions:</strong> Use reasonable excerpts of copyrighted works</li>
+                            <li><strong>Attribution:</strong> Always credit original sources</li>
+                            <li><strong>Transformative Use:</strong> Modify materials for educational purposes</li>
+                            <li><strong>Digital Restrictions:</strong> Be cautious with online distribution</li>
+                        </ul>
+                    </div>
+
+                    <div class="copyright-guideline">
+                        <h3>Best Practices</h3>
+                        <p>Stay compliant with copyright law:</p>
+                        <ul>
+                            <li>Use public domain and open educational resources</li>
+                            <li>Create original materials when possible</li>
+                            <li>Obtain permissions for extensive use</li>
+                            <li>Include copyright notices on all materials</li>
+                            <li>Educate students about proper citation and use</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Can I merge different lesson formats into PDFs?</h3>
+                        <p>Yes, you can convert various formats (Word, PowerPoint, images) to PDF first, then merge them. This creates a consistent format for all materials.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I create student work packets?</h3>
+                        <p>Start with a cover sheet with instructions, then add worksheets, reading materials, and activities. Use our page numbering tool to organize content.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I merge interactive elements in educational PDFs?</h3>
+                        <p>Basic interactivity like hyperlinks and form fields can be preserved. However, complex interactive elements may need to be recreated after merging.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What's the best way to organize teaching materials?</h3>
+                        <p>Organize by subject, grade level, or chronologically depending on your needs. Include a table of contents for longer documents.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How can I share merged materials with students?</h3>
+                        <p>Distribute via email, learning management systems, or cloud storage. Consider file size limits and use our compression tool if needed.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Educational PDF Tools</h2>
+                    <ul>
+                        <li><a href="/page-numbers">Page Numbers</a> - Add numbering to worksheets and packets</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Reduce file size for sharing</li>
+                        <li><a href="/rotate-pdf">Rotate PDF</a> - Fix orientation of scanned materials</li>
+                        <li><a href="/watermark-pdf">Watermark</a> - Add school branding or "DRAFT" marks</li>
+                        <li><a href="/merge-pdf">Merge PDF</a> - Our main educational material merger</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                        <li><a href="/pdf-to-jpg" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">PDF to JPG</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

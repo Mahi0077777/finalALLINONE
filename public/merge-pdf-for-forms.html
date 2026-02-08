@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Merge PDF for Forms - Applications & Paperwork | FreeProPDF</title>
+    <meta name="description" content="Combine application forms, supporting documents, and paperwork. Perfect for permits, licenses, and submissions.">
+    <meta name="keywords" content="merge forms pdf, application paperwork, permit documents, license applications">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/merge-pdf-for-forms" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Organize Application Forms by Merging PDF Documents</h1>
+                
+                <p class="intro">Simplify form submissions by combining all required documents into a single, organized PDF file. Perfect for government applications, permits, licenses, and official paperwork that requires multiple supporting documents.</p>
+
+                <section class="form-types">
+                    <h2>Common Form Types That Need Merging</h2>
+                    
+                    <div class="form-category">
+                        <h3>Government Applications</h3>
+                        <p>Official paperwork often requires multiple documents:</p>
+                        <ul>
+                            <li><strong>Passport Applications:</strong> Form, photos, identification, proof of address</li>
+                            <li><strong>Visa Applications:</strong> Application form, financial documents, travel itinerary</li>
+                            <li><strong>Tax Returns:</strong> Forms, receipts, statements, supporting calculations</li>
+                            <li><strong>Social Services:</strong> Application forms, income proof, residency documents</li>
+                        </ul>
+                    </div>
+
+                    <div class="form-category">
+                        <h3>Professional Licenses</h3>
+                        <p>Certification and licensing requirements:</p>
+                        <ul>
+                            <li><strong>Medical Licenses:</strong> Application, degree certificates, training records</li>
+                            <li><strong>Legal Bar Admission:</strong> Forms, law degree, character references</li>
+                            <li><strong>Engineering Licenses:</strong> Application, degree transcripts, work experience</li>
+                            <li><strong>Teaching Certificates:</strong> Forms, education credentials, background checks</li>
+                        </ul>
+                    </div>
+
+                    <div class="form-category">
+                        <h3>Business Permits</h3>
+                        <p>Business registration and operations:</p>
+                        <ul>
+                            <li><strong>Business Registration:</strong> Forms, identification, address proof</li>
+                            <li><strong>Building Permits:</strong> Application, architectural plans, property documents</li>
+                            <li><strong>Health Department Permits:</strong> Forms, inspection reports, compliance documents</li>
+                            <li><strong>Environmental Permits:</strong> Applications, impact studies, compliance reports</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="organization-strategies">
+                    <h2>Document Organization Strategies</h2>
+                    
+                    <div class="strategy">
+                        <h3>Chronological Organization</h3>
+                        <p>Arrange documents by date when required:</p>
+                        <ul>
+                            <li>Most recent documents first</li>
+                            <li>Supporting documents in date order</li>
+                            <li>Validations and certifications by expiration date</li>
+                            <li>Historical records in chronological sequence</li>
+                        </ul>
+                        <p><strong>Best for:</strong> Tax returns, financial applications, historical records.</p>
+                    </div>
+
+                    <div class="strategy">
+                        <h3>Priority-Based Organization</h3>
+                        <p>Most important documents first:</p>
+                        <ul>
+                            <li>Main application form</li>
+                            <li>Primary identification documents</li>
+                            <li>Critical supporting documents</li>
+                            <li>Secondary evidence and references</li>
+                        </ul>
+                        <p><strong>Best for:</strong> Government applications, license applications, permits.</p>
+                    </div>
+
+                    <div class="strategy">
+                        <h3>Category-Based Organization</h3>
+                        <p>Group similar documents together:</p>
+                        <ul>
+                            <li>All identification documents</li>
+                            <li>Financial documents together</li>
+                            <li>Educational certificates grouped</li>
+                            <li>Professional references in one section</li>
+                        </ul>
+                        <p><strong>Best for:</strong> Complex applications with multiple document types.</p>
+                    </div>
+                </section>
+
+                <section class="page-ordering">
+                    <h2>Optimal Page Ordering for Different Agencies</h2>
+                    
+                    <div class="agency-guide">
+                        <h3>Government Agencies</h3>
+                        <p>Standard government submission order:</p>
+                        <ol>
+                            <li><strong>Cover Letter</strong> - Submission explanation</li>
+                            <li><strong>Application Form</strong> - Main document</li>
+                            <li><strong>Identification</strong> - Primary ID documents</li>
+                            <li><strong>Proof of Address</strong> - Residency documents</li>
+                            <li><strong>Supporting Documents</strong> - Additional evidence</li>
+                            <li><strong>References</strong> - Character/professional references</li>
+                        </ol>
+                    </div>
+
+                    <div class="agency-guide">
+                        <h3>Professional Boards</h3>
+                        <p>Professional licensing order:</p>
+                        <ol>
+                            <li><strong>Application Form</strong> - Completed application</li>
+                            <li><strong>Educational Credentials</strong> - Degrees and certificates</li>
+                            <li><strong>Professional Experience</strong> - Work history and references</li>
+                            <li><strong>Continuing Education</strong> - Training certificates</li>
+                            <li><strong>Background Checks</strong> - Clearance documents</li>
+                        </ol>
+                    </div>
+
+                    <div class="agency-guide">
+                        <h3>Financial Institutions</h3>
+                        <p>Banking and finance applications:</p>
+                        <ol>
+                            <li><strong>Application Form</strong> - Main request</li>
+                            <li><strong>Identification Documents</strong> - Photo ID and proof</li>
+                            <li><strong>Financial Statements</strong> - Income and asset documents</li>
+                            <li><strong>Collateral Documents</strong> - Property and asset proof</li>
+                            <li><strong>Legal Agreements</strong> - Contracts and terms</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="digital-forms">
+                    <h2>Working with Digital and Fillable Forms</h2>
+                    
+                    <div class="digital-tip">
+                        <h3>Fillable PDF Forms</h3>
+                        <p>Handle interactive forms correctly:</p>
+                        <ul>
+                            <li>Complete all form fields before merging</li>
+                            <li>Save the filled form as a new PDF</li>
+                            <li>Test that form data is preserved</li>
+                            <li>Check for required field validation</li>
+                        </ul>
+                        <p><strong>Important:</strong> Some agencies require forms to remain fillable - check requirements.</p>
+                    </div>
+
+                    <div class="digital-tip">
+                        <h3>Electronic Signatures</h3>
+                        <p>Handle digital signatures properly:</p>
+                        <ul>
+                            <li>Apply signatures before merging</li>
+                            <li>Verify signature validity</li>
+                            <li>Check agency signature requirements</li>
+                            <li>Preserve signature certificates</li>
+                        </ul>
+                        <p><strong>Note:</strong> Some agencies require original handwritten signatures.</p>
+                    </div>
+
+                    <div class="digital-tip">
+                        <h3>Form Field Preservation</h3>
+                        <p>Maintain form functionality:</p>
+                        <ul>
+                            <li>Test merged forms for field accessibility</li>
+                            <li>Check calculation fields still work</li>
+                            <li>Verify dropdown and checkbox functionality</li>
+                            <li>Ensure form validation remains active</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="submission-requirements">
+                    <h2>Meeting Submission Requirements</h2>
+                    
+                    <div class="requirement">
+                        <h3>File Size Limitations</h3>
+                        <p>Common size restrictions:</p>
+                        <ul>
+                            <li><strong>Government Agencies:</strong> Usually 5-10MB limit</li>
+                            <li><strong>Online Portals:</strong> Often 2-5MB maximum</li>
+                            <li><strong>Email Submissions:</strong> 10-25MB attachment limit</li>
+                            <li><strong>Physical Submissions:</strong> No limit, but larger files costly to print</li>
+                        </ul>
+                        <p><strong>Solution:</strong> Use our <a href="/compress-pdf">compression tool</a> to reduce file size.</p>
+                    </div>
+
+                    <div class="requirement">
+                        <h3>Format Specifications</h3>
+                        <p>Technical requirements to check:</p>
+                        <ul>
+                            <li>PDF version compatibility (PDF 1.4 or later)</li>
+                            <li>No password protection or encryption</li>
+                            <li>Standard fonts embedded</li>
+                            <li>Color mode (RGB for screen, CMYK for print)</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement">
+                        <h3>Page Limits</h3>
+                        <p>Common page restrictions:</p>
+                        <ul>
+                            <li><strong>Application Forms:</strong> Usually unlimited for supporting docs</li>
+                            <li><strong>Online Systems:</strong> May have 50-100 page limits</li>
+                            <li><strong>Print Submissions:</strong> Consider printing costs</li>
+                            <li><strong>Review Processes:</strong> Shorter documents reviewed faster</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="quality-checks">
+                    <h2>Pre-Submission Quality Checklist</h2>
+                    
+                    <div class="checklist">
+                        <h3>Before Submitting Your Form Packet</h3>
+                        <p>Complete these verification steps:</p>
+                        <ul>
+                            <li>✓ All required forms included and complete</li>
+                            <li>✓ Documents in correct order</li>
+                            <li>✓ All signatures applied where required</li>
+                            <li>✓ Dates current and valid</li>
+                            <li>✓ File size within limits</li>
+                            <li>✓ No password protection</li>
+                            <li>✓ All text readable and clear</li>
+                            <li>✓ Page numbers added for reference</li>
+                            <li>✓ File name follows agency guidelines</li>
+                            <li>✓ Backup copy saved locally</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Can I merge filled forms with blank ones?</h3>
+                        <p>Yes, but ensure all forms are properly filled out before merging. Some agencies prefer separate files for different form types.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Will form fields remain editable after merging?</h3>
+                        <p>Usually not. Most agencies require completed, non-editable forms. Fill all fields before merging unless specified otherwise.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I organize documents for government applications?</h3>
+                        <p>Follow the agency's specific instructions. Generally: main application first, then identification, supporting documents, and references last.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I add page numbers to form packets?</h3>
+                        <p>Yes, page numbers help with organization. Use our <a href="/page-numbers">page numbering tool</a> before merging for professional results.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What if my file is too large for submission?</h3>
+                        <p>Use our PDF compression tool to reduce file size. If still too large, consider splitting into multiple files or contacting the agency for alternatives.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Tools for Form Processing</h2>
+                    <ul>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Reduce file size for submissions</li>
+                        <li><a href="/page-numbers">Page Numbers</a> - Add numbering to form packets</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Secure sensitive form information</li>
+                        <li><a href="/rotate-pdf">Rotate PDF</a> - Fix form orientation</li>
+                        <li><a href="/merge-pdf">Merge PDF</a> - Our main form merging tool</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                        <li><a href="/pdf-to-jpg" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">PDF to JPG</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Transparent Watermark PDF - Subtle Watermarking | FreeProPDF</title>
+    <meta name="description" content="Add transparent watermarks to PDF documents. Create subtle, semi-transparent watermarks that don't interfere with content. Professional transparent watermarking tool.">
+    <meta name="keywords" content="transparent watermark pdf, subtle watermark, semi-transparent pdf, opacity watermark, faint watermark pdf">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/transparent-watermark-pdf" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: '#374151';
+        background-color: '#1f2937';
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Transparent Watermark PDF - Subtle Watermarking</h1>
+                
+                <p class="intro">Add transparent watermarks to PDF documents using our <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">watermark tool</a> for subtle content protection. Create semi-transparent watermarks that protect your content without interfering with readability or document appearance. <a href="/watermark-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Try transparent watermarks now</a>.</p>
+
+                <section class="transparent-benefits">
+                    <h2>Why Use Transparent Watermarks</h2>
+                    
+                    <div class="benefit">
+                        <h3>Subtle Protection</h3>
+                        <p>Benefits of transparency:</p>
+                        <ul>
+                            <li><strong>Content Preservation:</strong> Maintain document readability</li>
+                            <li><strong>Professional Appearance:</strong> Clean, unobtrusive look</li>
+                            <li><strong>Visual Harmony:</strong> Blend with document design</li>
+                            <li><strong>Reader Experience:</strong> Don't distract readers</li>
+                            <li><strong>Print Quality:</strong> Better printing results</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit">
+                        <h3>Effective Security</h3>
+                        <p>Security advantages:</p>
+                        <ul>
+                            <li><strong>Deterrent Effect:</strong> Still discourages unauthorized use</li>
+                            <li><strong>Ownership Claim:</strong> Clear attribution without intrusion</li>
+                            <li><strong>Legal Evidence:</strong> Supports copyright claims</li>
+                            <li><strong>Brand Presence:</strong> Subtle brand reinforcement</li>
+                            <li><strong>Professional Standards:</strong> Industry best practice</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="opacity-levels">
+                    <h2>Transparency Levels and Applications</h2>
+                    
+                    <div class="level">
+                        <h3>High Transparency (70-90% opacity)</h3>
+                        <p>Very subtle watermarks:</p>
+                        <ul>
+                            <li><strong>Background Elements:</strong> Almost invisible background marks</li>
+                            <li><strong>Brand Presence:</strong> Subtle brand reinforcement</li>
+                            <li><strong>Template Watermarks:</strong> Sample document marking</li>
+                            <li><strong>Archival Documents:</strong> Historical document protection</li>
+                            <li><strong>Display Materials:</strong> Presentation document marking</li>
+                        </ul>
+                    </div>
+
+                    <div class="level">
+                        <h3>Medium Transparency (40-60% opacity)</h3>
+                        <p>Balanced visibility:</p>
+                        <ul>
+                            <li><strong>Copyright Notices:</strong> Visible but unobtrusive</li>
+                            <li><strong>Company Documents:</strong> Corporate document marking</li>
+                            <li><strong>Academic Papers:</strong> Research paper protection</li>
+                            <li><strong>Technical Manuals:</strong> Professional document marking</li>
+                            <li><strong>Client Proposals:</strong> Business proposal protection</li>
+                        </ul>
+                    </div>
+
+                    <div class="level">
+                        <h3>Low Transparency (20-30% opacity)</h3>
+                        <p>More prominent but still subtle:</p>
+                        <ul>
+                            <li><strong>Confidential Documents:</strong> Security marking</li>
+                            <li><strong>Draft Documents:</strong> Work-in-progress marking</li>
+                            <li><strong>Review Copies:</strong> Review document identification</li>
+                            <li><strong>Legal Documents:</strong> Legal notice placement</li>
+                            <li><strong>Financial Reports:</strong> Sensitive document marking</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="design-techniques">
+                    <h2>Transparent Watermark Design Techniques</h2>
+                    
+                    <div class="technique">
+                        <h3>Color Selection</h3>
+                        <p>Optimal color choices:</p>
+                        <ul>
+                            <li><strong>Grayscale Colors:</strong> Black, gray, white variations</li>
+                            <li><strong>Light Colors:</strong> Pastel tones for subtlety</li>
+                            <li><strong>Brand Colors:</strong> Faded brand color versions</li>
+                            <li><strong>Contrast Balance:</strong> Match document background</li>
+                            <li><strong>Print Considerations:</strong> Ensure print visibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique">
+                        <h3>Font and Typography</h3>
+                        <p>Text watermark styling:</p>
+                        <ul>
+                            <li><strong>Clean Fonts:</strong> Simple, readable typefaces</li>
+                            <li><strong>Appropriate Size:</strong> Large enough to be seen</li>
+                            <li><strong>Font Weight:</strong> Light or regular weight</li>
+                            <li><strong>Letter Spacing:</strong> Adjusted for readability</li>
+                            <li><strong>Font Style:</strong> Avoid bold or heavy styles</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique">
+                        <h3>Placement Strategy</h3>
+                        <p>Optimal positioning:</p>
+                        <ul>
+                            <li><strong>Center Placement:</strong> Balanced visibility</li>
+                            <li><strong>Corner Placement:</strong> Subtle positioning</li>
+                            <li><strong>Diagonal Placement:</strong> Across document content</li>
+                            <li><strong>Background Integration:</strong> Blend with page elements</li>
+                            <li><strong>Consistent Positioning:</strong> Same location across pages</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="application-process">
+                    <h2>How to Add Transparent Watermark to PDF</h2>
+                    
+                    <ol class="steps">
+                        <li>
+                            <h3>Upload PDF Document</h3>
+                            <p>Start with your file:</p>
+                            <ul>
+                                <li>Select the PDF to watermark</li>
+                                <li>Drag and drop for quick upload</li>
+                                <li>Import from cloud storage</li>
+                                <li>Wait for file processing</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Create Watermark Content</h3>
+                            <p>Design your watermark:</p>
+                            <ul>
+                                <li>Choose text or image watermark</li>
+                                <li>Enter custom text or upload logo</li>
+                                <li>Select appropriate font and size</li>
+                                <li>Choose color scheme</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Set Transparency Level</h3>
+                            <p>Configure opacity:</p>
+                            <ul>
+                                <li>Adjust opacity slider (20-90%)</li>
+                                <li>Preview transparency effect</li>
+                                <li>Test different opacity levels</li>
+                                <li>Consider document content density</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Configure Position and Style</h3>
+                            <p>Finalize appearance:</p>
+                            <ul>
+                                <li>Choose placement position</li>
+                                <li>Set rotation angle if needed</li>
+                                <li>Configure page range</li>
+                                <li>Preview on sample pages</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <h3>Apply and Download</h3>
+                            <p>Complete your document:</p>
+                            <ul>
+                                <li>Process document with transparent watermark</li>
+                                <li>Review final appearance</li>
+                                <li>Verify subtlety and visibility balance</li>
+                                <li>Download your watermarked PDF</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="use-cases">
+                    <h2>Transparent Watermark Use Cases</h2>
+                    
+                    <div class="use-case">
+                        <h3>Professional Documents</h3>
+                        <p>Business applications:</p>
+                        <ul>
+                            <li><strong>Corporate Reports:</strong> Annual and quarterly reports</li>
+                            <li><strong>Client Proposals:</strong> Business proposal documents</li>
+                            <li><strong>Legal Documents:</strong> Contracts and agreements</li>
+                            <li><strong>Financial Statements:</strong> Financial reporting</li>
+                            <li><strong>Presentations:</strong> Slide deck protection</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Creative Content</h3>
+                        <p>Artistic and creative works:</p>
+                        <ul>
+                            <li><strong>Design Portfolios:</strong> Designer work samples</li>
+                            <li><strong>Photography:</strong> Photo portfolio protection</li>
+                            <li><strong>Writing Samples:</strong> Author work protection</li>
+                            <li><strong>Art Portfolios:</strong> Artist work collection</li>
+                            <li><strong>Music Scores:</strong> Composer work protection</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Educational Materials</h3>
+                        <p>Academic and training content:</p>
+                        <ul>
+                            <li><strong>Research Papers:</strong> Academic paper protection</li>
+                            <li><strong>Textbooks:</strong> Educational content protection</li>
+                            <li><strong>Course Materials:</strong> Training document protection</li>
+                            <li><strong>Study Guides:</strong> Educational resource protection</li>
+                            <li><strong>Theses:</strong> Graduate work protection</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h3>Publishing and Media</h3>
+                        <p>Content distribution:</p>
+                        <ul>
+                            <li><strong>Magazines:</strong> Publication content protection</li>
+                            <li><strong>Newsletters:</strong> Newsletter content protection</li>
+                            <li><strong>Catalogs:</strong> Product catalog protection</li>
+                            <li><strong>Brochures:</strong> Marketing material protection</li>
+                            <li><strong>White Papers:</strong> Research document protection</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="technical-considerations">
+                    <h2>Technical Considerations for Transparency</h2>
+                    
+                    <div class="consideration">
+                        <h3>Visual Quality</h3>
+                        <p>Maintaining document quality:</p>
+                        <ul>
+                            <li><strong>Readability:</strong> Ensure content remains readable</li>
+                            <li><strong>Print Quality:</strong> Test print output</li>
+                            <li><strong>Digital Display:</strong> Check on various devices</li>
+                            <li><strong>Color Accuracy:</strong> Maintain color integrity</li>
+                            <li><strong>Resolution:</strong> Preserve image quality</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>File Performance</h3>
+                        <p>Optimization considerations:</p>
+                        <ul>
+                            <li><strong>File Size:</strong> Impact on file size</li>
+                            <li><strong>Processing Speed:</strong> Rendering performance</li>
+                            <li><strong>Memory Usage:</strong> System resource requirements</li>
+                            <li><strong>Compatibility:</strong> PDF viewer compatibility</li>
+                            <li><strong>Compression:</strong> File compression options</li>
+                        </ul>
+                    </div>
+
+                    <div class="consideration">
+                        <h3>Accessibility</h3>
+                        <p>User experience considerations:</p>
+                        <ul>
+                            <li><strong>Screen Readers:</strong> Impact on accessibility</li>
+                            <li><strong>Color Blindness:</strong> Consider color choices</li>
+                            <li><strong>Low Vision:</strong> Visibility for impaired users</li>
+                            <li><strong>Mobile Devices:</strong> Mobile display quality</li>
+                            <li><strong>Print Accessibility:</strong> Print readability</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="best-practices">
+                    <h2>Transparent Watermark Best Practices</h2>
+                    
+                    <div class="practice">
+                        <h3>Design Principles</h3>
+                        <p>Creating effective transparent watermarks:</p>
+                        <ul>
+                            <li><strong>Balance Visibility:</strong> Find the right opacity level</li>
+                            <li><strong>Maintain Readability:</strong> Don't interfere with content</li>
+                            <li><strong>Professional Appearance:</strong> Keep clean and subtle</li>
+                            <li><strong>Consistent Styling:</strong> Use uniform design elements</li>
+                            <li><strong>Brand Alignment:</strong> Match brand guidelines</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Technical Implementation</h3>
+                        <p>Technical best practices:</p>
+                        <ul>
+                            <li><strong>Test Thoroughly:</strong> Check on different devices</li>
+                            <li><strong>Print Testing:</strong> Verify print quality</li>
+                            <li><strong>File Optimization:</strong> Keep file sizes reasonable</li>
+                            <li><strong>Backup Creation:</strong> Keep original documents</li>
+                            <li><strong>Quality Control:</strong> Review final output</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice">
+                        <h3>Content Considerations</h3>
+                        <p>Content-specific guidelines:</p>
+                        <ul>
+                            <li><strong>Document Type:</strong> Adjust for different content types</li>
+                            <li><strong>Audience:</strong> Consider reader needs</li>
+                            <li><strong>Purpose:</strong> Match watermark to document purpose</li>
+                            <li><strong>Distribution:</strong> Consider distribution method</li>
+                            <li><strong>Legal Requirements:</strong> Meet compliance needs</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>What transparency level should I use for watermarks?</h3>
+                        <p>For most documents, 30-50% opacity provides good balance between visibility and subtlety. Use higher transparency (70-90%) for very subtle marking.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Will transparent watermarks affect PDF printing quality?</h3>
+                        <p>Transparent watermarks generally print well, but test your specific opacity level and printer to ensure good results.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can transparent watermarks be removed from PDFs?</h3>
+                        <p>Removing watermarks from PDFs is difficult regardless of transparency. Always keep an unwatermarked original for future use.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What colors work best for transparent watermarks?</h3>
+                        <p>Light gray, faded brand colors, or white text on dark backgrounds work well. Avoid colors that blend too much with content.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do transparent watermarks affect file size?</h3>
+                        <p>Transparent watermarks have minimal impact on file size, especially compared to solid watermarks, making them efficient for large documents.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Watermark and Transparency Tools</h2>
+                    <ul>
+                        <li><a href="/add-watermark-to-pdf">Add Watermark to PDF</a> - General watermarking</li>
+                        <li><a href="/text-watermark-pdf">Text Watermark PDF</a> - Text-specific watermarking</li>
+                        <li><a href="/logo-watermark-pdf">Logo Watermark PDF</a> - Image watermarking</li>
+                        <li><a href="/copyright-watermark-pdf">Copyright Watermark PDF</a> - Legal protection</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize file size</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/watermark-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Watermark PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

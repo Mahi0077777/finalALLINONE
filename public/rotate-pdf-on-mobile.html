@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGTHBCSNPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGTHBCSNPX');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061444567248984"
+     crossorigin="anonymous"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Rotate PDF on Mobile - iPhone & Android | FreeProPDF</title>
+    <meta name="description" content="Rotate PDF pages on your phone or tablet. Works perfectly on iPhone, Android, and iPad. Fix sideways PDFs on mobile devices.">
+    <meta name="keywords" content="rotate pdf mobile, iphone pdf rotation, android pdf rotate, tablet pdf tool">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="FreeProPDF">
+    <meta name="theme-color" content="#0d9488">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freepropdf.com/rotate-pdf-on-mobile" />
+    
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .prose {
+        max-width: 65ch;
+        color: inherit;
+      }
+      
+      .prose h1,
+      .prose h2,
+      .prose h3 {
+        color: inherit;
+      }
+      
+      .dark .prose h1,
+      .dark .prose h2,
+      .dark .prose h3 {
+        color: #f3f4f6;
+      }
+      
+      .prose img {
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+      }
+      
+      .prose a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      
+      .header-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #115e59 100%);
+      }
+      
+      .btn-primary {
+        background-color: #0d9488;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+      
+      .tool-card {
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .tool-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .dark .tool-card {
+        border-color: #374151;
+        background-color: #1f2937;
+      }
+      
+      .dark .tool-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased">
+    <!-- Header -->
+    <header class="header-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="FreeProPDF Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold">FreeProPDF</span>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:opacity-80 transition-opacity">Home</a>
+                    <a href="/#tools" class="hover:opacity-80 transition-opacity">Tools</a>
+                    <a href="/blog" class="hover:opacity-80 transition-opacity">Blog</a>
+                    <a href="/about" class="hover:opacity-80 transition-opacity">About</a>
+                    <a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="/" class="block py-2 hover:bg-white/10 px-2 rounded">Home</a>
+                    <a href="/#tools" class="block py-2 hover:bg-white/10 px-2 rounded">Tools</a>
+                    <a href="/blog" class="block py-2 hover:bg-white/10 px-2 rounded">Blog</a>
+                    <a href="/about" class="block py-2 hover:bg-white/10 px-2 rounded">About</a>
+                    <a href="/contact" class="block py-2 hover:bg-white/10 px-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <article class="prose mx-auto py-8">
+            <div class="max-w-4xl mx-auto">
+                <h1>Rotate PDF Pages on Your Mobile Device</h1>
+                
+                <p class="intro">Need to fix sideways PDFs on your phone or tablet? Our <a href="/rotate-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">mobile-optimized PDF rotator</a> works flawlessly on iPhone, Android, and iPad. No app installation required - just open your browser and start rotating PDF pages anywhere, anytime. <a href="/rotate-pdf" class="text-brand-600 hover:text-brand-700 font-semibold">Rotate PDFs on mobile now</a>.</p>
+
+                <section class="mobile-features">
+                    <h2>Mobile-Specific Rotation Features</h2>
+                    
+                    <div class="feature">
+                        <h3>Touch-Optimized Controls</h3>
+                        <p>Designed specifically for mobile devices:</p>
+                        <ul>
+                            <li>Large, easy-to-tap rotation buttons</li>
+                            <li>Swipe gestures for page navigation</li>
+                            <li>Pinch-to-zoom for detailed inspection</li>
+                            <li>Responsive design for any screen size</li>
+                            <li>Thumb-friendly interface elements</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Device Integration</h3>
+                        <p>Seamless mobile experience:</p>
+                        <ul>
+                            <li>Direct camera access for new photos</li>
+                            <li>Photo library integration</li>
+                            <li>Cloud storage connectivity</li>
+                            <li>File app integration</li>
+                            <li>Share sheet compatibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>Performance Optimization</h3>
+                        <p>Fast and efficient on mobile:</p>
+                        <ul>
+                            <li>Quick page loading and rendering</li>
+                            <li>Optimized for mobile processors</li>
+                            <li>Minimal battery consumption</li>
+                            <li>Works offline after initial load</li>
+                            <li>Efficient memory usage</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="device-instructions">
+                    <h2>Step-by-Step for Each Device</h2>
+                    
+                    <div class="device">
+                        <h3>On iPhone or iPad</h3>
+                        <ol>
+                            <li><strong>Open Safari or Chrome</strong> on your iOS device</li>
+                            <li><strong>Visit our PDF rotator</strong> and add to home screen for quick access</li>
+                            <li><strong>Tap "Select Files"</strong> and choose from:
+                                <ul>
+                                    <li>Photos app</li>
+                                    <li>Files app</li>
+                                    <li>iCloud Drive</li>
+                                    <li>Take a new photo</li>
+                                </ul>
+                            </li>
+                            <li><strong>Preview pages</strong> and tap rotation buttons</li>
+                            <li><strong>Download corrected PDF</strong> to Files or share directly</li>
+                        </ol>
+                        <p><strong>Pro Tip:</strong> Use the Files app to organize rotated documents in folders.</p>
+                    </div>
+
+                    <div class="device">
+                        <h3>On Android Phones & Tablets</h3>
+                        <ol>
+                            <li><strong>Open Chrome or Firefox</strong> on your Android device</li>
+                            <li><strong>Navigate to our rotator</strong> and bookmark for easy access</li>
+                            <li><strong>Select files</strong> from:
+                                <ul>
+                                    <li>Google Photos</li>
+                                    <li>Downloads folder</li>
+                                    <li>Google Drive</li>
+                                    <li>Camera to capture new documents</li>
+                                </ul>
+                            </li>
+                            <li><strong>Use touch controls</strong> to rotate pages</li>
+                            <li><strong>Save or share</strong> the corrected PDF</li>
+                        </ol>
+                        <p><strong>Pro Tip:</strong> Use Android's share menu to quickly send rotated files to other apps.</p>
+                    </div>
+
+                    <div class="device">
+                        <h3>On Windows Tablets</h3>
+                        <ol>
+                            <li><strong>Open Edge or Chrome</strong> in tablet mode</li>
+                            <li><strong>Go to our PDF rotator</strong> with touch or stylus</li>
+                            <li><strong>Upload files</strong> from OneDrive or local storage</li>
+                            <li><strong>Use touch gestures</strong> to rotate pages</li>
+                            <li><strong>Download result</strong> to your preferred location</li>
+                        </ol>
+                        <p><strong>Pro Tip:</strong> Windows tablets work great with stylus input for precise page selection.</p>
+                    </div>
+                </section>
+
+                <section class="common-scenarios">
+                    <h2>Common Mobile Scenarios</h2>
+                    
+                    <div class="scenario">
+                        <h3>Fixing Scanned Documents</h3>
+                        <p>Correct orientation issues with:</p>
+                        <ul>
+                            <li>Document scanner apps that save sideways</li>
+                            <li>Receipt photos taken at wrong angle</li>
+                            <li>Whiteboard captures needing rotation</li>
+                            <li>Contract photos from mobile devices</li>
+                            <li>Form submissions with mixed orientations</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario">
+                        <h3>Photo Document Corrections</h3>
+                        <p>Fix mobile-captured content:</p>
+                        <ul>
+                            <li>Screenshots saved in wrong orientation</li>
+                            <li>Camera roll photos needing adjustment</li>
+                            <li>Instagram saves for document use</li>
+                            <li>WhatsApp document photos</li>
+                            <li>Email attachment corrections</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario">
+                        <h3>Professional Use Cases</h3>
+                        <p>Business document fixes:</p>
+                        <ul>
+                            <li>Business card scans</li>
+                            <li>Meeting notes photos</li>
+                            <li>Invoice and receipt images</li>
+                            <li>Presentation slide corrections</li>
+                            <li>Legal document photos</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="mobile-tips">
+                    <h2>Mobile Optimization Tips</h2>
+                    
+                    <div class="tip">
+                        <h3>File Management</h3>
+                        <p>Organize rotated documents efficiently:</p>
+                        <ul>
+                            <li>Create folders by project or date</li>
+                            <li>Use descriptive file names</li>
+                            <li>Utilize cloud storage for backup</li>
+                            <li>Regular cleanup of old files</li>
+                            <li>Share directly from the app</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip">
+                        <h3>Performance Optimization</h3>
+                        <p>Get the best mobile experience:</p>
+                        <ul>
+                            <li>Close other apps while processing</li>
+                            <li>Ensure stable internet connection</li>
+                            <li>Clear browser cache regularly</li>
+                            <li>Update your browser to latest version</li>
+                            <li>Use Wi-Fi for large files</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip">
+                        <h3>Storage Management</h3>
+                        <p>Manage mobile storage effectively:</p>
+                        <ul>
+                            <li>Delete original files after rotation</li>
+                            <li>Store completed docs in cloud</li>
+                            <li>Monitor available storage space</li>
+                            <li>Use compression for large files</li>
+                            <li>Regular backup important documents</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="troubleshooting">
+                    <h2>Common Mobile Issues & Solutions</h2>
+                    
+                    <div class="issue">
+                        <h3>Pages Not Rotating Correctly?</h3>
+                        <p><strong>Solutions:</strong></p>
+                        <ul>
+                            <li>Refresh the page and try again</li>
+                            <li>Check your internet connection</li>
+                            <li>Try a different browser (Chrome, Safari, Firefox)</li>
+                            <li>Restart your device</li>
+                            <li>Clear browser cache and data</li>
+                        </ul>
+                    </div>
+
+                    <div class="issue">
+                        <h3>App Crashing or Freezing?</h3>
+                        <p><strong>Try these fixes:</strong></p>
+                        <ul>
+                            <li>Close other running applications</li>
+                            <li>Free up device storage space</li>
+                            <li>Update your browser to latest version</li>
+                            <li>Reduce file size before rotating</li>
+                            <li>Restart your device</li>
+                        </ul>
+                    </div>
+
+                    <div class="issue">
+                        <h3>Can't Find Downloaded File?</h3>
+                        <p><strong>Check these locations:</strong></p>
+                        <ul>
+                            <li>Downloads folder in Files app</li>
+                            <li>Browser download history</li>
+                            <li>Search by filename</li>
+                            <li>Check cloud storage if auto-save enabled</li>
+                            <li>Look in recently opened files</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Does this work on iPhone and Android?</h3>
+                        <p>Yes, our PDF rotator works perfectly on all mobile devices including iPhone, iPad, Android phones and tablets, and Windows tablets.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Do I need to install an app?</h3>
+                        <p>No app installation required! Our tool works directly in your mobile browser. You can add it to your home screen for quick access.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I rotate photos and save as PDF?</h3>
+                        <p>Yes, you can take photos directly in the app or select from your photo library, then rotate and save as a corrected PDF document.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I share rotated PDFs from mobile?</h3>
+                        <p>After rotation, use your device's share menu to send via email, messaging apps, cloud storage, or any other compatible app.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What's the file size limit on mobile?</h3>
+                        <p>The maximum file size is 50MB, regardless of device. For larger files, try compressing first or use a desktop computer.</p>
+                    </div>
+                </section>
+
+                <section class="related-tools">
+                    <h2>Other Mobile PDF Tools</h2>
+                    <ul>
+                        <li><a href="/merge-pdf">Merge PDF</a> - Combine documents on mobile</li>
+                        <li><a href="/split-pdf">Split PDF</a> - Separate pages on the go</li>
+                        <li><a href="/compress-pdf">Compress PDF</a> - Optimize file sizes for mobile</li>
+                        <li><a href="/pdf-to-jpg">PDF to JPG</a> - Convert pages to images</li>
+                        <li><a href="/protect-pdf">Protect PDF</a> - Secure documents on mobile</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">FreeProPDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300">The world's fastest free PDF tools. No uploads, no sign-ups, 100% privacy guaranteed.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/rotate-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Rotate PDF</a></li>
+                        <li><a href="/merge-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Merge PDF</a></li>
+                        <li><a href="/split-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Split PDF</a></li>
+                        <li><a href="/compress-pdf" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Compress PDF</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">About Us</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Blog</a></li>
+                        <li><a href="/contact" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Contact</a></li>
+                        <li><a href="/privacy" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
+                <p>© 2024 FreeProPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        // Check for dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Toggle dark mode
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
