@@ -1,0 +1,100 @@
+{
+  "merge-pdf-for-mobile": {
+    "breadcrumb": {
+      "position": 3,
+      "name": "Merge PDF for Mobile",
+      "url": "https://freepropdf.com/merge-pdf-for-mobile"
+    },
+    "howTo": {
+      "name": "How to Merge PDFs on Mobile Devices",
+      "description": "Step-by-step guide to merge PDF files on iPhone, Android, and mobile devices using FreeProPDF's mobile-optimized merger tool",
+      "image": "https://freepropdf.com/images/merge-pdf-mobile.jpg",
+      "totalTime": "PT3M",
+      "steps": [
+        "Open Mobile Browser",
+        "Upload PDF Files from Device or Cloud",
+        "Arrange Pages with Touch Gestures",
+        "Merge and Download to Device"
+      ]
+    },
+    "faq": [
+      {
+        "question": "Can I merge PDFs on my smartphone?",
+        "answer": "Yes, our mobile-optimized PDF merger works perfectly on smartphones including iPhone and Android. No app installation required."
+      },
+      {
+        "question": "Is mobile PDF merging secure?",
+        "answer": "Absolutely. All processing happens in your browser with SSL encryption. Files are never stored on our servers."
+      },
+      {
+        "question": "How many PDFs can I merge on mobile?",
+        "answer": "You can merge up to 20 PDF files on mobile devices. Perfect for on-the-go document management."
+      }
+    ]
+  },
+  "merge-pdf-for-printing": {
+    "breadcrumb": {
+      "position": 3,
+      "name": "Merge PDF for Printing",
+      "url": "https://freepropdf.com/merge-pdf-for-printing"
+    },
+    "howTo": {
+      "name": "How to Merge Print-Ready PDFs",
+      "description": "Step-by-step guide to merge PDF files for professional printing using FreeProPDF's print-optimized merger tool",
+      "image": "https://freepropdf.com/images/merge-pdf-printing.jpg",
+      "totalTime": "PT5M",
+      "steps": [
+        "Check Print Specifications",
+        "Verify Resolution and Color Mode",
+        "Arrange with Print Margins",
+        "Merge and Download for Printing"
+      ]
+    },
+    "faq": [
+      {
+        "question": "Will merging affect print quality?",
+        "answer": "No, our merger maintains original print quality including resolution, color accuracy, and formatting."
+      },
+      {
+        "question": "What resolution should PDFs have for printing?",
+        "answer": "For professional printing, ensure images are 300 DPI and text remains vector-based for crisp output."
+      },
+      {
+        "question": "Can I merge different paper sizes?",
+        "answer": "Yes, but standardize to consistent paper size (A4 or Letter) before merging for best print results."
+      }
+    ]
+  },
+  "merge-pdf-for-resumes": {
+    "breadcrumb": {
+      "position": 3,
+      "name": "Merge PDF for Resumes",
+      "url": "https://freepropdf.com/merge-pdf-for-resumes"
+    },
+    "howTo": {
+      "name": "How to Merge Resume Documents for Job Applications",
+      "description": "Step-by-step guide to merge resume PDF files including cover letters, references, and portfolios using FreeProPDF's professional merger tool",
+      "image": "https://freepropdf.com/images/merge-pdf-resumes.jpg",
+      "totalTime": "PT5M",
+      "steps": [
+        "Gather Resume Components",
+        "Arrange in Professional Order",
+        "Merge and Download for Applications"
+      ]
+    },
+    "faq": [
+      {
+        "question": "What should I include in my resume PDF?",
+        "answer": "Include resume, cover letter, references, portfolio samples, and relevant certificates. Keep it to 5 pages maximum."
+      },
+      {
+        "question": "Will merged resumes pass ATS systems?",
+        "answer": "Yes, our merger preserves text-based formatting that ATS systems can read, ensuring your application gets processed correctly."
+      },
+      {
+        "question": "How do I organize multiple job applications?",
+        "answer": "Create separate merged PDFs for each job application, tailored to the specific position and company requirements."
+      }
+    ]
+  }
+}
