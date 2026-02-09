@@ -8,7 +8,7 @@ function optimizeInternalLinks(content, pageUrl) {
   if (!introMatch) return content;
   
   // Find all internal links in the content
-  const linkRegex = /<a href="\/[^"]*" class="text-brand-600 hover:text-brand-700 font-semibold">([^<]*?)<\/a>/g;
+  const linkRegex = /<a\s+href="\/[^"]*" class="text-brand-600 hover:text-brand-700 font-semibold">([^<]*?)<\/a>/g;
   const allLinks = content.match(linkRegex) || [];
   
   if (allLinks.length === 0) return content;
